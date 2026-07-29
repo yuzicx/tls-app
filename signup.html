@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <div xmlns="http://www.w3.org/1999/xhtml" data-template="templates:surround" data-template-with="templates/page.html" data-template-at="content">
         <div id="results" data-template="app:signup" data-i18n-scope="ui">
-        <div class="row">
+        <div class="row" data-i18n-scope="ui">
             <div class="col-md-2"/>
             <div class="col-md-5">
 <!--            <h1>Note: <strong>This is a dummy, the form is not yet live (2022-11-18)</strong>
@@ -14,7 +14,7 @@
                 <h2>Signup form</h2>
                 <h3>Personal information</h3>
                 <p class="text-mute">All input (except the website) is required</p>
-            <form action="sgn-received.html" method="post" oninput="up2.setCustomValidity(inputpw2.value != inputpw1.value ? &#34;Passwords do not match.&#34; : &#34;&#34;)">
+            <form action="sgn-received.html" method="post" oninput="up2.setCustomValidity(inputpw2.value != inputpw1.value ? (window.TLSI18n ? TLSI18n.fromSource(&#34;Passwords do not match.&#34;) : &#34;Passwords do not match.&#34;) : &#34;&#34;)">
                 <div class="form-group row">                
                   <div id="inputname-group" class="col-md-8">
                     <label for="inputname">

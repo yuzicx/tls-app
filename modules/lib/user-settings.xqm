@@ -54,8 +54,8 @@ declare function lus:user-name($node as node()*, $model as map(*)){ $model?px };
 
 
 declare %templates:wrap function lus:settings($node as node()*, $model as map(*)) {
-<div>
-<h2>Customizable settings for {$model?px}</h2>
+<div data-i18n-scope="ui">
+<h2>Customizable settings for <span data-i18n-scope="content">{$model?px}</span></h2>
 <p>
  
 </p>
@@ -66,7 +66,7 @@ declare %templates:wrap function lus:settings($node as node()*, $model as map(*)
 
 
 declare function lus:settings-external($node as node()*, $model as map(*)){
-<div>
+<div data-i18n-scope="ui">
 <div class="row">
 <p><span class="badge" onclick="show_dialog('external-resource',{{'dummy':'3'}})"  type="button">Add</span> additional resources or <b>select</b> which to show.</p>
 </div>

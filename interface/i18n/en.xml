@@ -160,4 +160,231 @@
     <message key="toast.bookmark-saved" source="Bookmark has been saved.">Bookmark has been saved.</message>
     <message key="toast.bookmark-deleted" source="Bookmark has been deleted.">Bookmark has been deleted.</message>
     <message key="toast.password-changed" source="Your password has been changed. You will be logged out.">Your password has been changed. You will be logged out.</message>
+
+    <message key="home.founding-editor" source="Founding Editor:">Founding Editor:</message>
+    <message key="home.associate-editor" source="Associate Editor:">Associate Editor:</message>
+    <message key="home.general-editor" source="General Editor:">General Editor:</message>
+    <message key="home.technical-editor" source="Technical Editor:">Technical Editor:</message>
+    <message key="home.problems" source="Problems and suggestions can be reported and discussed also on">Problems and suggestions can be reported and discussed also on</message>
+    <message key="home.overview" source="Overview of the content of the database (last updated:">Overview of the content of the database (last updated:</message>
+
+    <message key="footer.copyright-prefix" source="Copyright TLS Project 2026, licensed under a">Copyright TLS Project 2026, licensed under a</message>
+    <message key="footer.copyright-suffix" source="license (except some translations)">license (except some translations)</message>
+    <message key="footer.cc-title" source="Creative Commons Attribution-ShareAlike 4.0 International License">Creative Commons Attribution-ShareAlike 4.0 International License</message>
+    <message key="footer.developed-at" source="Developed at the">Developed at the</message>
+    <message key="footer.with-support" source=", with support from the">, with support from the</message>
+    <message key="footer.and-comma" source=", and">, and</message>
+    <message key="footer.development-supported" source="Development supported by the">Development supported by the</message>
+    <message key="footer.research-group-at" source="research group at">research group at</message>
+    <message key="footer.financial-support" source=", with financial support from the">, with financial support from the</message>
+    <message key="footer.hosted-by" source="Hosted by">Hosted by</message>
+    <message key="footer.cooperation" source=", in cooperation with">, in cooperation with</message>
+    <message key="footer.support-from" source="Support from">Support from</message>
+    <message key="footer.and" source="and">and</message>
+    <message key="footer.acknowledged" source="gratefully acknowledged.">gratefully acknowledged.</message>
+    <message key="footer.cookies" source="This site uses cookies to maintain login state. The cookies are not used for any other purposes. By using this site you agree to this.">This site uses cookies to maintain login state. The cookies are not used for any other purposes. By using this site you agree to this.</message>
+
+    <message key="browse.word-relation-type" source="Word relation type:">Word relation type:</message>
+    <message key="browse.sort-by" source="Sort by:">Sort by:</message>
+    <message key="browse.left-word" source="Left word">Left word</message>
+    <message key="browse.right-word" source="Right word">Right word</message>
+    <message key="browse.left-concept" source="Left concept">Left concept</message>
+    <message key="browse.right-concept" source="Right concept">Right concept</message>
+    <message key="browse.words-by-concepts" source="Words by decreasing number of concepts">Words by decreasing number of concepts</message>
+
+    <message key="citations.warning-tree-prefix" source="The options ending in '(tree)' are still a mockup and do">The options ending in '(tree)' are still a mockup and do</message>
+    <message key="citations.warning-tree-suffix" source="not yet have the correct data">not yet have the correct data</message>
+    <message key="citations.item" source="Item:">Item:</message>
+    <message key="citations.perspectives" source="Perspectives:">Perspectives:</message>
+    <message key="citations.grouping-key1" source="Grouping: Key 1">Grouping: Key 1</message>
+    <message key="citations.key2" source="Key 2">Key 2</message>
+    <message key="citations.show" source="Show">Show</message>
+    <message key="citations.contributors" source="Contributors">Contributors</message>
+    <message key="citations.syntactical-functions" source="Syntactical Functions">Syntactical Functions</message>
+    <message key="citations.diachronic" source="Diachronic">Diachronic</message>
+    <message key="citations.diachronic-tree" source="Diachronic(tree)">Diachronic(tree)</message>
+    <message key="citations.by-character" source="By character">By character</message>
+    <message key="citations.by-concept" source="By Concept">By Concept</message>
+    <message key="citations.by-concept-tree" source="By Concept(tree)">By Concept(tree)</message>
+    <message key="citations.by-text" source="By text">By text</message>
+    <message key="citations.by-synfunc" source="By Syntactic Function">By Syntactic Function</message>
+    <message key="citations.by-synfunc-tree" source="By Syntactic Function(tree)">By Syntactic Function(tree)</message>
+    <message key="citations.by-semantic-feature" source="By Semantic Feature">By Semantic Feature</message>
+    <message key="citations.by-pos" source="By Part Of Speech">By Part Of Speech</message>
+    <message key="citations.none" source="None">None</message>
+    <message key="citations.total" source="Total:">Total:</message>
+
+    <message key="signup.project-description" source="The TLS Project is a collaborative research project, concerned with all aspects of the Chinese culture as transmitted through its textual sources.">The TLS Project is a collaborative research project, concerned with all aspects of the Chinese culture as transmitted through its textual sources.</message>
+    <message key="signup.platform-description" source="This website is the main platform for this work. It allows to prepare, edit, analyze, annotate and translate the texts.">This website is the main platform for this work. It allows to prepare, edit, analyze, annotate and translate the texts.</message>
+    <message key="signup.privacy-description" source="This system is still work in progress, but a limited number of accounts are available at this moment. The accounts are free of charge and there is no advertisement or tracking on the site. Your personal data will only be kept on the server and not shared with anyone. If you request deletion of the account, all personal information will be deleted, except your name as far as it is associated with data items.">This system is still work in progress, but a limited number of accounts are available at this moment. The accounts are free of charge and there is no advertisement or tracking on the site. Your personal data will only be kept on the server and not shared with anyone. If you request deletion of the account, all personal information will be deleted, except your name as far as it is associated with data items.</message>
+    <message key="signup.languages" source="If you are interested, please fill in the information below and let us now. You may use English, Chinese, Japanese, Korean or German when filling out this form.">If you are interested, please fill in the information below and let us now. You may use English, Chinese, Japanese, Korean or German when filling out this form.</message>
+    <message key="signup.important" source="Important:">Important:</message>
+    <message key="signup.nickname-prefix" source="this nickname can only contain">this nickname can only contain</message>
+    <message key="signup.letters" source="letters">letters</message>
+    <message key="signup.and-or" source="and/or">and/or</message>
+    <message key="signup.numbers" source="numbers">numbers</message>
+    <message key="signup.nickname-restriction" source=". No other characters, such as a">. No other characters, such as a</message>
+    <message key="signup.space-character" source="space character">space character</message>
+    <message key="signup.allowed" source="are allowed.">are allowed.</message>
+    <message key="signup.password-help" source="Make sure you take note of this password and remember it, you will need it to log in to your account!">Make sure you take note of this password and remember it, you will need it to log in to your account!</message>
+    <message key="signup.email-help" source="Make sure the email is spelled correctly and will receive messages from">Make sure the email is spelled correctly and will receive messages from</message>
+    <message key="signup.website-help" source="If you have a private or institutional website, please let us now.">If you have a private or institutional website, please let us now.</message>
+    <message key="signup.license-prefix" source="All data on this site, with the exception of translations, is made available by the TLS Project under a">All data on this site, with the exception of translations, is made available by the TLS Project under a</message>
+    <message key="signup.license-suffix" source="license. This applies to all of your input as well.">license. This applies to all of your input as well.</message>
+    <message key="signup.translation-license" source="As far as your translations are concerned, you retain your copyright, and are free to publish them wherever you like. You do grant a irrevocable license to the TLS Project to display the translations in the context of the website, but not anywhere else.">As far as your translations are concerned, you retain your copyright, and are free to publish them wherever you like. You do grant a irrevocable license to the TLS Project to display the translations in the context of the website, but not anywhere else.</message>
+    <message key="signup.agree" source="By submitting this form, you agree to these conditions!">By submitting this form, you agree to these conditions!</message>
+    <message key="signup.next-description" source="Shortly after sending this form, you should receive an automated message to verify your email address. You will have to click on a link that has been sent to you. Only after the mail has been verified will the review process begin. If you are accepted, you will receive an email notification and can start to use your account.">Shortly after sending this form, you should receive an automated message to verify your email address. You will have to click on a link that has been sent to you. Only after the mail has been verified will the review process begin. If you are accepted, you will receive an email notification and can start to use your account.</message>
+    <message key="signup.password-mismatch" source="Passwords do not match.">Passwords do not match.</message>
+    <message key="signup.captcha-label" source="To make sure, only humans sign up, here is a random question:">To make sure, only humans sign up, here is a random question:</message>
+    <message key="signup.captcha-question" source="What is twelve times thirteen? (write the answer in numbers)">What is twelve times thirteen? (write the answer in numbers)</message>
+
+    <message key="settings.intro-prefix" source="Here are settings to fine-tune the place, type and number of">Here are settings to fine-tune the place, type and number of</message>
+    <message key="settings.items" source="items">items</message>
+    <message key="settings.intro-middle" source="to display in different">to display in different</message>
+    <message key="settings.contexts" source="contexts:">contexts:</message>
+    <message key="settings.wikidata" source="Wikidata Search and Links">Wikidata Search and Links</message>
+    <message key="settings.links" source="Links to external resources">Links to external resources</message>
+    <message key="settings.add-reference" source="Add reference">Add reference</message>
+    <message key="settings.add-bibliography" source="Add bibliographic item">Add bibliographic item</message>
+    <message key="settings.context-label" source="Context:">Context:</message>
+    <message key="settings.select-option" source="Select here from the following options:">Select here from the following options:</message>
+    <message key="settings.help-title" source="Open documentation for this item">Open documentation for this item</message>
+    <message key="settings.concept-page" source="The page displaying a Concept">The page displaying a Concept</message>
+    <message key="settings.rhetdev-page" source="The page displaying a Rhetorical Device">The page displaying a Rhetorical Device</message>
+    <message key="settings.word-definition" source="The definition of a word">The definition of a word</message>
+    <message key="settings.attribution-floater" source="The attribution floater">The attribution floater</message>
+    <message key="settings.search-results" source="The area at the beginning of the display of search results for texts and words.">The area at the beginning of the display of search results for texts and words.</message>
+    <message key="settings.text-info" source="A section in the text info display">A section in the text info display</message>
+    <message key="settings.delete-context" source="Delete this context.">Delete this context.</message>
+    <message key="settings.bookmarks-prefix" source="Here are your currently defined bookmarks. Bookmarks register a">Here are your currently defined bookmarks. Bookmarks register a</message>
+    <message key="settings.specific-location" source="specific location">specific location</message>
+    <message key="settings.bookmarks-middle" source="in a text for you to come back any time. If you">in a text for you to come back any time. If you</message>
+    <message key="settings.rate" source="rate">rate</message>
+    <message key="settings.bookmarks-access" source="a text, you can access the">a text, you can access the</message>
+    <message key="settings.recent-location" source="most recent location">most recent location</message>
+    <message key="settings.bookmarks-menu" source="through red-star">through red-star</message>
+    <message key="settings.menu-above" source="menu above.">menu above.</message>
+    <message key="settings.delete-instruction-prefix" source="In the list below, click on the">In the list below, click on the</message>
+    <message key="settings.delete-instruction-suffix" source="to delete a bookmark.">to delete a bookmark.</message>
+    <message key="settings.delete-bookmark" source="Delete this bookmark.">Delete this bookmark.</message>
+    <message key="settings.additional-prefix" source="additional resources or">additional resources or</message>
+    <message key="settings.select-lower" source="select">select</message>
+    <message key="settings.additional-suffix" source="which to show.">which to show.</message>
+    <message key="settings.available-resources" source="Available resources:">Available resources:</message>
+    <message key="settings.basic" source="Basic">Basic</message>
+    <message key="settings.additional" source="Additional">Additional</message>
+
+    <message key="observations.title" source="Observations in the TLS">Observations in the TLS</message>
+    <message key="observations.add-template" source="Add new template">Add new template</message>
+    <message key="observations.edit-template" source="Edit template">Edit template</message>
+    <message key="observations.show" source="Show observations">Show observations</message>
+    <message key="observations.inline" source="inline">inline</message>
+    <message key="observations.block" source="block">block</message>
+    <message key="observations.ingredient" source="Ingredient">Ingredient</message>
+    <message key="observations.disease" source="Disease condition">Disease condition</message>
+    <message key="observations.person" source="Person">Person</message>
+    <message key="observations.place" source="Place">Place</message>
+    <message key="observations.rhetorical-device" source="Rhetorical Device">Rhetorical Device</message>
+    <message key="observations.comment" source="Comment">Comment</message>
+    <message key="observations.recipe" source="Recipe">Recipe</message>
+    <message key="observations.biographical" source="Biographical entry">Biographical entry</message>
+
+    <message key="activity.recent" source="Recent activity as of">Recent activity as of</message>
+    <message key="activity.attributions" source="Attributions">Attributions</message>
+    <message key="activity.attribution-total" source="Total number of attributions made since Aug. 28, 2019:">Total number of attributions made since Aug. 28, 2019:</message>
+    <message key="activity.most-recent" source="The most recent attribution was">The most recent attribution was</message>
+    <message key="activity.ago" source="ago:">ago:</message>
+    <message key="activity.translation-lines" source="Lines of translations">Lines of translations</message>
+    <message key="activity.translation-total" source="Total number of lines translated since Aug. 28, 2019:">Total number of lines translated since Aug. 28, 2019:</message>
+    <message key="activity.ai-prefix" source="This does not include AI generated output, which is">This does not include AI generated output, which is</message>
+    <message key="activity.ai-suffix" source="lines, but some hand-generated AI requests using the 'AI' button.">lines, but some hand-generated AI requests using the 'AI' button.</message>
+    <message key="duration.years" source="{count} years">{count} years</message>
+    <message key="duration.year" source="{count} year">{count} year</message>
+    <message key="duration.months" source="{count} months">{count} months</message>
+    <message key="duration.month" source="{count} month">{count} month</message>
+    <message key="duration.days" source="{count} days">{count} days</message>
+    <message key="duration.day" source="{count} day">{count} day</message>
+    <message key="duration.hours" source="{count} hours">{count} hours</message>
+    <message key="duration.hour" source="{count} hour">{count} hour</message>
+    <message key="duration.minutes" source="{count} minutes">{count} minutes</message>
+    <message key="duration.minute" source="{count} minute">{count} minute</message>
+    <message key="duration.seconds" source="{count} seconds">{count} seconds</message>
+    <message key="duration.second" source="{count} second">{count} second</message>
+
+    <message key="textlist.available" source="Available texts:">Available texts:</message>
+    <message key="textlist.core" source="Core Texts">Core Texts</message>
+    <message key="textlist.more" source="More Texts">More Texts</message>
+    <message key="textlist.starred" source="Starred Texts">Starred Texts</message>
+    <message key="textlist.new" source="New Texts">New Texts</message>
+    <message key="textlist.recent-title" source="Recently added texts">Recently added texts</message>
+
+    <message key="ui.show-annotations" source="Press here to show annotations.">Press here to show annotations.</message>
+    <message key="ui.end-editing-title" source="Click here to end editing">Click here to end editing</message>
+    <message key="ui.ai-translation-title" source="Translation generated by AI">Translation generated by AI</message>
+    <message key="ui.opened-exide" source="Opened code in existing eXide window.">Opened code in existing eXide window.</message>
+    <message key="ui.cancel-move" source="Cancelling move to store data. Please press button again.">Cancelling move to store data. Please press button again.</message>
+    <message key="ui.new-concept-prompt" source="Please enter the name of the new concept:">Please enter the name of the new concept:</message>
+    <message key="ui.new-synfunc-prompt" source="No syntactic function '{function}' defined. If you want to define a new one, please enter the definition here:">No syntactic function '{function}' defined. If you want to define a new one, please enter the definition here:</message>
+    <message key="ui.new-synfunc-saved" source="New syntactic function has been saved.">New syntactic function has been saved.</message>
+    <message key="ui.sw-definition-required" source="Newly defined SW need a definition. Can not save SW to concept.">Newly defined SW need a definition. Can not save SW to concept.</message>
+    <message key="ui.no-concept-confirm" source="No existing concept selected. Do you want create a new concept named {concept} ?">No existing concept selected. Do you want create a new concept named {concept} ?</message>
+    <message key="ui.no-synfunc" source="No syntactic function defined. Can not save SW to concept.">No syntactic function defined. Can not save SW to concept.</message>
+    <message key="ui.guangyun-required" source="Guangyun has not been selected!">Guangyun has not been selected!</message>
+    <message key="ui.email-sent" source="Email has been sent to {email}">Email has been sent to {email}</message>
+    <message key="ui.email-unregistered" source="Email is not registered {email}">Email is not registered {email}</message>
+    <message key="ui.concept-id-required" source="Concept ID not set. Please select the concept name with the mouse!">Concept ID not set. Please select the concept name with the mouse!</message>
+    <message key="ui.unsaved-nedit" source="Unsaved data exist, do you want to save (nedit)?">Unsaved data exist, do you want to save (nedit)?</message>
+    <message key="ui.unsaved-translation" source="Unsaved data exist, do you want to save? (tr)">Unsaved data exist, do you want to save? (tr)</message>
+    <message key="ui.click-yellow-eye" source="Click the yellow eye to end the editing.">Click the yellow eye to end the editing.</message>
+    <message key="ui.delete-line-confirm" source="'{line}' ({id}) will be deleted and removed, do you want to proceed?.">'{line}' ({id}) will be deleted and removed, do you want to proceed?.</message>
+    <message key="ui.new-rhetdev-prompt" source="No existing rhetorical device selected. Do you want to create a new one?">No existing rhetorical device selected. Do you want to create a new one?</message>
+    <message key="ui.delete-used-confirm" source="'{item}' has been used in attributions, do you want to proceed? All attributions will be deleted as well.">'{item}' has been used in attributions, do you want to proceed? All attributions will be deleted as well.</message>
+    <message key="ui.url-copied" source="URL: {url} copied to clipboard!">URL: {url} copied to clipboard!</message>
+    <message key="ui.delete-translation-confirm" source="Do you really want to delete this translation?">Do you really want to delete this translation?</message>
+    <message key="ui.select-user" source="Please select a user!">Please select a user!</message>
+
+    <message key="toast.unknown-detail" source="An unknown error happened on the system.{detail}">An unknown error happened on the system.{detail}</message>
+    <message key="toast.could-not-save" source="Could not save: {reason}">Could not save: {reason}</message>
+    <message key="toast.word-moving-name" source="Word {word} is being moved.">Word {word} is being moved.</message>
+    <message key="toast.word-move-complete" source="Move of {word} has been completed.">Move of {word} has been completed.</message>
+    <message key="toast.concept-reload" source="Concept has been modified/deleted. Please reload page to see the effect.">Concept has been modified/deleted. Please reload page to see the effect.</message>
+    <message key="toast.definition-saved" source="Modification for definition saved.">Modification for definition saved.</message>
+    <message key="toast.problem-response" source="PROBLEM: {status} {response}">PROBLEM: {status} {response}</message>
+    <message key="toast.problem-detail" source="PROBLEM: {detail}">PROBLEM: {detail}</message>
+    <message key="toast.problem-compact" source="PROBLEM{detail}">PROBLEM{detail}</message>
+    <message key="toast.translation-line-saved" source="Translation for line {line} saved.">Translation for line {line} saved.</message>
+    <message key="toast.line-saved" source="Modification for line {line} saved.">Modification for line {line} saved.</message>
+    <message key="toast.line-deleted" source="Deletion for line {id} completed.">Deletion for line {id} completed.</message>
+    <message key="toast.synfunc-updated" source="Syntactic function updated.">Syntactic function updated.</message>
+    <message key="toast.semfeat-updated" source="Semantic feature updated.">Semantic feature updated.</message>
+    <message key="toast.list-display" source="List display option changed.">List display option changed.</message>
+    <message key="toast.observation-saved" source="Observation location {item} saved.">Observation location {item} saved.</message>
+    <message key="toast.observation-error" source="Could not save observation. {detail}">Could not save observation. {detail}</message>
+    <message key="toast.synonyms-saved" source="New synonyms for {concept} saved.">New synonyms for {concept} saved.</message>
+    <message key="toast.item-saved" source="New item {item} saved.">New item {item} saved.</message>
+    <message key="toast.checking-usage" source="Checking for usage, please wait.">Checking for usage, please wait.</message>
+    <message key="toast.synfunc-deleted" source="Syntactic function entry had been deleted.">Syntactic function entry had been deleted.</message>
+    <message key="toast.generic-item-saved" source="{item} has been saved.">{item} has been saved.</message>
+    <message key="toast.generic-item-deleted" source="{item} has been deleted.">{item} has been deleted.</message>
+    <message key="toast.pinyin-saved" source="Pinyin has been saved. Please reload page to see all changes.">Pinyin has been saved. Please reload page to see all changes.</message>
+    <message key="toast.pronunciation-deleted" source="Pronounciation has been deleted.">Pronounciation has been deleted.</message>
+    <message key="toast.pronunciation-used" source="Pronounciation is in use, can not be deleted.">Pronounciation is in use, can not be deleted.</message>
+    <message key="toast.gloss-saved" source="Gloss has been saved.">Gloss has been saved.</message>
+    <message key="toast.text-category-saved" source="Text category has been saved.">Text category has been saved.</message>
+    <message key="toast.text-date-saved" source="Textdate has been saved.">Textdate has been saved.</message>
+    <message key="toast.vote" source="Your vote has been registered. Thank you">Your vote has been registered. Thank you</message>
+    <message key="toast.request-deleted" source="The request has been deleted.">The request has been deleted.</message>
+    <message key="toast.request-approved" source="The request has been approved. Thank you">The request has been approved. Thank you</message>
+    <message key="toast.tag-saved" source="Tag {tag} for {count} item(s) saved.">Tag {tag} for {count} item(s) saved.</message>
+    <message key="toast.url-saved" source="New URL saved.">New URL saved.</message>
+    <message key="toast.resource-saved" source="Resource saved.">Resource saved.</message>
+    <message key="toast.translation-deleted" source="Translation has been deleted.">Translation has been deleted.</message>
+    <message key="toast.pagebreak-saved" source="Pagebreak saved.">Pagebreak saved.</message>
+    <message key="toast.variant-recorded" source="Variant recorded.">Variant recorded.</message>
+    <message key="toast.request-received" source="Request received. Please leave a few days for processing">Request received. Please leave a few days for processing</message>
+    <message key="toast.request-processed" source="Request processed">Request processed</message>
+    <message key="toast.permission-added" source="Permission added for user {user}">Permission added for user {user}</message>
+    <message key="toast.permission-add-error" source="Error occured when trying to add permission">Error occured when trying to add permission</message>
+    <message key="toast.permission-revoked" source="Permission revoked for user {user}">Permission revoked for user {user}</message>
+    <message key="toast.permission-revoke-error" source="Error occured when trying to revoke permission">Error occured when trying to revoke permission</message>
 </catalogue>

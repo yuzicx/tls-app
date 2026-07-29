@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div xml:lang="zh-Hans">
+  <div xml:id="for-guests">
+    <h3>欢迎访问汉学文典（HXWD）网站</h3>
+    <p>本网站面向有兴趣阅读和翻译中国古代文献的读者。要有效使用本网站，需要具备一定的中文基础。</p>
+    <p>您无需登录即可<a href="browse.html?type=welcome">浏览本站</a>，但许多功能仅向注册用户开放。</p>
+    <p>目前<a href="https://docs.hxwd.org" target="docs">使用文档</a>仍不完整，但其中的信息或许仍有帮助。</p>
+    <p>您可以从以下文本开始阅读：</p>
+    <ul>
+      <li><a href="textview.html?location=KR1h0004">Lunyu (Analects of Confucius)</a></li>
+      <li><a href="textview.html?location=KR1h0001">Mengzi (Mencius)</a></li>
+      <li><a href="textview.html?location=KR3a0002">Xunzi (Hsün-tzu)</a></li>
+      <li><a href="textview.html?location=KR1d0052">Liji (Li-chi, Book of Rites)</a></li>
+      <li><a href="textview.html?location=KR1f0001">Xiaojing (Hsiao-ching, Classic of Filial Piety)</a></li>
+      <li><a href="textview.html?location=KR5c0126">Zhuangzi (Chuang-tzu)</a></li>
+      <li><a href="textview.html?location=KR5c0057">Laozi (Lao-tzu, Daodejing, Tao-Te-ching)</a></li>
+      <li><a href="textview.html?location=KR3j0010">Huainantzu (Huai-nan-tzu)</a></li>
+      <li><a href="textview.html?location=KR5c0124">Liezi (Lieh-tzu)</a></li>
+      <li><a href="textview.html?location=CH1a0938">Mozi (Mo-tzu)</a></li>
+      <li><a href="textview.html?location=KR1c0001">Shijing (Shih-ching, Book of Odes)</a></li>
+      <li><a href="textview.html?location=KR4a0001">Chuci (Songs of the South)</a></li>
+      <li><a href="textview.html?location=KR3c0005">Han Feizi (Han Fei-tzu)</a></li>
+      <li><a href="textview.html?location=KR3c0004">Shangjunshu (Book of Lord Shang)</a></li>
+      <li><a href="textview.html?location=KR3b0003">Sunzi (Sun-tzu, Art of War)</a></li>
+      <li><a href="textview.html?location=KR1b0061">Shangshu (Book of Documents)</a></li>
+      <li><a href="textview.html?location=KR1e0001">Zuozhuan (Tso-chuan, Zuo Commentary)</a></li>
+      <li><a href="textview.html?location=CH1b0943_CHANT_176-7a.5&amp;prec=0&amp;foll=357">Ban Zhao: Lessons for Women</a></li>
+    </ul>
+    <p>也可以查看<a href="search.html?search-type=12"><b>完整文本列表</b></a>。</p>
+    <p>有关本站使用 AI 翻译的说明，请参阅<a href="browse.html?type=ai-rationale">此处</a>。</p>
+    <p>搜索数据库：</p>
+    <form action="search.html" class="form-inline my-2 my-lg-0" method="get">
+      <input type="hidden" name="textid" value=""/>
+      <input id="query-inp" name="query" class="form-control w-50 mr-sm-2 chn-font" type="search" placeholder="搜索" aria-label="搜索" value=""/>
+      <span class="mr-1">范围</span>
+      <select class="form-control input-sm" name="search-type">
+        <option selected="true" value="1">文本</option>
+        <option value="7">标题</option>
+        <option value="2">词典</option>
+        <option value="3">翻译</option>
+        <option value="4">全部</option>
+        <option value="10">参考文献</option>
+      </select>
+      <button id="search-submit" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+        <img class="icon" src="resources/icons/open-iconic-master/svg/magnifying-glass.svg"/>
+      </button>
+    </form>
+    <p><b><a href="#" data-toggle="modal" data-target="#loginDialog">登录</a></b>，或<br/><br/>
+      <a href="signup.html"><b>申请</b>加入 TLS 项目。</a>
+    </p>
+  </div>
+  <div xml:id="for-users">
+    <div>
+      <h3>欢迎回来！</h3>
+      <p>以下是您最近查看过的文本：</p>
+      <ul>{for $l in $r return $l}</ul>
+      <p>有关本站使用 AI 翻译的说明，请参阅<a href="browse.html?type=ai-rationale">此处</a>。</p>
+      <p>在出版物中使用 TLS 时，请注明本项目。</p>
+    </div>
+  </div>
+</div>
