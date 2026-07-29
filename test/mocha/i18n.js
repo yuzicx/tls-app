@@ -113,6 +113,14 @@ describe('interface catalogues', function () {
       .to.equal('尚未定义句法功能“SUBJ”。如需新建，请在此输入定义：')
     expect(i18n.fromSource('Tag reviewed for 12 item(s) saved.'))
       .to.equal('已为 12 个项目保存标签“reviewed”。')
+    expect(i18n.fromSource('Found 1118 matches, showing 1 to 50'))
+      .to.equal('找到 1118 个匹配项，显示第 1 至 50 项')
+    expect(i18n.fromSource('line 23 / 42%'))
+      .to.equal('第 23 行 / 42%')
+    expect(i18n.fromSource('Resp: CW'))
+      .to.equal('责任人：CW')
+    expect(i18n.fromSource('Search 麒麟 in Kanseki Repository'))
+      .to.equal('在汉籍リポジトリ中检索“麒麟”')
   })
 
   it('contains the global navigation, account and search messages', function () {

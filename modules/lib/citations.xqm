@@ -353,7 +353,7 @@ return
 <div class="col-sm-1" title="{$creation-date}"><span class="chn-font">{$zi}</span> ({$pr}){lct:set-value('chars', $zi)}</div>
 <div class="col-sm-1"><a href="concept.html?concept={$concept}{$node//tei:sense/@corresp}">{$concept}</a> {lct:set-value('concept', $concept)}</div>
 <div class="col-sm-4"><a href="textview.html?location={$target}{if ($type='remote')then '&amp;mode=remote'else()}" class="font-weight-bold">{$src, $loc}</a>&#160;{$line}{if (1) then (<br/>,
-   <button class="btn small" type="button" title="More translations" onclick="show_dialog('att-tr-dialog', {{'line': '{$line}', 'seg_id' : '{$target}', 'att_id' : '{$attid}'}})">
+   <button class="btn small" type="button" title="More translations" data-i18n-title="search.more-translations" onclick="show_dialog('att-tr-dialog', {{'line': '{$line}', 'seg_id' : '{$target}', 'att_id' : '{$attid}'}})">
 <img class="icon"  src="resources/icons/octicons/svg/info.svg"/></button>,
 <span id="{$attid}-tr">{$tr}</span>
 ) else ()}</div>

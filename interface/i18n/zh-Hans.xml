@@ -53,6 +53,136 @@
     <message key="search.searching" source="Searching, please wait...">正在搜索，请稍候……</message>
     <message key="search.loading" source="Loading the list, please wait a moment.">正在加载列表，请稍候。</message>
     <message key="search.retrieving" source="Retrieving data, please wait...">正在获取数据，请稍候……</message>
+    <message key="search.searching-in" source="Searching in">检索范围：</message>
+    <message key="search.for" source="for">检索内容：</message>
+    <message key="search.within-text" source="within text">指定文本：</message>
+    <message key="search.catalog" source="Catalog">目录</message>
+    <message key="search.subcategory-excerpt" source="excerpt for subcategory">子类摘录：</message>
+    <message key="search.items" source="({count} items)">（{count} 项）</message>
+    <message key="search.time" source="Time:">用时：</message>
+    <message key="search.found-one" source="Found {count} match, showing {start} to {end}">找到 {count} 个匹配项，显示第 {start} 至 {end} 项</message>
+    <message key="search.found-many" source="Found {count} matches, showing {start} to {end}">找到 {count} 个匹配项，显示第 {start} 至 {end} 项</message>
+    <message key="search.sorting-disabled" source="Sorting is disabled, since we have more than {count} hits.">匹配项超过 {count} 个，排序功能已停用。</message>
+    <message key="search.filter-help" source="Select a facet from the display to the left to filter and reduce the number of hits and apply sorting or click here to change the setting.">请在左侧选择分面以缩小结果范围并启用排序，或点击此处修改设置。</message>
+    <message key="search.facets" source="Facets">分面</message>
+    <message key="search.configure" source="Configure...">配置……</message>
+    <message key="search.total-hits" source="Total number of hits:">匹配项总数：</message>
+    <message key="search.result-matrix" source="Result matrix">结果矩阵</message>
+    <message key="search.applied-filters" source="Applied filters:">已应用筛选：</message>
+    <message key="search.release-filters-title" source="To release filters find 'Click here to display all matches' in the center of the page">要取消筛选，请点击页面中部的“点击此处显示全部匹配项”</message>
+    <message key="search.not-assigned" source="Not assigned">未分类</message>
+    <message key="search.filter-category-title" source="Click here to filter on this category">点击按此类别筛选</message>
+    <message key="search.aggregate-title" source="Aggregate over this and lower levels">汇总本级及下级</message>
+    <message key="search.count-level-title" source="Count on this level only">仅统计本级</message>
+    <message key="search.ratio-larger" source="{ratio}: This result is larger than expected">{ratio}：此结果高于预期</message>
+    <message key="search.ratio-smaller" source="{ratio}: This result is smaller than expected">{ratio}：此结果低于预期</message>
+    <message key="search.ratio-expected" source="{ratio}: This result is in the expected range">{ratio}：此结果处于预期范围</message>
+    <message key="search.annotations" source="Annotations">标注</message>
+    <message key="search.creation-period" source="Period of creation of text">文本创作时期</message>
+    <message key="search.classified-catalog" source="Classified catalog">分类目录</message>
+    <message key="search.all-matches" source="Click here to display all matches">点击此处显示全部匹配项</message>
+    <message key="search.tabulated" source="Click here to display matches tabulated by text">点击此处按文本汇总显示匹配项</message>
+    <message key="search.only-translated" source="Click here to display only {count} matching lines that have a translation">点击此处仅显示已有翻译的 {count} 个匹配行</message>
+    <message key="search.only-in-text" source="Click here to display only {count} matches in {title}">点击此处仅显示《{title}》中的 {count} 个匹配项</message>
+    <message key="search.sorting-rating" source="Sorting by text rating.">当前按文本评分排序。</message>
+    <message key="search.sort-date" source="Click here to sort by text date instead.">点击改为按文本年代排序。</message>
+    <message key="search.sorting-date" source="Sorting by text date.">当前按文本年代排序。</message>
+    <message key="search.sort-favorites" source="Click here to sort your favorite texts first.">点击优先显示您收藏的文本。</message>
+    <message key="search.rating-menu-help" source="Go to the menu -&gt; Browse -&gt; Texts to rate your favorite texts.">请前往“浏览 → 文本”为常用文本评分。</message>
+    <message key="search.more-translations" source="More translations">更多翻译</message>
+    <message key="search.text-info-title" source="Information about this text">查看文本信息</message>
+    <message key="search.tab-found" source="Found {count} matches, shown by text.">找到 {count} 个匹配项，按文本显示。</message>
+    <message key="search.match-count" source="{count} match(es)">{count} 个匹配项</message>
+    <message key="search.existing-tls-texts" source="Existing texts in TLS:">TLS 已收录文本：</message>
+    <message key="search.kanseki-texts" source="Texts in the Kanseki Repository:">汉籍リポジトリ中的文本：</message>
+    <message key="search.requests" source="Requests:">申请数：</message>
+    <message key="search.view-kanseki" source="View {title} in Kanseki Repository (External link)">在汉籍リポジトリ中查看《{title}》（外部链接）</message>
+    <message key="search.meaning-taxonomy" source="Taxonomy of meanings:">义项分类：</message>
+    <message key="search.phonetic-profile" source="Phonetic profile:">语音信息：</message>
+    <message key="search.show-meaning-taxonomy" source="Show taxonomy of meanings for {character}">查看“{character}”的义项分类</message>
+    <message key="search.show-phonetic-profile" source="Show phonetic profile for {character}">查看“{character}”的语音信息</message>
+    <message key="search.kanseki-search" source="Search {query} in Kanseki Repository">在汉籍リポジトリ中检索“{query}”</message>
+    <message key="search.algorithm-label" source="Select algorithm for display">选择显示算法</message>
+    <message key="search.algorithm-title" source="This algorithm is used to evaluate the matches in every category against the expected matches.">此算法用于比较各类别的实际匹配数与预期匹配数。</message>
+    <message key="search.none" source="None">无</message>
+    <message key="search.ratio-characters" source="Matches / Total Characters (MF/ICF)">匹配数 / 总字符数（MF/ICF）</message>
+    <message key="search.ratio-segments" source="Matches / Segments (MF/ISF)">匹配数 / 文本段数（MF/ISF）</message>
+    <message key="search.cutoff-label" source="Select cutoff value {value}">选择阈值 {value}</message>
+    <message key="search.cutoff-title" source="Cutoff value used for the different display colors.">用于区分显示颜色的阈值。</message>
+    <message key="search.save-settings" source="Save Settings">保存设置</message>
+    <message key="search.update-page" source="Update Page">更新页面</message>
+    <message key="search.category" source="Category">类别</message>
+    <message key="search.texts-heading" source="Texts">文本</message>
+    <message key="search.sum" source="Sum">总计</message>
+    <message key="search.matches" source="Matches">匹配数</message>
+    <message key="search.sort-limit-hint" source="This is the number of hits beyond which searching will be disabled. The current value is {count}. Enter 0 to switch off the disabling.">超过此数量时将停用搜索排序。当前值为 {count}；输入 0 可取消限制。</message>
+    <message key="search.link-selected" source="Link selected items to this line">将所选项目关联到此行</message>
+    <message key="search.advanced-title" source="Advanced Search">高级搜索</message>
+
+    <message key="pagination.label" source="Page navigation">分页导航</message>
+    <message key="pagination.first" source="First">首页</message>
+    <message key="pagination.previous" source="Previous">上一页</message>
+    <message key="pagination.next" source="Next">下一页</message>
+    <message key="pagination.last" source="Last">末页</message>
+    <message key="pagination.go-first" source="Go to the first page">前往首页</message>
+    <message key="pagination.go-previous" source="Go to the previous page">前往上一页</message>
+    <message key="pagination.go-next" source="Go to the next page">前往下一页</message>
+    <message key="pagination.go-last" source="Go to the last page">前往末页</message>
+
+    <message key="textview.more-information" source="Click here for more information">点击查看更多信息</message>
+    <message key="textview.source" source="Source:">来源：</message>
+    <message key="textview.translation-by" source="Translation by">译者：</message>
+    <message key="textview.select-annotation" source="Select type of annotation:">选择标注类型：</message>
+    <message key="textview.line-position" source="line {line} / {percent}%">第 {line} 行 / {percent}%</message>
+    <message key="textview.facsimile-title" source="Click here to display a facsimile of this page: {page}">点击显示此页影像：{page}</message>
+    <message key="textview.no-facsimile" source="No facsimile available">无可用影像</message>
+    <message key="textview.edition" source="Edition:">版本：</message>
+    <message key="textview.catalog-category" source="Catalog category:">目录分类：</message>
+    <message key="textview.edit-category" source="Edit category">编辑分类</message>
+    <message key="textview.dates" source="Dates:">年代：</message>
+    <message key="textview.edit-date" source="Edit date">编辑年代</message>
+    <message key="textview.add-date" source="Add date">添加年代</message>
+    <message key="textview.rating" source="Rating:">评分：</message>
+    <message key="textview.rating-title" source="Click on one of the stars to rate the text and add to the ★ menu.">点击星标为文本评分，并将其加入 ★ 菜单。</message>
+    <message key="textview.text-length" source="Text length:">文本长度：</message>
+    <message key="textview.characters" source="{count} characters.">{count} 字。</message>
+    <message key="textview.comment" source="Comment:">备注：</message>
+    <message key="textview.wikidata" source="Wikidata:">Wikidata：</message>
+    <message key="textview.references" source="References:">参考文献：</message>
+    <message key="textview.show-bibliography" source="Show bibliography">查看参考文献</message>
+    <message key="textview.add-reference-title" source="Add new reference">添加新参考文献</message>
+    <message key="textview.add-reference" source="Add reference to source or witness">添加底本或见证本参考文献</message>
+    <message key="textview.responsible" source="Resp: {person}">责任人：{person}</message>
+
+    <message key="textlist.title" source="TLS Text list">TLS 文本目录</message>
+    <message key="textlist.count" source="There are currently {count} texts available.">当前共有 {count} 部可用文本。</message>
+    <message key="textlist.browse-help" source="Please click on the links in the list below to browse the titles or search for titles in the search box.">请点击下方列表中的链接浏览书名，或在搜索框中检索书名。</message>
+    <message key="textlist.doc-intro-prefix" source="This page allows you to browse the contents of the TLS and discover what texts are available. The texts are basically classified into the four traditional bibliographic categories. However, the Daoist and Buddhist texts, which are usually part of the">本页用于浏览 TLS 收录内容并查看可用文本。文本基本按传统四部分类；但道教与佛教文本在传统分类中通常归入</message>
+    <message key="textlist.doc-intro-suffix" source="in the traditional classification are treated as top level categories, for a total of six top level categories, as shown in Table 1.">，此处则分别列为一级类别，因此共设六个一级类别，见表 1。</message>
+    <message key="textlist.table-one" source="Table 1:">表 1：</message>
+    <message key="textlist.six-categories-prefix" source="The six top categories (as in the">六个一级类别（沿用</message>
+    <message key="textlist.close-parenthesis" source=")">）</message>
+    <message key="textlist.kr1-description" source="Confucian Classics (incl. music, dictionaries and elementary learning)">儒家经典（包括乐类、字书与小学类）</message>
+    <message key="textlist.kr2-description" source="Historiography and politics">史学与政治</message>
+    <message key="textlist.kr3-description" source="Masters, philosophers and treatises; medical and mathematical texts">诸子、哲学与论著，以及医书和算书</message>
+    <message key="textlist.kr4-description" source="Anthologies (Poetry and Collected Writings)">诗文总集与别集</message>
+    <message key="textlist.kr5-description" source="Daoist texts">道教文本</message>
+    <message key="textlist.kr6-description" source="Buddhist texts">佛教文本</message>
+    <message key="textlist.catalog-explanation" source="In the classified catalog, the four categories have been folded into one (artificial) top level, in order to allow direct comparison to the Daoist and Buddhist texts.">分类目录将传统四部折叠在一个人为设置的上级类别中，以便与道教、佛教文本直接比较。</message>
+    <message key="textlist.usage" source="Usage">使用方法</message>
+    <message key="textlist.access-prefix" source="To access the classified catalog,">要打开分类目录，请</message>
+    <message key="textlist.click-links" source="click on any of the links">点击任一链接</message>
+    <message key="textlist.access-suffix" source="shown to the left.">（见左侧）。</message>
+    <message key="textlist.specific-prefix" source="If you are looking for a specific title, use the">如需查找特定书名，请使用</message>
+    <message key="textlist.search-function" source="search function in the upper right corner">右上角的搜索功能</message>
+    <message key="textlist.specific-suffix" source="and select &quot;titles&quot; from the dropdown selector.">，并在下拉选项中选择“标题”。</message>
+
+    <message key="browse.about-word-relations" source="About word relations:">词语关系说明：</message>
+    <message key="browse.left-word-heading" source="Left Word">左侧词语</message>
+    <message key="browse.right-word-heading" source="Right Word">右侧词语</message>
+    <message key="browse.text-reference-heading" source="Text / Ref">文本 / 出处</message>
+
+    <message key="citations.analyze-count" source="Analyze the {count} citations currently defined in the system.">分析系统中当前定义的 {count} 条引文。</message>
 
     <message key="account.login" source="Login">登录</message>
     <message key="account.logout" source="Logout">退出</message>
@@ -78,6 +208,11 @@
     <message key="common.loading" source="Loading…">正在加载……</message>
     <message key="common.not-implemented" source="Not yet implemented">尚未实现</message>
     <message key="common.problem" source="A problem occurred.">发生了问题。</message>
+    <message key="common.period" source=".">。</message>
+    <message key="common.semicolon" source=";">；</message>
+    <message key="common.show-more" source="Show more...">显示更多……</message>
+    <message key="common.total" source="Total:">总计：</message>
+    <message key="common.click-to-show" source="Click to show">点击显示</message>
     <message key="common.unknown-error" source="An unknown error happened on the system.">系统发生未知错误。</message>
     <message key="common.saved" source="Modification saved.">修改已保存。</message>
     <message key="common.hxwd-says" source="HXWD says:">汉学文典提示：</message>
