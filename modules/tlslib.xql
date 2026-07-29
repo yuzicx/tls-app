@@ -1621,7 +1621,7 @@ return
          <div class="row">        
            <div class="col-sm-1"/>
            <div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n="textview.text-length">Text length:</span></div>
-           <div class="col-sm-9"><span id="textinfo-charcount" data-i18n-scope="ui">{$charcount || " characters."}</span></div>
+           <div class="col-sm-9"><span id="textinfo-charcount" data-i18n-scope="ui">{$charcount} characters.</span></div>
          </div>   
          <div class="row">
            <div class="col-sm-1"/>
