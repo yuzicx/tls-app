@@ -145,8 +145,13 @@
     } else if (inScope) {
       Array.prototype.slice.call(element.childNodes).forEach(function (child) {
         if (child.nodeType === Node.TEXT_NODE && child.nodeValue.trim()) {
-          var translated = translateSource(child.nodeValue);
-          if (translated !== child.nodeValue) child.nodeValue = translated;
+          var original = child.nodeValue;
+          var translated = translateSource(original);
+          if (translated !== original) {
+            var leadingWhitespace = (original.match(/^\s*/) || [''])[0];
+            var trailingWhitespace = (original.match(/\s*$/) || [''])[0];
+            child.nodeValue = leadingWhitespace + translated.trim() + trailingWhitespace;
+          }
         } else if (child.nodeType === Node.ELEMENT_NODE) {
           translateElement(child, true);
         }

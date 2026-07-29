@@ -145,6 +145,24 @@ describe('interface catalogues', function () {
       .to.equal('在汉籍リポジトリ中检索“麒麟”')
   })
 
+  it('preserves surrounding whitespace when translating interface text nodes', function () {
+    const i18n = createBrowserI18n(simplifiedChinese)
+    const textNode = { nodeType: 3, nodeValue: '  246 Attributions ' }
+    const element = {
+      nodeType: 1,
+      tagName: 'SMALL',
+      childNodes: [textNode],
+      closest() { return this },
+      getAttribute(name) { return name === 'data-i18n-scope' ? 'ui' : null },
+      hasAttribute(name) { return name === 'data-i18n-scope' },
+      querySelectorAll() { return [] }
+    }
+
+    i18n.localize(element)
+
+    expect(textNode.nodeValue).to.equal('  246 个义项标注 ')
+  })
+
   it('contains the global navigation, account and search messages', function () {
     const chinese = valuesByKey(simplifiedChinese)
     ;[
