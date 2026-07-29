@@ -183,9 +183,9 @@ bib:biblio-short($u/ancestor::mods:mods, "title", '')
 }</ul> 
 , $recent := ""
 return 
-<div><h4>Browse the bibliography <button class="btn badge badge-warning ml-2" type="button" onclick="add_ref('')">Add new reference</button></h4>
+<div><h4 data-i18n-scope="ui">Browse the bibliography <button class="btn badge badge-warning ml-2" type="button" onclick="add_ref('')">Add new reference</button></h4>
 
-    <ul class="nav nav-tabs" id="Tab" role="tablist">
+    <ul class="nav nav-tabs" id="Tab" role="tablist" data-i18n-scope="ui">
     <li class="nav-item"> <a class="nav-link" id="aut-tab" role="tab" 
     href="#byauthor" data-toggle="tab">Authors</a></li>
     <li class="nav-item"> <a class="nav-link" id="tit-tab" role="tab" 
@@ -208,11 +208,11 @@ return
     {$topheader}
     </div>
     <div class="tab-pane" id="byusage" role="tabpanel">    
-    <h3>Works which have been most frequently referenced</h3>
+    <h3 data-i18n-scope="ui">Works which have been most frequently referenced</h3>
     {$topusage}
     </div>
     <div class="tab-pane" id="byrecent" role="tabpanel">    
-    <h3>Recently added works</h3>
+    <h3 data-i18n-scope="ui">Recently added works</h3>
     {$recent}
     </div>
     </div>
@@ -276,60 +276,60 @@ return
 <div>
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Responsibility</span></div>
-<div class="col-sm-5">{string-join(for $a in $m/mods:name return bib:display-author-role($a),"; ")}</div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Responsibility</span></div>
+<div class="col-sm-5">{for $a at $position in $m/mods:name return (if ($position > 1) then "; " else (), bib:display-author-role($a))}</div>
 </div>
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Title</span></div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Title</span></div>
 <div class="col-sm-5">{for $t in $m/mods:titleInfo return bib:display-title($t)}</div>
 </div>
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Details</span></div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Details</span></div>
 {if ($m//mods:issuance='continuing') then
-<div class="col-sm-5">(publication){string-join($m/mods:relatedItem//mods:title/text(), ' / ')}: (details){
+<div class="col-sm-5"><span data-i18n-scope="ui">(publication)</span><span data-i18n-scope="content">{string-join($m/mods:relatedItem//mods:title/text(), ' / ')}</span>: <span data-i18n-scope="ui">(details)</span>{
     string-join(($m/mods:relatedItem//mods:part/mods:date/text(), $m/mods:relatedItem//mods:part/mods:detail//text(), $m/mods:relatedItem/mods:part/mods:extent//text() ) , ',') }</div>
 else 
-<div class="col-sm-5">(place){$m//mods:place/mods:placeTerm/text()}: (publisher){$m//mods:publisher/text()}, {$m//mods:dateIssued/text(),$m//mods:copyrightDate/text()}</div>
+<div class="col-sm-5"><span data-i18n-scope="ui">(place)</span>{$m//mods:place/mods:placeTerm/text()}: <span data-i18n-scope="ui">(publisher)</span>{$m//mods:publisher/text()}, {$m//mods:dateIssued/text(),$m//mods:copyrightDate/text()}</div>
 }
 </div>
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Identifier</span></div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Identifier</span></div>
 <div class="col-sm-5">{$m/mods:note[@type="bibliographic-reference"]/text(), $m/mods:identifier[@type="isbn"]}</div>
 </div>
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Topics</span></div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Topics</span></div>
 <div class="col-sm-5">{for $t in $m//mods:topic return <a  class="badge badge-pill badge-light" href="browse.html?type=biblio&amp;filter={$t}&amp;mode=topic">{$t}</a>}</div>
 </div>
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Comments</span></div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Comments</span></div>
 <div class="col-sm-5">{$m/mods:note[@type='general']/text()}</div>
 </div>
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Information basis</span></div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Information basis</span></div>
 <div class="col-sm-5">{$m/mods:note[@type='information-basis']/text()}</div>
 </div>
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Electronic Version</span></div>
-<div class="col-sm-5">{if (string-length($r)>0) then <a class="btn badge" href="textview.html?location={$r/ancestor::tei:TEI/@xml:id}&amp;mode=visit">TLS</a> else ()}<a class="btn badge badge-light" target="GXDS" style="background-color:paleturquoise" href="https://archive.org/search.php?query={string-join(for $n in $m/mods:name return ($n/mods:namePart[@type='given'])[1] || " " || ($n/mods:namePart[@type='family'])[1], ', ')}%20AND%20mediatype%3A%28texts%29 ">Find on Internet Archive</a> <button class="btn badge badge-warning" type="button" onclick="add_url('{$m/@ID}')">Add direct link to this work</button></div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Electronic Version</span></div>
+<div class="col-sm-5">{if (string-length($r)>0) then <a class="btn badge" href="textview.html?location={$r/ancestor::tei:TEI/@xml:id}&amp;mode=visit">TLS</a> else ()}<a class="btn badge badge-light" data-i18n-scope="ui" target="GXDS" style="background-color:paleturquoise" href="https://archive.org/search.php?query={string-join(for $n in $m/mods:name return ($n/mods:namePart[@type='given'])[1] || " " || ($n/mods:namePart[@type='family'])[1], ', ')}%20AND%20mediatype%3A%28texts%29 ">Find on Internet Archive</a> <button class="btn badge badge-warning" data-i18n-scope="ui" type="button" onclick="add_url('{$m/@ID}')">Add direct link to this work</button></div>
 </div>
 { if ($m/mods:location) then
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Registered URLs</span></div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Registered URLs</span></div>
 <div class="col-sm-5"><ul>{for $l in $m/mods:location/mods:url return <li><a href="{$l/text()}">{data($l/@displayLabel)}</a><br/><span class="text-muted">{data($l/@note)}</span></li>}</ul></div>
 </div>
 else ()
 }
 <div class="row">
 <div class="col-sm-2"/>
-<div class="col-sm-2"><span class="font-weight-bold float-right">Referred from</span></div>
+<div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n-scope="ui">Referred from</span></div>
 <div class="col-sm-5">{(: there are duplicates, so we remove them first :) 
          let $entries := 
             for $t in collection($config:tls-data-root)//tei:ref[@target="#"||$uuid] 
@@ -380,7 +380,7 @@ update insert $urlnode into $mods
 };
 
 declare function bib:display-author-role($n as node()*){
-  <span>{if (exists($n/mods:role)) then "(" || $n/mods:role/mods:roleTerm ||"): " else ()} {bib:display-author($n)}</span>
+  <span data-i18n-scope="ui">{if (exists($n/mods:role)) then <span>{"(" || $n/mods:role/mods:roleTerm || "):"}</span> else ()} <span data-i18n-scope="content">{bib:display-author($n)}</span></span>
 };
 
 declare function bib:display-author($n as node()*){
@@ -394,7 +394,7 @@ declare function bib:display-author($n as node()*){
 
 
 declare function bib:display-title($t as node()*){
- <span>{if (exists($t/@lang)) then "(" || data($t/@lang) ||"): " else ()} {$t/mods:title/text()} {$t/mods:subTitle/text()}</span>
+ <span data-i18n-scope="ui">{if (exists($t/@lang)) then <span>{"(" || data($t/@lang) || "):"}</span> else ()} <span data-i18n-scope="content">{$t/mods:title/text()} {$t/mods:subTitle/text()}</span></span>
 };
 
 declare function bib:biblio-search($query, $mode, $textid){
@@ -956,4 +956,3 @@ declare function bib:display-bibl($bibl as node()){
 
 </li>
 };
-

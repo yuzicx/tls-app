@@ -427,13 +427,13 @@ let $tr-node := if (map:contains($map, "tr-seg")) then $map?tr-seg
                 else ($node//tei:seg[@corresp="#"||$map?seg/@xml:id])[1]
 return
 if ($map?ann = 'false') then () else
-<div class="{$map?col-class}" title="{$tit}" lang="{$map?trans-lang}" >
+<div class="{$map?col-class}" title="{$tit}" lang="{$map?trans-lang}" data-i18n-scope="ui">
   {typeswitch ($node)
 case element(tei:TEI) return (if ($node/@type='notes') then
       lli:get-linked-items($map?user, $map?seg/@xml:id) else (),
-      <div class="tr {$map?tr-class}" tabindex="{$map?tabindex}" id="{$map?seg/@xml:id}-{$map?ex}" contenteditable="{$map?editable}">{lrh:tr-seg($tr-node, $map)}</div>  )
+      <div class="tr {$map?tr-class}" tabindex="{$map?tabindex}" id="{$map?seg/@xml:id}-{$map?ex}" contenteditable="{$map?editable}" data-i18n-scope="content">{lrh:tr-seg($tr-node, $map)}</div>  )
 default return
-    <div class="tr" id="{$map?seg/@xml:id}-{$map?ex}"></div>
+    <div class="tr" id="{$map?seg/@xml:id}-{$map?ex}" data-i18n-scope="content"></div>
 
 (:(krx:get-varseg-ed($map?seg/@xml:id, substring-before($node, "::"))):)
 

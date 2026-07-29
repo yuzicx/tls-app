@@ -232,6 +232,98 @@
     <message key="browse.semantic-features-title" source="Semantic Features">Semantic Features</message>
     <message key="browse.rhetorical-devices-title" source="Rhetorical Devices">Rhetorical Devices</message>
 
+    <message key="textview.line-empty" source="line / %">line / %</message>
+    <message key="wikidata.view" source="View {label} in Wikidata (External link)">View {label} in Wikidata (External link)</message>
+    <message key="wikidata.change" source="Click here to change association of {label} with {item}">Click here to change association of {label} with {item}</message>
+    <message key="wikidata.search" source="Click here to search for {label} in WikiData">Click here to search for {label} in WikiData</message>
+
+    <message key="biblio.browse" source="Browse the bibliography">Browse the bibliography</message>
+    <message key="biblio.authors" source="Authors">Authors</message>
+    <message key="biblio.titles" source="Titles">Titles</message>
+    <message key="biblio.topics" source="Topics">Topics</message>
+    <message key="biblio.most-referred" source="Most referred">Most referred</message>
+    <message key="biblio.recently-added" source="Recently added">Recently added</message>
+    <message key="biblio.most-referenced-works" source="Works which have been most frequently referenced">Works which have been most frequently referenced</message>
+    <message key="biblio.recent-works" source="Recently added works">Recently added works</message>
+    <message key="biblio.edit-reference" source="Edit this reference">Edit this reference</message>
+    <message key="biblio.responsibility" source="Responsibility">Responsibility</message>
+    <message key="biblio.title" source="Title">Title</message>
+    <message key="biblio.details" source="Details">Details</message>
+    <message key="biblio.identifier" source="Identifier">Identifier</message>
+    <message key="biblio.comments" source="Comments">Comments</message>
+    <message key="biblio.information-basis" source="Information basis">Information basis</message>
+    <message key="biblio.electronic-version" source="Electronic Version">Electronic Version</message>
+    <message key="biblio.internet-archive" source="Find on Internet Archive">Find on Internet Archive</message>
+    <message key="biblio.add-direct-link" source="Add direct link to this work">Add direct link to this work</message>
+    <message key="biblio.registered-urls" source="Registered URLs">Registered URLs</message>
+    <message key="biblio.referred-from" source="Referred from">Referred from</message>
+    <message key="biblio.publication-marker" source="(publication)">(publication)</message>
+    <message key="biblio.details-marker" source="(details)">(details)</message>
+    <message key="biblio.place-marker" source="(place)">(place)</message>
+    <message key="biblio.publisher-marker" source="(publisher)">(publisher)</message>
+    <message key="biblio.author-marker" source="(author):">(author):</message>
+    <message key="biblio.editor-marker" source="(editor):">(editor):</message>
+    <message key="biblio.translator-marker" source="(translator):">(translator):</message>
+    <message key="biblio.english-marker" source="(eng):">(eng):</message>
+    <message key="biblio.delete-reference" source="Immediately delete this reference">Immediately delete this reference</message>
+
+    <message key="concept.modern-chinese" source="Modern Chinese">Modern Chinese</message>
+    <message key="concept.old-chinese" source="Old Chinese">Old Chinese</message>
+    <message key="concept.old-chinese-criteria" source="Old Chinese Criteria">Old Chinese Criteria</message>
+    <message key="concept.modern-chinese-criteria" source="Modern Chinese Criteria">Modern Chinese Criteria</message>
+    <message key="concept.hyponym" source="Hyponym">Hyponym</message>
+    <message key="concept.hypernym" source="Hypernym">Hypernym</message>
+    <message key="concept.antonym" source="Antonym">Antonym</message>
+    <message key="concept.part-of" source="Part of">Part of</message>
+    <message key="concept.has-part" source="Has part">Has part</message>
+    <message key="concept.see-also" source="See also">See also</message>
+    <message key="concept.register" source="Register">Register</message>
+    <message key="concept.warring-states-currency" source="Warring States Currency">Warring States Currency</message>
+    <message key="concept.old-chinese-contrasts" source="Old Chinese Contrasts">Old Chinese Contrasts</message>
+    <message key="concept.texts-or-translation" source="Texts or Translation">Texts or Translation</message>
+    <message key="concept.chars" source="Chars">Chars</message>
+    <message key="concept.syntactic-function" source="Syntactic Function">Syntactic Function</message>
+    <message key="concept.semantic-feature" source="Semantic Feature">Semantic Feature</message>
+    <message key="concept.alternate-labels" source="Alternate labels">Alternate labels</message>
+    <message key="concept.criteria-notes" source="Criteria and general notes">Criteria and general notes</message>
+    <message key="concept.source-references" source="Source references">Source references</message>
+    <message key="concept.ontology" source="Ontology">Ontology</message>
+    <message key="concept.words-count" source="Words ({count} items)">Words ({count} items)</message>
+    <message key="concept.character-count" source="({count} characters)">({count} characters)</message>
+    <message key="concept.separate-page" source="This moves to a separate page">This moves to a separate page</message>
+    <message key="concept.attribution" source="Attribution">Attribution</message>
+    <message key="concept.change-pinyin" source="Click here to change pinyin">Click here to change pinyin</message>
+    <message key="concept.add-pinyin" source="Click here to add pinyin">Click here to add pinyin</message>
+    <message key="concept.search-word" source="Search for this word">Search for this word</message>
+    <message key="concept.pending" source="Concept pending: not yet attributed for this character">Concept pending: not yet attributed for this character</message>
+    <message key="concept.reveal-syntactic-words" source="click to reveal {count} syntactic words">click to reveal {count} syntactic words</message>
+    <message key="concept.other-hypernyms" source="Other Hypernyms">Other Hypernyms</message>
+    <message key="concept.restore-primary" source="Click here to restore as primary concept">Click here to restore as primary concept</message>
+    <message key="concept.tree-counts" source="anc: {ancestors}/{new}, child: {children}">anc: {ancestors}/{new}, child: {children}</message>
+    <message key="concept.edit" source="Edit concept">Edit concept</message>
+
+    <message key="taxonomy.title" source="Taxonomy of meanings for {item}:">Taxonomy of meanings for {item}:</message>
+    <message key="taxonomy.character-unanalysed" source="The character {item} has not been analyzed yet.">The character {item} has not been analyzed yet.</message>
+    <message key="taxonomy.word-unanalysed" source="The word {item} has not been analyzed yet.">The word {item} has not been analyzed yet.</message>
+    <message key="taxonomy.additional-info" source="Additional information about {item}">Additional information about {item}</message>
+    <message key="taxonomy.criteria" source="Criteria">Criteria</message>
+    <message key="taxonomy.save" source="Save taxonomy">Save taxonomy</message>
+    <message key="taxonomy.leave-edit" source="Leave edit mode">Leave edit mode</message>
+    <message key="taxonomy.edit" source="Edit taxonomy">Edit taxonomy</message>
+    <message key="taxonomy.character-help" source="Hints for editing the character taxonomy">Hints for editing the character taxonomy</message>
+    <message key="taxonomy.word-help" source="Hints for editing the word taxonomy">Hints for editing the word taxonomy</message>
+    <message key="taxonomy.lines-movable" source="Lines can be moved around with the mouse.">Lines can be moved around with the mouse.</message>
+    <message key="taxonomy.highest-level" source="Lines of the highest level indicate the reading for this part of the hierarchy.">Lines of the highest level indicate the reading for this part of the hierarchy.</message>
+    <message key="taxonomy.save-before-leaving" source="Save before leaving the page!">Save before leaving the page!</message>
+    <message key="taxonomy.right-click" source="Start editing the label by right-clicking on it.">Start editing the label by right-clicking on it.</message>
+    <message key="taxonomy.keep-concept-name" source="When editing the label, please leave the name of the concept unchanged at the very end of the label.">When editing the label, please leave the name of the concept unchanged at the very end of the label.</message>
+    <message key="taxonomy.text-after-concept" source="Text after the name of the concept will not be saved.">Text after the name of the concept will not be saved.</message>
+    <message key="taxonomy.delete-subtree" source="&quot;Delete&quot; will delete a subtree. Move lines you want to keep to other subtrees before deleting the upper level item(s).">"Delete" will delete a subtree. Move lines you want to keep to other subtrees before deleting the upper level item(s).</message>
+    <message key="taxonomy.new-concepts" source="There might be some lines at the bottom with new concepts that have been added since the last editing of this character.">There might be some lines at the bottom with new concepts that have been added since the last editing of this character.</message>
+
+    <message key="citations.processing" source="Processing data, just a moment please.">Processing data, just a moment please.</message>
+    <message key="citations.new-item-definition" source="If the new item is not from the list, please add a definition below!">If the new item is not from the list, please add a definition below!</message>
+
     <message key="settings.title" source="Customizable settings for">Customizable settings for</message>
     <message key="settings.display" source="Display settings">Display settings</message>
     <message key="settings.external-resources" source="External resources">External resources</message>

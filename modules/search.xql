@@ -425,10 +425,10 @@ let $st :=  if (string-length($type) > 0) then map:get($config:search-map, $map?
 return
 (if ($map?search-type = $src:search-bib ) then () else
  if ($map?search-type = $src:ngtype) then (
- <h1 id="search-results-top"><span data-i18n="search.searching-in">Searching in</span> <strong data-i18n-scope="content">{if (count(map:keys($map?cat)) > 0) then string-join(for $c in map:keys($map?cat) return lmd:cat-title($map?cat?($c)), " / ") else $st}</strong> <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
+ <h1 id="search-results-top"><span data-i18n="search.searching-in">Searching in</span> <strong>{if (count(map:keys($map?cat)) > 0) then <span data-i18n-scope="content">{string-join(for $c in map:keys($map?cat) return lmd:cat-title($map?cat?($c)), " / ")}</span> else <span data-i18n-scope="ui">{$st}</span>}</strong> <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
 ) else
  if ($map?search-type = $src:search-trans) then (
- <h1 id="search-results-top"><span data-i18n="search.searching-in">Searching in</span> <strong data-i18n-scope="content">{$st}</strong>{if (string-length($map?textid) > 0) then (" ", <span data-i18n="search.within-text">within text</span>, " ", <span data-i18n-scope="content">{lu:get-title($map?textid)}</span>) else ()} <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
+ <h1 id="search-results-top"><span data-i18n="search.searching-in">Searching in</span> <strong data-i18n-scope="ui">{$st}</strong>{if (string-length($map?textid) > 0) then (" ", <span data-i18n="search.within-text">within text</span>, " ", <span data-i18n-scope="content">{lu:get-title($map?textid)}</span>) else ()} <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
 ) else
  if ($map?search-type = $src:textlist) then
    let $count := count($map?hits)
@@ -439,7 +439,7 @@ return
    else src:textlist-doc()
  else
 <div id="search-results-top">
-<h1><span data-i18n="search.searching-in">Searching in</span> <strong data-i18n-scope="content">{$st}</strong> <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
+<h1><span data-i18n="search.searching-in">Searching in</span> <strong data-i18n-scope="ui">{$st}</strong> <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
 
 <p><span data-i18n="search.time">Time:</span> <span data-i18n-scope="content">{util:system-dateTime() - $map?s-time}</span></p>
 </div>

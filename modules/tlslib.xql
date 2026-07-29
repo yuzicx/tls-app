@@ -293,12 +293,12 @@ typeswitch ($node)
        else
       <span>
       {if ($swl-count = 0) then 
-      <a href="concept.html?uuid={$id}" class="text-muted mr-2 ml-2" title="Concept pending: not yet attributed for this character">{$concept}</a>
+      <a href="concept.html?uuid={$id}" class="text-muted mr-2 ml-2" title="Concept pending: not yet attributed for this character" data-i18n-scope="ui"><span data-i18n-scope="content">{$concept}</span></a>
       else 
       (
       <a href="concept.html?uuid={$id}#{$entry-id}" class="mr-2 ml-2" title="{$cdef}">{$concept}</a>
        ,
-      <button title="click to reveal {count($swl)} syntactic words" class="btn badge badge-light" type="button" 
+      <button title="click to reveal {count($swl)} syntactic words" class="btn badge badge-light" type="button" data-i18n-scope="ui"
       data-toggle="collapse" data-target="#{$id}-swl">{$swl-count}</button>)}
       <ul class="list-unstyled collapse" id="{$id}-swl"> 
       {for $sw in $swl

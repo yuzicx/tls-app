@@ -5,7 +5,13 @@
 
 // the dev server needs a different prefix
 
-const urlprefix =  window.location.host.includes('8443') ? '/exist/apps/tls-app/' : '/'
+const urlprefix = window.location.host.includes('8443')
+  ? '/exist/apps/tls-app/'
+  : window.location.pathname.replace(/[^/]*$/, '')
+
+function citationUiText(source) {
+  return window.TLSI18n ? window.TLSI18n.fromSource(source) : source
+}
 
 
 
@@ -30,7 +36,7 @@ function do_citation() {
     $('#cit-results').html(resp.responseText);
   }
   });
-  $('#cit-results').html('Processing data, just a moment please.')
+  $('#cit-results').html(citationUiText('Processing data, just a moment please.'))
 };
 
 
@@ -51,7 +57,11 @@ function initialize_cit_autocomplete(){
       response : function(event, ui){
       // need to reset this, in case of a new SF
         $("#input-id-span" ).html("xxx");     
-        $("#def-old-sf-span").html("<span class='warn'>If the new item is not from the list, please add a definition below!</span>")
+        $("#def-old-sf-span").html(
+          "<span class='warn'>" +
+          citationUiText('If the new item is not from the list, please add a definition below!') +
+          '</span>'
+        )
       },
       source: function( request, response ) {
         $.ajax( {
@@ -73,4 +83,3 @@ function initialize_cit_autocomplete(){
       }
     } );
 };
-

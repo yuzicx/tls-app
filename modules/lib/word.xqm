@@ -65,8 +65,8 @@ let $zi := string-join($e/tei:form/tei:orth, " / ")
     default 
     return  let $px := normalize-space($l/text()) return
     (: todo: check for permissions! :)
-    <span id="{$entry-id}-{$pos}-py" title="Click here to change pinyin" onclick="assign_guangyun_dialog({{'zi':'{$zi}', 'wid':'{$entry-id}','py': '{normalize-space($l/text())}','concept' : '{$map?concept}', 'concept_id' : '{$map?key}', 'pos':'{$pos}'}})">&#160;&#160;{
-    if (string-length($px) = 0) then "Click here to add pinyin" else $px}</span>,
+    <span id="{$entry-id}-{$pos}-py" title="Click here to change pinyin" data-i18n-scope="ui" onclick="assign_guangyun_dialog({{'zi':'{$zi}', 'wid':'{$entry-id}','py': '{normalize-space($l/text())}','concept' : '{$map?concept}', 'concept_id' : '{$map?key}', 'pos':'{$pos}'}})">&#160;&#160;{
+    if (string-length($px) = 0) then "Click here to add pinyin" else <span data-i18n-scope="content">{$px}</span>}</span>,
     if (count($e/tei:form) > 1) then 
     lrh:format-button("delete_zi_from_word('"|| $entry-id || "','" || $pos ||"','"|| $zi ||"')", "Delete " || $zi || " and pronounciation from this word.", "open-iconic-master/svg/x.svg", "", "", "tls-editor")
     else ()
@@ -83,7 +83,7 @@ let $zi := string-join($e/tei:form/tei:orth, " / ")
         {if ($resp[1]) then 
     <small><span class="ml-2 btn badge-secondary" title="{$resp[1]} - {$e/@tls:created}">{$resp[2]}</span></small> else ()}
 
-    <small>{"  " || $e/@n} {if ($map?ann = 1) then " Attribution" else " Attributions"}</small>
+    <small data-i18n-scope="ui">{"  " || $e/@n} {if ($map?ann = 1) then " Attribution" else " Attributions"}</small>
     {if ($map?ann = 0) then
     lrh:format-button("delete_word_from_concept('"|| $entry-id || "', 'word')", "Delete the word "|| $zi || ", including all syntactic words.", "open-iconic-master/svg/x.svg", "", "", "tls-editor") else 
     (: move :)
@@ -91,19 +91,19 @@ let $zi := string-join($e/tei:form/tei:orth, " / ")
     }
     {if (lpm:show-setting('wd', 'concept')) then wd:display-qitems($entry-id, 'concept', $zi) else ()}
     </h5>
-    {if ($def) then <p class="ml-4">{$def[1]}</p> else ()}
+    {if ($def) then <p class="ml-4" data-i18n-scope="content">{$def[1]}</p> else ()}
     {if ($word-rel) then <p class="ml-4">
     {let $char := $e/tei:form/tei:orth[1]/text()
     return lw:display-word-rel($word-rel, $char, $map?concept)}
     </p> else ()}
     {if ($e//tei:listBibl) then 
-         <div><button class="btn" data-toggle="collapse" data-target="#bib-{$entry-id}">Show references</button><ul id="bib-{$entry-id}" class="collapse" data-toggle="collapse">
+         <div><button class="btn" data-i18n-scope="ui" data-toggle="collapse" data-target="#bib-{$entry-id}">Show references</button><ul id="bib-{$entry-id}" class="collapse" data-toggle="collapse">
         {for $d in $e//tei:bibl
         return
         bib:display-bibl($d)
      }</ul></div>  
     else ()} 
-    <ul><span class="font-weight-bold">Syntactic words</span>{for $sw in $e/tei:sense
+    <ul><span class="font-weight-bold" data-i18n-scope="ui">Syntactic words</span>{for $sw in $e/tei:sense
     let $sf := lower-case(($sw//tls:syn-func/text())[1])
     , $sm := lower-case($sw//tls:sem-feat/text())
     order by $sf || $sm
@@ -196,7 +196,7 @@ declare function lw:display-sense($sw as node(), $count as xs:int?, $display-wor
     <span class="ml-2">{$def}</span>
     {if ($resp[1]) then 
     <small><span class="ml-2 btn badge-secondary" title="{$resp[1]} - {$sw/@tls:created}">{$resp[2]}</span></small> else ()}
-     <button class="btn badge badge-light ml-2" type="button" 
+     <button class="btn badge badge-light ml-2" type="button" data-i18n-scope="ui"
      data-toggle="collapse" data-target="#{$id}-resp" onclick="show_att('{$id}')">
           {if ($count > -1) then $count else ()}
           {if (not($count)) then "" else 
@@ -204,7 +204,7 @@ declare function lw:display-sense($sw as node(), $count as xs:int?, $display-wor
       </button>
      {if ($user = "guest") then () else 
       if ( not($display-word)) then
-     <button title="Search for this word" class="btn badge btn-outline-success ml-2" type="button" 
+     <button title="Search for this word" class="btn badge btn-outline-success ml-2" type="button" data-i18n-scope="ui"
      data-toggle="collapse" data-target="#{$id}-resp1" onclick="search_and_att('{$id}')">
       <img class="icon-small" src="resources/icons/open-iconic-master/svg/magnifying-glass.svg"/>
       </button> else (),
@@ -226,7 +226,7 @@ declare function lw:display-sense($sw as node(), $count as xs:int?, $display-wor
 
 (: we get a nodeset of wr to display :)
 declare function lw:display-word-rel($word-rel, $char, $cname){
-<ul><span class="font-weight-bold">Word relations</span>{for $wr in $word-rel 
+<ul><span class="font-weight-bold" data-i18n-scope="ui">Word relations</span>{for $wr in $word-rel
     let $wrt := $wr/ancestor::tei:div[@type="word-rel-type"]/tei:head/text()
     , $entry-id := substring(($wr//tei:item[. = $char])[1]/@corresp, 2)
     , $wrid := ($wr/tei:div[@type="word-rel-ref"]/@xml:id)[1]
@@ -242,7 +242,7 @@ declare function lw:display-word-rel($word-rel, $char, $cname){
     where $show
     return 
     <li><span class="font-weight-bold"><a href="browse.html?type=word-rel-type&amp;mode={$wrt}#{$wrid}">{$wrt}</a></span>: {if (string-length($cname) > 1) then () else <span>({$tnam})</span>}<a title="{$concept}" href="concept.html?uuid={$cid}#{$oid}">{$other}/{$concept}</a>{$oword/tei:def[1]}
-         <button class="btn badge badge-light ml-2" type="button" 
+         <button class="btn badge badge-light ml-2" type="button" data-i18n-scope="ui"
      data-toggle="collapse" data-target="#{$wrid}-{$uuid}-resp" onclick="show_wr('{$wrid}', '{$uuid}')">
           {if ($count) then ( $count ,
           if ($count = 1) then " Attribution" else  " Attributions")
@@ -253,4 +253,3 @@ declare function lw:display-word-rel($word-rel, $char, $cname){
 </li>
     }</ul>
 };
-
