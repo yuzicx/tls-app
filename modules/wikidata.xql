@@ -206,10 +206,10 @@ declare function wd:display-qitems($idref as xs:string, $context as xs:string, $
     let $qr := $q/ancestor::tei:TEI
       , $qlabel := tokenize($qr//tei:titleStmt/tei:title/text(), '\$\$')[last()]
     return
-    (<span class="ml-2"><a  class="btn badge badge-light" target="dict" title="View {$qlabel} in Wikidata (External link)" style="background-color:paleturquoise" href="https://www.wikidata.org/wiki/{$qr/@xml:id}">{$qlabel}</a></span>,
-       <span class="badge badge-secondary ml-2" onclick="do_wikidata_search('{$label}','{$context}:change', '{$idref}', '{$qr/@xml:id}')" title="Click here to change association of {$label} with {data($qr/@xmlid)}">WD</span>)             
+    (<span class="ml-2" data-i18n-scope="ui"><a class="btn badge badge-light" target="dict" title="View {$qlabel} in Wikidata (External link)" style="background-color:paleturquoise" href="https://www.wikidata.org/wiki/{$qr/@xml:id}"><span data-i18n-scope="content">{$qlabel}</span></a></span>,
+       <span class="badge badge-secondary ml-2" data-i18n-scope="ui" onclick="do_wikidata_search('{$label}','{$context}:change', '{$idref}', '{$qr/@xml:id}')" title="Click here to change association of {$label} with {data($qr/@xmlid)}">WD</span>)
   else 
-       <span class="badge badge-info ml-2" onclick="do_wikidata_search('{$label}','{$context}', '{$idref}', '')" title="Click here to search for {$label} in WikiData">WD</span>             
+       <span class="badge badge-info ml-2" data-i18n-scope="ui" onclick="do_wikidata_search('{$label}','{$context}', '{$idref}', '')" title="Click here to search for {$label} in WikiData">WD</span>
            
 };
 

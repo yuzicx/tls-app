@@ -32,9 +32,9 @@ let $tax := collection($config:tls-data-root||"/core")//tei:category[@xml:id=$ta
 , $cat := ($tax//tei:category[@xml:id=$catid])[1]
 return
 if ($type = 'desc') then
- string-join($cat/tei:catDesc/text())
+ string-join(for $desc in $cat/tei:catDesc return string($desc), " ")
 else
- string-join($cat/tei:def/text())
+ string-join(for $definition in $cat/tei:def return string($definition), " ")
 };
 (:~ 
 get the subtree for a given category 
@@ -371,4 +371,3 @@ declare function ltx:tax-add-hits($n, $set){
    return $n
   default return $n
 };
-

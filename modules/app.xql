@@ -661,10 +661,10 @@ function app:char-info($node as node()*, $model as map(*), $char as xs:string?, 
     return
     <div class="card">
     <div class="card-header">
-    <h4 class="card-title">Additional information about {$char}</h4>
+    <h4 class="card-title" data-i18n-scope="ui">{"Additional information about " || $char}</h4>
     <p><a href="textview.html?location={($sw/tei:seg)[1]/@xml:id}">說文解字</a>: {$sw//text()}</p>
     {
-    if ($crit) then <p class="ml-4"><ul><span class="font-weight-bold">Criteria</span>{for $c in $crit return 
+    if ($crit) then <p class="ml-4"><ul><span class="font-weight-bold" data-i18n-scope="ui">Criteria</span>{for $c in $crit return
     <li><span><a href="concept.html?uuid={$c/ancestor::tei:div[@type='concept']/@xml:id}">{$c/ancestor::tei:div[@type='concept']/tei:head/text()}</a><br/>{$c}</span></li>
     }</ul></p> else ()
     ,if ($word-rel) then 
@@ -695,19 +695,19 @@ function app:char($node as node()*, $model as map(*), $char as xs:string?, $id a
     return
     <div class="card">
     <div class="card-header">
-    <h4 class="card-title">{if ($n) then <span>Taxonomy of meanings for {$h}:　　</span> else 
-    <span>The character {$char} has not been analyzed yet.　　</span>,
+    <h4 class="card-title">{if ($n) then <span data-i18n-scope="ui">{"Taxonomy of meanings for " || $h || ":"}　　</span> else
+    <span data-i18n-scope="ui">{"The character " || $char || " has not been analyzed yet."}　　</span>,
     if ($e) then 
-       <span><button id="save-taxchar-button" type="button" class="btn btn-primary" onclick="save_taxchar('taxchar')">Save taxonomy</button>　　<a class="btn btn-secondary" href="char.html?char={$char}">Leave edit mode</a></span> 
+       <span data-i18n-scope="ui"><button id="save-taxchar-button" type="button" class="btn btn-primary" onclick="save_taxchar('taxchar')">Save taxonomy</button>　　<a class="btn btn-secondary" href="char.html?char={$char}">Leave edit mode</a></span>
     else 
        if ("tls-editor" = $usergroups) then
-       <a class="btn btn-secondary" href="char.html?char={$char}&amp;edit=true">Edit taxonomy</a>
+       <a class="btn btn-secondary" data-i18n-scope="ui" href="char.html?char={$char}&amp;edit=true">Edit taxonomy</a>
        else ()
     }</h4>
     </div>
     
     {if ($e) then 
-    <div class="card" id="help-content">
+    <div class="card" id="help-content" data-i18n-scope="ui">
     <div class="card-header" id="help-head">
       <h5 class="mb-0">
         <button class="btn" data-toggle="collapse" data-target="#help" >
@@ -717,21 +717,21 @@ function app:char($node as node()*, $model as map(*), $char as xs:string?, $id a
       </div>
       <div id="help" class="collapse" data-parent="#help-content">
       <ul>
-      <li>Lines can be moved around with the mouse.</li>
-      <li>Lines of the highest level indicate the reading for this part of the hierarchy.</li>
-      <li><b>Save before leaving the page!</b></li>
-      <li>Start editing the label by right-clicking on it. </li>
-      <li>When editing the label, please leave the name of the concept unchanged at the very end of the label.</li>
-      <li>Text <b>after</b> the name of the concept will <b>not</b> be saved.</li>
-      <li>"Delete" will delete a subtree.  Move lines you want to keep to other subtrees before deleting the upper level item(s).</li>
-      <li>There might be some lines at the bottom with new concepts that have been added since the last editing of this character.</li>
+      <li data-i18n="taxonomy.lines-movable">Lines can be moved around with the mouse.</li>
+      <li data-i18n="taxonomy.highest-level">Lines of the highest level indicate the reading for this part of the hierarchy.</li>
+      <li><b data-i18n="taxonomy.save-before-leaving">Save before leaving the page!</b></li>
+      <li data-i18n="taxonomy.right-click">Start editing the label by right-clicking on it.</li>
+      <li data-i18n="taxonomy.keep-concept-name">When editing the label, please leave the name of the concept unchanged at the very end of the label.</li>
+      <li data-i18n="taxonomy.text-after-concept">Text after the name of the concept will not be saved.</li>
+      <li data-i18n="taxonomy.delete-subtree">"Delete" will delete a subtree. Move lines you want to keep to other subtrees before deleting the upper level item(s).</li>
+      <li data-i18n="taxonomy.new-concepts">There might be some lines at the bottom with new concepts that have been added since the last editing of this character.</li>
       </ul>
       </div>
     </div>
     else ()}
     
     
-    <div class="card-text" id="{if ($e) then 'chartree' else 'notree'}" tei-id="{$char-id}" tei-head="{if (exists($n/tei:head)) then $h else $char}">
+    <div class="card-text" id="{if ($e) then 'chartree' else 'notree'}" tei-id="{$char-id}" tei-head="{if (exists($n/tei:head)) then $h else $char}" data-i18n-scope="content">
      {if ($n) then (for $l in $n/tei:list return tlslib:proc-char($l, $edit), 
         for $l in tlslib:char-tax-newconcepts($char, "taxchar")//tei:list return tlslib:proc-char($l, $edit) )
      else tlslib:char-tax-stub($char, "taxchar")}
@@ -776,19 +776,19 @@ function app:word($node as node()*, $model as map(*), $char as xs:string?, $id a
     return
     <div class="card">
     <div class="card-header">
-    <h4 class="card-title">{if ($n) then <span>Taxonomy of meanings for {$h}:　　</span> else 
-    <span>The word {$char} has not been analyzed yet.　　</span>,
+    <h4 class="card-title">{if ($n) then <span data-i18n-scope="ui">{"Taxonomy of meanings for " || $h || ":"}　　</span> else
+    <span data-i18n-scope="ui">{"The word " || $char || " has not been analyzed yet."}　　</span>,
     if ($e) then 
-       <span><button id="save-taxchar-button" type="button" class="btn btn-primary" onclick="save_taxchar('taxword')">Save taxonomy</button>　　<a class="btn btn-secondary" href="word.html?char={$char}">Leave edit mode</a></span> 
+       <span data-i18n-scope="ui"><button id="save-taxchar-button" type="button" class="btn btn-primary" onclick="save_taxchar('taxword')">Save taxonomy</button>　　<a class="btn btn-secondary" href="word.html?char={$char}">Leave edit mode</a></span>
     else 
        if ("tls-editor" = $usergroups) then
-       <a class="btn btn-secondary" href="word.html?char={$char}&amp;edit=true">Edit taxonomy</a>
+       <a class="btn btn-secondary" data-i18n-scope="ui" href="word.html?char={$char}&amp;edit=true">Edit taxonomy</a>
        else ()
     }</h4>
     </div>
     
     {if ($e) then 
-    <div class="card" id="help-content">
+    <div class="card" id="help-content" data-i18n-scope="ui">
     <div class="card-header" id="help-head">
       <h5 class="mb-0">
         <button class="btn" data-toggle="collapse" data-target="#help" >
@@ -798,21 +798,21 @@ function app:word($node as node()*, $model as map(*), $char as xs:string?, $id a
       </div>
       <div id="help" class="collapse" data-parent="#help-content">
       <ul>
-      <li>Lines can be moved around with the mouse.</li>
-      <li>Lines of the highest level indicate the reading for this part of the hierarchy.</li>
-      <li><b>Save before leaving the page!</b></li>
-      <li>Start editing the label by right-clicking on it. </li>
-      <li>When editing the label, please leave the name of the concept unchanged at the very end of the label.</li>
-      <li>Text <b>after</b> the name of the concept will <b>not</b> be saved.</li>
-      <li>"Delete" will delete a subtree.  Move lines you want to keep to other subtrees before deleting the upper level item(s).</li>
-      <li>There might be some lines at the bottom with new concepts that have been added since the last editing of this character.</li>
+      <li data-i18n="taxonomy.lines-movable">Lines can be moved around with the mouse.</li>
+      <li data-i18n="taxonomy.highest-level">Lines of the highest level indicate the reading for this part of the hierarchy.</li>
+      <li><b data-i18n="taxonomy.save-before-leaving">Save before leaving the page!</b></li>
+      <li data-i18n="taxonomy.right-click">Start editing the label by right-clicking on it.</li>
+      <li data-i18n="taxonomy.keep-concept-name">When editing the label, please leave the name of the concept unchanged at the very end of the label.</li>
+      <li data-i18n="taxonomy.text-after-concept">Text after the name of the concept will not be saved.</li>
+      <li data-i18n="taxonomy.delete-subtree">"Delete" will delete a subtree. Move lines you want to keep to other subtrees before deleting the upper level item(s).</li>
+      <li data-i18n="taxonomy.new-concepts">There might be some lines at the bottom with new concepts that have been added since the last editing of this character.</li>
       </ul>
       </div>
     </div>
     else ()}
     
     
-    <div class="card-text" id="{if ($e) then 'chartree' else 'notree'}" tei-id="{$char-id}" tei-head="{if (exists($n/tei:head)) then $h else $char}">
+    <div class="card-text" id="{if ($e) then 'chartree' else 'notree'}" tei-id="{$char-id}" tei-head="{if (exists($n/tei:head)) then $h else $char}" data-i18n-scope="content">
      {if ($n) then (for $l in $n/tei:list return tlslib:proc-char($l, $edit), 
         for $l in tlslib:char-tax-newconcepts($char, "taxword")//tei:list return tlslib:proc-char($l, $edit) )
      else tlslib:char-tax-stub($char, "taxword")}
@@ -1433,7 +1433,7 @@ function app:review($node as node()*, $model as map(*), $type as xs:string, $iss
 declare 
     %templates:wrap
 function app:recent($node as node()*, $model as map(*)){
-<div data-i18n-scope="ui"><h2>Recent activity as of <span data-i18n-scope="content">{current-dateTime()}</span></h2>
+<div data-i18n-scope="ui"><h2><span data-i18n="activity.recent">Recent activity as of</span>&#160;<span data-i18n-scope="content">{current-dateTime()}</span></h2>
 {
 let $notes := $config:tls-data-root || "/notes"
 , $trans := $config:tls-data-root || "/translations"
@@ -1446,8 +1446,8 @@ let $atts := for $a in collection($notes)//tls:ann/tls:metadata
 return  
 <div>
 <div>
- <h3>Attributions</h3>
- <p>Total number of attributions made since Aug. 28, 2019: <span data-i18n-scope="content">{count($atts)}</span></p>
+ <h3 data-i18n="activity.attributions">Attributions</h3>
+ <p><span data-i18n="activity.attribution-total">Total number of attributions made since Aug. 28, 2019:</span>&#160;<span data-i18n-scope="content">{count($atts)}</span></p>
 
  <ul data-i18n-scope="content">
 {for $a in $atts
@@ -1463,7 +1463,7 @@ return
  for $a in subsequence($atts, 1, 1)
  let $att := $a/ancestor::tls:ann
  return 
- <div><span>The most recent attribution was <span>{lrh:display-duration(xs:dateTime(current-dateTime()) - xs:dateTime(data($a/@created)))}</span> ago:</span>
+ <div><span><span data-i18n="activity.most-recent">The most recent attribution was</span>&#160;<span>{lrh:display-duration(xs:dateTime(current-dateTime()) - xs:dateTime(data($a/@created)))}</span>&#160;<span data-i18n="activity.ago">ago:</span></span>
 <div data-i18n-scope="content">{(
 lrh:show-att-display($att),
 lrh:format-swl($att, map{"type" : "row"})
@@ -1493,9 +1493,9 @@ let $segs := for $a in $trans//tei:seg
 return  
 
 <div>
-<h3>Lines of translations</h3>
-<p>Total number of lines translated since Aug. 28, 2019: <span data-i18n-scope="content">{lu:seg-count($segs)}</span><br/>
-This does not include AI generated output, which is <span data-i18n-scope="content">{$ai-segs}</span> lines, but some hand-generated AI requests using the 'AI' button.
+<h3 data-i18n="activity.translation-lines">Lines of translations</h3>
+<p><span data-i18n="activity.translation-total">Total number of lines translated since Aug. 28, 2019:</span>&#160;<span data-i18n-scope="content">{lu:seg-count($segs)}</span><br/>
+<span data-i18n="activity.ai-prefix">This does not include AI generated output, which is</span>&#160;<span data-i18n-scope="content">{$ai-segs}</span>&#160;<span data-i18n="activity.ai-suffix">lines, but some hand-generated AI requests using the 'AI' button.</span>
 </p>
 <ul data-i18n-scope="content">
 {for $seg in $segs
@@ -1844,7 +1844,7 @@ declare
 function app:bibliography($node as node()*, $model as map(*), $uuid as xs:string, $textid as xs:string){
     <div class="card">
     <div class="card-header">
-    <h4 class="card-title"><a class="btn" href="browse.html?type=biblio">Bibliography</a> <button class="btn badge badge-primary ml-2" type="button" onclick="edit_bib('{$uuid}', '{$textid}')">Edit this reference</button></h4>
+    <h4 class="card-title" data-i18n-scope="ui"><a class="btn" href="browse.html?type=biblio">Bibliography</a> <button class="btn badge badge-primary ml-2" type="button" onclick="edit_bib('{$uuid}', '{$textid}')">Edit this reference</button></h4>
     </div>
     <div class="card-text">{
     bib:display-mods($uuid)

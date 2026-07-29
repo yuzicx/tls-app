@@ -78,11 +78,11 @@ declare function lc:name($node as node()*, $model as map(*)){
 
 declare %templates:wrap function lc:tr-names($node as node()*, $model as map(*)){
 for $t in $model?trs return
-<span class="badge badge-light" title="{map:get($config:lmap, $t/@xml:lang)}">{$t/text()}</span> 
+<span class="badge badge-light" title="{map:get($config:lmap, $t/@xml:lang)}" data-i18n-scope="ui"><span data-i18n-scope="content">{$t/text()}</span></span>
 };
 
 declare function lc:edit-link($node as node()*, $model as map(*)){
-<a target="_blank" class="float-right badge badge-pill badge-light" href="{$config:exide-url || "?open=" || document-uri(root($model?concept))}">Edit concept</a>
+<a target="_blank" class="float-right badge badge-pill badge-light" data-i18n-scope="ui" href="{$config:exide-url || "?open=" || document-uri(root($model?concept))}">Edit concept</a>
 };
 declare function lc:label-count($node as node()*, $model as map(*)){count($model?alt)};
 
@@ -94,7 +94,7 @@ declare %templates:wrap function lc:divs($node as node()*, $model as map(*), $ty
 
 declare %templates:wrap function lc:div-heads($node as node()*, $model as map(*), $type as xs:string?){  
 switch($type)
- case 'pointers' return <span>{$config:lmap?($type)} of {$model?name}</span>
+ case 'pointers' return <span><span data-i18n-scope="ui">{$config:lmap?($type)}</span> of <span data-i18n-scope="content">{$model?name}</span></span>
  default return () 
 };
 
@@ -141,8 +141,8 @@ case element(tei:div) return
         let $key := local:get-key($node)
         , $edit := if (lpm:can-edit-concept()) then 'true' else 'false'
         return
-         (<h5 class="ml-2 mt-2">{map:get($config:lmap, $type)}</h5>
-         ,<div lang="en-GB" contenteditable="{$edit}" style="white-space: pre-wrap;" class="nedit" id="{$type}_{$key}-nt">
+         (<h5 class="ml-2 mt-2" data-i18n-scope="ui">{map:get($config:lmap, $type)}</h5>
+         ,<div lang="en-GB" contenteditable="{$edit}" style="white-space: pre-wrap;" class="nedit" id="{$type}_{$key}-nt" data-i18n-scope="content">
          {lc:display($node/node(), $map)}
          </div>)
        case "pointers" return
@@ -158,7 +158,7 @@ case element(tei:div) return
        return
       <div id="word-content" class="card">
        <div class="card-body">
-         <h4 class="card-title">Words ({count($ws)} items)</h4>
+         <h4 class="card-title" data-i18n-scope="ui">{"Words (" || count($ws) || " items)"}</h4>
        <div class="card-text">  
        {for $e in $ws
          let $wc := xs:int($e/@n)
@@ -189,15 +189,15 @@ declare function lc:display-card-body($node, $map){
     <div class="card col-sm-12" style="max-width: 1000px;">
     <div class="card-body">
     <h4 class="card-title">
-     <span id="{$map?key}-la" class="sf" contenteditable="{$map?edit}">{$node/tei:head/text()}</span>
+     <span id="{$map?key}-la" class="sf" contenteditable="{$map?edit}" data-i18n-scope="content">{$node/tei:head/text()}</span>
       &#160;&#160;
       {lc:display-translations($node)} 
       {if  (lpm:can-edit-concept()) then 
-      <a target="_blank" class="float-right badge badge-pill badge-light" href="{
+      <a target="_blank" class="float-right badge badge-pill badge-light" data-i18n-scope="ui" href="{
       concat($config:exide-url, "?open=", document-uri(root($node)))}">Edit concept</a>
       else ()}
       </h4>
-      <h5 class="card-subtitle" id="concept-def">{lc:display-defintion($map?key)}</h5>
+      <h5 class="card-subtitle" id="concept-def" data-i18n-scope="content">{lc:display-defintion($map?key)}</h5>
       <div id="concept-content" class="accordion">
        {lc:display-card(
          map{'type': 'altnames',
@@ -219,7 +219,7 @@ declare function lc:display-translations($node){
 let  $tr := $node//tei:list[@type="translations"]//tei:item
 return
 for $t in $tr return 
-<span class="badge badge-light" title="{map:get($config:lmap, $t/@xml:lang)}">{$t/text()}</span>
+<span class="badge badge-light" title="{map:get($config:lmap, $t/@xml:lang)}" data-i18n-scope="ui"><span data-i18n-scope="content">{$t/text()}</span></span>
 };
 
 declare function lc:display-defintion($key){
@@ -234,11 +234,11 @@ declare function lc:display-card($map){
     <div class="card-header" id="{$map?type}-head">
       <h5 class="mb-0">
         {if ($map?type='citation') then 
-        <button class="btn" data-toggle="collapse" data-target="#look" >
+        <button class="btn" data-toggle="collapse" data-target="#look" data-i18n-scope="ui">
           <a href="citations.html?perspective=concept&amp;item={$map?concept}" title="This moves to a separate page">Citations</a> <span class="btn badge badge-light">{$map?size}</span>
         </button>
         else
-        <button class="btn" data-toggle="collapse" data-target="#{$map?type}" >
+        <button class="btn" data-toggle="collapse" data-target="#{$map?type}" data-i18n-scope="ui">
           {$config:lmap?($map?type)}  {$map?size}
         </button>}
       </h5>
@@ -270,9 +270,9 @@ declare function lc:display-children($tax-type, $seq, $type){
       , $ann := ltx:get-ancestors-new($x, $tax-type)
       return
        <li class="ml-{$npos}"><span><a  class="badge {$badge}" href="concept.html?uuid={$xid}&amp;ontshow=true">{$desc}</a>
-       {if ($x = $xid) then () else (<span class="text-muted" title="Click here to restore as primary concept" onclick="modify_category('{$x}', 'swap')">{$x}</span>
+       {if ($x = $xid) then () else (<span class="text-muted" title="Click here to restore as primary concept" data-i18n-scope="ui" onclick="modify_category('{$x}', 'swap')"><span data-i18n-scope="content">{$x}</span></span>
        , if (lpm:can-edit-concept()) then lrh:format-button("delete_word_from_concept('"|| $x || "', 'concept')", "Delete the concept '"|| $desc || "' from the tree, including all attached concepts.", "open-iconic-master/svg/x.svg", "", "", "tls-editor") else ()  )}
-     <small style="display:inline;">　{$dex}</small></span> (anc: {count($anc)}/{count($ann)}, child: {count($cd)})</li>
+     <small style="display:inline;" data-i18n-scope="content">　{$dex}</small></span> <span data-i18n-scope="ui">{"anc: " || count($anc) || "/" || count($ann) || ", child: " || count($cd)}</span></li>
 };
 
 declare function lc:display-pointer-list($l){
@@ -282,7 +282,7 @@ for $p in $l
       let $othersubtrees := if ($p[@type = "hypernymy"]) then ltx:get-other-subtrees(local:get-key($p), $tax-type, 3) else ()
      (:order by $p/@type:)
      return
-     (<h5 class="ml-2">
+     (<h5 class="ml-2" data-i18n-scope="ui">
      {map:get($config:lmap, data($p/@type))}
      </h5>
      (: we assume that clicking here implies an interest in the ontology, so we load in open state:)
@@ -310,7 +310,7 @@ for $p in $l
      )
      }</ul>
      , if ($othersubtrees[1]) then 
-     (<h5 class="ml-2">Other Hypernyms</h5>
+     (<h5 class="ml-2" data-i18n-scope="ui">Other Hypernyms</h5>
      , <ul>{     
      lc:display-children($tax-type, $othersubtrees, 'other')
 

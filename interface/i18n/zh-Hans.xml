@@ -232,6 +232,98 @@
     <message key="browse.semantic-features-title" source="Semantic Features">语义特征</message>
     <message key="browse.rhetorical-devices-title" source="Rhetorical Devices">修辞手法</message>
 
+    <message key="textview.line-empty" source="line / %">行号 / 进度</message>
+    <message key="wikidata.view" source="View {label} in Wikidata (External link)">在 Wikidata 中查看“{label}”（外部链接）</message>
+    <message key="wikidata.change" source="Click here to change association of {label} with {item}">点击更改“{label}”与 {item} 的关联</message>
+    <message key="wikidata.search" source="Click here to search for {label} in WikiData">点击在 Wikidata 中搜索“{label}”</message>
+
+    <message key="biblio.browse" source="Browse the bibliography">浏览参考文献</message>
+    <message key="biblio.authors" source="Authors">作者</message>
+    <message key="biblio.titles" source="Titles">题名</message>
+    <message key="biblio.topics" source="Topics">主题</message>
+    <message key="biblio.most-referred" source="Most referred">引用最多</message>
+    <message key="biblio.recently-added" source="Recently added">最近添加</message>
+    <message key="biblio.most-referenced-works" source="Works which have been most frequently referenced">引用次数最多的著作</message>
+    <message key="biblio.recent-works" source="Recently added works">最近添加的著作</message>
+    <message key="biblio.edit-reference" source="Edit this reference">编辑此参考文献</message>
+    <message key="biblio.responsibility" source="Responsibility">责任者</message>
+    <message key="biblio.title" source="Title">题名</message>
+    <message key="biblio.details" source="Details">详细信息</message>
+    <message key="biblio.identifier" source="Identifier">标识符</message>
+    <message key="biblio.comments" source="Comments">评注</message>
+    <message key="biblio.information-basis" source="Information basis">信息依据</message>
+    <message key="biblio.electronic-version" source="Electronic Version">电子版</message>
+    <message key="biblio.internet-archive" source="Find on Internet Archive">在 Internet Archive 中查找</message>
+    <message key="biblio.add-direct-link" source="Add direct link to this work">添加此著作的直接链接</message>
+    <message key="biblio.registered-urls" source="Registered URLs">已登记网址</message>
+    <message key="biblio.referred-from" source="Referred from">引用来源</message>
+    <message key="biblio.publication-marker" source="(publication)">（出版物）</message>
+    <message key="biblio.details-marker" source="(details)">（详情）</message>
+    <message key="biblio.place-marker" source="(place)">（出版地）</message>
+    <message key="biblio.publisher-marker" source="(publisher)">（出版者）</message>
+    <message key="biblio.author-marker" source="(author):">（作者）：</message>
+    <message key="biblio.editor-marker" source="(editor):">（编者）：</message>
+    <message key="biblio.translator-marker" source="(translator):">（译者）：</message>
+    <message key="biblio.english-marker" source="(eng):">（英文）：</message>
+    <message key="biblio.delete-reference" source="Immediately delete this reference">立即删除此参考文献</message>
+
+    <message key="concept.modern-chinese" source="Modern Chinese">现代汉语</message>
+    <message key="concept.old-chinese" source="Old Chinese">上古汉语</message>
+    <message key="concept.old-chinese-criteria" source="Old Chinese Criteria">上古汉语判据</message>
+    <message key="concept.modern-chinese-criteria" source="Modern Chinese Criteria">现代汉语判据</message>
+    <message key="concept.hyponym" source="Hyponym">下位概念</message>
+    <message key="concept.hypernym" source="Hypernym">上位概念</message>
+    <message key="concept.antonym" source="Antonym">反义关系</message>
+    <message key="concept.part-of" source="Part of">隶属于</message>
+    <message key="concept.has-part" source="Has part">包含部分</message>
+    <message key="concept.see-also" source="See also">另见</message>
+    <message key="concept.register" source="Register">语体</message>
+    <message key="concept.warring-states-currency" source="Warring States Currency">战国货币</message>
+    <message key="concept.old-chinese-contrasts" source="Old Chinese Contrasts">上古汉语对比</message>
+    <message key="concept.texts-or-translation" source="Texts or Translation">文本或译文</message>
+    <message key="concept.chars" source="Chars">汉字</message>
+    <message key="concept.syntactic-function" source="Syntactic Function">句法功能</message>
+    <message key="concept.semantic-feature" source="Semantic Feature">语义特征</message>
+    <message key="concept.alternate-labels" source="Alternate labels">其他名称</message>
+    <message key="concept.criteria-notes" source="Criteria and general notes">判据与综合说明</message>
+    <message key="concept.source-references" source="Source references">来源参考文献</message>
+    <message key="concept.ontology" source="Ontology">本体关系</message>
+    <message key="concept.words-count" source="Words ({count} items)">词语（{count} 项）</message>
+    <message key="concept.character-count" source="({count} characters)">（{count} 字符）</message>
+    <message key="concept.separate-page" source="This moves to a separate page">前往独立页面</message>
+    <message key="concept.attribution" source="Attribution">义项标注</message>
+    <message key="concept.change-pinyin" source="Click here to change pinyin">点击修改拼音</message>
+    <message key="concept.add-pinyin" source="Click here to add pinyin">点击添加拼音</message>
+    <message key="concept.search-word" source="Search for this word">搜索此词</message>
+    <message key="concept.pending" source="Concept pending: not yet attributed for this character">概念待处理：尚未为此字建立义项标注</message>
+    <message key="concept.reveal-syntactic-words" source="click to reveal {count} syntactic words">点击显示 {count} 个句法词</message>
+    <message key="concept.other-hypernyms" source="Other Hypernyms">其他上位概念</message>
+    <message key="concept.restore-primary" source="Click here to restore as primary concept">点击恢复为主要概念</message>
+    <message key="concept.tree-counts" source="anc: {ancestors}/{new}, child: {children}">上级：{ancestors}/{new}，下级：{children}</message>
+    <message key="concept.edit" source="Edit concept">编辑概念</message>
+
+    <message key="taxonomy.title" source="Taxonomy of meanings for {item}:">{item} 的义项分类：</message>
+    <message key="taxonomy.character-unanalysed" source="The character {item} has not been analyzed yet.">尚未分析汉字“{item}”。</message>
+    <message key="taxonomy.word-unanalysed" source="The word {item} has not been analyzed yet.">尚未分析词语“{item}”。</message>
+    <message key="taxonomy.additional-info" source="Additional information about {item}">{item} 的补充信息</message>
+    <message key="taxonomy.criteria" source="Criteria">判据</message>
+    <message key="taxonomy.save" source="Save taxonomy">保存义项分类</message>
+    <message key="taxonomy.leave-edit" source="Leave edit mode">退出编辑模式</message>
+    <message key="taxonomy.edit" source="Edit taxonomy">编辑义项分类</message>
+    <message key="taxonomy.character-help" source="Hints for editing the character taxonomy">编辑汉字义项分类的提示</message>
+    <message key="taxonomy.word-help" source="Hints for editing the word taxonomy">编辑词语义项分类的提示</message>
+    <message key="taxonomy.lines-movable" source="Lines can be moved around with the mouse.">可使用鼠标拖动各行。</message>
+    <message key="taxonomy.highest-level" source="Lines of the highest level indicate the reading for this part of the hierarchy.">最高层级的行表示该层级部分的读音。</message>
+    <message key="taxonomy.save-before-leaving" source="Save before leaving the page!">离开页面前请先保存！</message>
+    <message key="taxonomy.right-click" source="Start editing the label by right-clicking on it.">右击标签可开始编辑。</message>
+    <message key="taxonomy.keep-concept-name" source="When editing the label, please leave the name of the concept unchanged at the very end of the label.">编辑标签时，请保持标签末尾的概念名称不变。</message>
+    <message key="taxonomy.text-after-concept" source="Text after the name of the concept will not be saved.">概念名称之后的文字不会被保存。</message>
+    <message key="taxonomy.delete-subtree" source="&quot;Delete&quot; will delete a subtree. Move lines you want to keep to other subtrees before deleting the upper level item(s).">“删除”会删除整个子树。删除上层项目前，请将需要保留的行移到其他子树。</message>
+    <message key="taxonomy.new-concepts" source="There might be some lines at the bottom with new concepts that have been added since the last editing of this character.">底部可能有自上次编辑此字以来新增的概念行。</message>
+
+    <message key="citations.processing" source="Processing data, just a moment please.">正在处理数据，请稍候。</message>
+    <message key="citations.new-item-definition" source="If the new item is not from the list, please add a definition below!">如果新项目不在列表中，请在下方添加定义！</message>
+
     <message key="settings.title" source="Customizable settings for">自定义设置：</message>
     <message key="settings.display" source="Display settings">显示设置</message>
     <message key="settings.external-resources" source="External resources">外部资源</message>

@@ -92,12 +92,12 @@ let $y := years-from-duration($pt)
 ,$s := seconds-from-duration($pt)
 return
 <span>{(
-if ($y > 0) then if ($y > 1) then <span> {$y} years </span> else <span>{$y} year </span> else (),
-if ($m > 0) then if ($m > 1) then <span> {$m} months </span> else <span> {$m} month </span> else (),
-if ($d > 0) then if ($d > 1) then <span> {$d} days </span> else <span> {$d} day </span> else (),
-if ($h > 0) then if ($h > 1) then <span> {$h} hours </span> else <span> {$h} hour </span> else (),
-if ($mi > 0) then if ($mi > 1) then <span> {$mi} minutes </span> else <span> {$mi} minute </span> else (),
-if ($s > 0) then if ($s > 1) then <span> {$s} seconds </span> else <span> {$s} second </span> else ()
+if ($y > 0) then if ($y > 1) then <span><span> {$y} years </span>&#160;</span> else <span><span>{$y} year </span>&#160;</span> else (),
+if ($m > 0) then if ($m > 1) then <span><span> {$m} months </span>&#160;</span> else <span><span> {$m} month </span>&#160;</span> else (),
+if ($d > 0) then if ($d > 1) then <span><span> {$d} days </span>&#160;</span> else <span><span> {$d} day </span>&#160;</span> else (),
+if ($h > 0) then if ($h > 1) then <span><span> {$h} hours </span>&#160;</span> else <span><span> {$h} hour </span>&#160;</span> else (),
+if ($mi > 0) then if ($mi > 1) then <span><span> {$mi} minutes </span>&#160;</span> else <span><span> {$mi} minute </span>&#160;</span> else (),
+if ($s > 0) then if ($s > 1) then <span><span> {$s} seconds </span>&#160;</span> else <span><span> {$s} second </span>&#160;</span> else ()
 )
 }
 </span>
