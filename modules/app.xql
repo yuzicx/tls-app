@@ -16,7 +16,7 @@ declare namespace tx="http://exist-db.org/tls";
 declare namespace ucd = "http://www.unicode.org/ns/2003/ucd/1.0";
 declare namespace mf = "http://kanripo.org/ns/KRX/Manifest/1.0";
 
-import module namespace templates="http://exist-db.org/xquery/templates" ;
+import module namespace templates="http://exist-db.org/xquery/html-templating" ;
 (: 2022-11-16: update to new template library, also including lib, but not yet used :)
 (:import module namespace templates="http://exist-db.org/xquery/html-templating";:)
 (:import module namespace lib="http://exist-db.org/xquery/html-templating/lib";:)

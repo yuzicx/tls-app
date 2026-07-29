@@ -15,7 +15,7 @@ declare namespace tls="http://hxwd.org/ns/1.0";
 
 import module namespace config="http://hxwd.org/config" at "config.xqm";
 import module namespace tlslib="http://hxwd.org/lib" at "tlslib.xql";
-import module namespace templates="http://exist-db.org/xquery/templates" ;
+import module namespace templates="http://exist-db.org/xquery/html-templating" ;
 import module namespace http="http://expath.org/ns/http-client";
 import module namespace dbu="http://exist-db.org/xquery/utility/db" at "db-utility.xqm";
 import module namespace lrh="http://hxwd.org/lib/render-html" at "lib/render-html.xqm";
@@ -956,4 +956,3 @@ declare function bib:display-bibl($bibl as node()){
 
 </li>
 };
-

@@ -16,7 +16,7 @@ import module namespace tlslib="http://hxwd.org/lib" at "../tlslib.xql";
 import module namespace lrh="http://hxwd.org/lib/render-html" at "render-html.xqm";
 import module namespace xmldb="http://exist-db.org/xquery/xmldb";
 
-declare namespace templates="http://exist-db.org/xquery/templates";
+declare namespace templates="http://exist-db.org/xquery/html-templating";
 
 declare variable $i18n:supported-languages := ("en", "zh-Hans");
 declare variable $i18n:default-language := "en";

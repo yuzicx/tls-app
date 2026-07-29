@@ -19,7 +19,7 @@ import module namespace lu="http://hxwd.org/lib/utils" at "utils.xqm";
 import module namespace lsi="http://hxwd.org/special-interest" at "special-interest.xqm";
 
 
-import module namespace templates="http://exist-db.org/xquery/templates" ;
+import module namespace templates="http://exist-db.org/xquery/html-templating" ;
 
 declare namespace tei= "http://www.tei-c.org/ns/1.0";
 declare namespace mf="http://kanripo.org/ns/KRX/Manifest/1.0";

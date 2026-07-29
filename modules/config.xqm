@@ -7,7 +7,7 @@ xquery version "3.1";
 module namespace config="http://hxwd.org/config";
 import module namespace login="http://exist-db.org/xquery/login" at "resource:org/exist/xquery/modules/persistentlogin/login.xql";
 
-declare namespace templates="http://exist-db.org/xquery/templates";
+declare namespace templates="http://exist-db.org/xquery/html-templating";
 
 declare namespace repo="http://exist-db.org/xquery/repo";
 declare namespace expath="http://expath.org/ns/pkg";

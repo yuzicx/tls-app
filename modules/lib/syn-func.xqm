@@ -20,7 +20,7 @@ import module namespace lc="http://hxwd.org/concept" at "concept.xqm";
 import module namespace lrh="http://hxwd.org/lib/render-html" at "render-html.xqm";
 
 
-import module namespace templates="http://exist-db.org/xquery/templates" ;
+import module namespace templates="http://exist-db.org/xquery/html-templating" ;
 
 import module namespace wd="http://hxwd.org/wikidata" at "../wikidata.xql"; 
 
@@ -870,5 +870,4 @@ declare function lsf:rebuild-counts() as element() {
                         "syn-func-counts.xml", $doc)
   return $doc
 };
-
 

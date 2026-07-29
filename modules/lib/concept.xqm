@@ -19,7 +19,7 @@ import module namespace ltx="http://hxwd.org/taxonomy" at "taxonomy.xqm";
 import module namespace lw="http://hxwd.org/word" at "word.xqm";
 import module namespace bib="http://hxwd.org/biblio" at "../biblio.xql";
 
-import module namespace templates="http://exist-db.org/xquery/templates" ;
+import module namespace templates="http://exist-db.org/xquery/html-templating" ;
 
 
 import module namespace src="http://hxwd.org/search" at "../search.xql";

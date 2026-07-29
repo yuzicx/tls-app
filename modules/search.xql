@@ -9,7 +9,7 @@ xquery version "3.1";
 
 module namespace src="http://hxwd.org/search";
 
-import module namespace templates="http://exist-db.org/xquery/templates" ;
+import module namespace templates="http://exist-db.org/xquery/html-templating" ;
 import module namespace config="http://hxwd.org/config" at "config.xqm";
 (:import module namespace krx="http://hxwd.org/krx-utils" at "krx-utils.xql";:)
 import module namespace wd="http://hxwd.org/wikidata" at "wikidata.xql"; 
