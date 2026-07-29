@@ -2,6 +2,7 @@
 
 const expect = require('chai').expect
 const fs = require('fs')
+const vm = require('vm')
 const xmldoc = require('xmldoc')
 
 function loadCatalogue(language) {
@@ -16,6 +17,48 @@ function loadCatalogue(language) {
 
 function valuesByKey(messages) {
   return new Map(messages.map((message) => [message.key, message.value]))
+}
+
+function placeholders(value) {
+  return Array.from(value.matchAll(/\{([A-Za-z][A-Za-z0-9_-]*)\}/g))
+    .map((match) => match[1])
+    .sort()
+}
+
+function createBrowserI18n(messages) {
+  const sources = Object.fromEntries(
+    messages.map((message) => [message.source.replace(/\s+/g, ' ').trim(), message.value])
+  )
+  const window = {
+    location: {
+      href: 'https://example.test/index.html?lang=zh-Hans',
+      assign() {},
+      replace() {}
+    },
+    localStorage: {
+      getItem() { return null },
+      setItem() {}
+    },
+    alert() {},
+    confirm() {},
+    prompt() {},
+    console
+  }
+  const document = {
+    body: null,
+    documentElement: { setAttribute() {} },
+    getElementById() {
+      return {
+        textContent: JSON.stringify({ language: 'zh-Hans', messages: {}, sources })
+      }
+    }
+  }
+
+  vm.runInNewContext(
+    fs.readFileSync('resources/scripts/i18n.js', 'utf8'),
+    { window, document, URL, Node: { ELEMENT_NODE: 1, TEXT_NODE: 3 } }
+  )
+  return window.TLSI18n
 }
 
 describe('interface catalogues', function () {
@@ -52,6 +95,24 @@ describe('interface catalogues', function () {
     english.forEach((message) => {
       expect(chineseSources.get(message.key), message.key).to.equal(message.source)
     })
+  })
+
+  it('keeps placeholders unchanged between source text and translations', function () {
+    simplifiedChinese.forEach((message) => {
+      expect(placeholders(message.value), message.key)
+        .to.deep.equal(placeholders(message.source))
+    })
+  })
+
+  it('translates runtime messages while preserving their variable values', function () {
+    const i18n = createBrowserI18n(simplifiedChinese)
+
+    expect(i18n.fromSource('Email has been sent to editor@example.org'))
+      .to.equal('邮件已发送至 editor@example.org')
+    expect(i18n.fromSource("No syntactic function 'SUBJ' defined.  If you want to define a new one, please enter the definition here:"))
+      .to.equal('尚未定义句法功能“SUBJ”。如需新建，请在此输入定义：')
+    expect(i18n.fromSource('Tag reviewed for 12 item(s) saved.'))
+      .to.equal('已为 12 个项目保存标签“reviewed”。')
   })
 
   it('contains the global navigation, account and search messages', function () {

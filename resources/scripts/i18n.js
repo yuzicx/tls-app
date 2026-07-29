@@ -70,17 +70,74 @@
     return interpolate(message, parameters);
   }
 
+  function escapeRegExp(value) {
+    return value.replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+  }
+
+  function sourcePattern(source) {
+    var names = [];
+    var expression = '';
+    var cursor = 0;
+    var placeholder = /\{([A-Za-z][A-Za-z0-9_-]*)\}/g;
+    var match;
+
+    while ((match = placeholder.exec(source)) !== null) {
+      expression += escapeRegExp(source.slice(cursor, match.index));
+      expression += '(.+?)';
+      names.push(match[1]);
+      cursor = match.index + match[0].length;
+    }
+
+    if (!names.length) return null;
+    expression += escapeRegExp(source.slice(cursor));
+    return { regex: new RegExp('^' + expression + '$'), names: names };
+  }
+
+  var sourcePatterns = Object.keys(data.sources || {}).reduce(function (patterns, source) {
+    var pattern = sourcePattern(source);
+    if (pattern) {
+      pattern.source = source;
+      pattern.translation = data.sources[source];
+      patterns.push(pattern);
+    }
+    return patterns;
+  }, []).sort(function (left, right) {
+    return right.source.replace(/\{[^}]+\}/g, '').length -
+      left.source.replace(/\{[^}]+\}/g, '').length;
+  });
+
   function translateSource(source) {
     if (typeof source !== 'string') return source;
     var normalized = source.replace(/\s+/g, ' ').trim();
-    return data.sources[normalized] || source;
+    if (data.sources[normalized]) return data.sources[normalized];
+
+    for (var index = 0; index < sourcePatterns.length; index += 1) {
+      var pattern = sourcePatterns[index];
+      var match = normalized.match(pattern.regex);
+      if (!match) continue;
+
+      var parameters = {};
+      pattern.names.forEach(function (name, parameterIndex) {
+        parameters[name] = match[parameterIndex + 1];
+      });
+      return interpolate(pattern.translation, parameters);
+    }
+
+    return source;
+  }
+
+  function isInUiScope(element) {
+    if (!element || !element.closest) return false;
+    var boundary = element.closest('[data-i18n-scope]');
+    return Boolean(boundary && boundary.getAttribute('data-i18n-scope') === 'ui');
   }
 
   function translateElement(element, scoped) {
     if (!element || element.nodeType !== Node.ELEMENT_NODE) return;
     if (/^(SCRIPT|STYLE)$/i.test(element.tagName)) return;
 
-    var inScope = scoped || element.getAttribute('data-i18n-scope') === 'ui';
+    var scope = element.getAttribute('data-i18n-scope');
+    var inScope = scope === 'content' ? false : scoped || scope === 'ui';
     var key = element.getAttribute('data-i18n');
 
     if (key) {
@@ -111,13 +168,13 @@
     if (!root) return;
 
     if (root.nodeType === Node.ELEMENT_NODE) {
-      var scoped = Boolean(root.closest('[data-i18n-scope="ui"]'));
+      var scoped = isInUiScope(root);
       translateElement(root, scoped);
     }
 
     if (root.querySelectorAll) {
-      root.querySelectorAll('[data-i18n], [data-i18n-scope="ui"]').forEach(function (element) {
-        var scoped = Boolean(element.closest('[data-i18n-scope="ui"]'));
+      root.querySelectorAll('[data-i18n], [data-i18n-scope]').forEach(function (element) {
+        var scoped = isInUiScope(element);
         translateElement(element, scoped);
       });
     }

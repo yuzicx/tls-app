@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="row" xml:id="browse" lang="zh-Hans">
+  <div class="col-md-2"/>
+  <div class="col-md-6">
+    <h3>浏览数据库</h3>
+    <p>您可以通过浏览界面访问数据库的以下部分；所有页面的“浏览”菜单也提供相同入口。</p>
+    <ul>
+      <li>本站提供大量可供阅读的文本：
+        <a class="dropdown-item" href="search.html?search-type=12">文本</a>
+      </li>
+      <li>浏览概念体系，从独特角度了解传统中国人的世界观：
+        <a data-template="lrh:help-link" data-parameter="concept" target="docs" href="https://docs.hxwd.org/1-General-introduction/Concepts" title="概念说明">
+          <img class="icon" src="resources/icons/help.svg"/>
+        </a>
+        <a class="dropdown-item" href="browse.html?type=concept">概念</a>
+        <a class="dropdown-item" href="browse.html?type=tax&amp;mode=concept">概念分类树</a>
+      </li>
+      <li>对于最常见的汉字，本站已建立按语义场组织的层级视图：
+        <a class="dropdown-item" href="browse.html?type=taxchar">汉字</a>
+      </li>
+      <li>对于一些常用词，本站列出了与之关联的概念：
+        <a class="dropdown-item" href="browse.html?type=taxword">词语</a>
+      </li>
+      <li>引文是与特定句法特征和概念关联的文本行，可在此进行分析：
+        <a class="dropdown-item" href="citations.html">引文</a>
+      </li>
+      <li>将相关词语置于相对位置是汉语散文的常见特点；这里列出已经发现的关系：
+        <a class="dropdown-item" href="browse.html?type=word-rel-type">词语关系</a>
+      </li>
+      <li>本站通过命名和分类已发现的句法功能进行细致的语言学分析；这些功能也用于上述引文：
+        <a class="dropdown-item" href="browse.html?type=syn-func">句法功能</a>
+        <a class="dropdown-item" href="browse.html?type=tax&amp;mode=syn-func">句法功能分类树</a>
+      </li>
+      <li>部分标注还记录词语使用中的语义特征：
+        <a class="dropdown-item" href="browse.html?type=sem-feat">语义特征</a>
+      </li>
+      <li>为描述位于词语层面之外的文体和修辞层次，本站使用修辞手法分类：
+        <a class="dropdown-item" href="browse.html?type=rhet-dev">修辞手法</a>
+      </li>
+      <li>在完整整理修辞手法之后，项目曾尝试将这一思路扩展为可记录文本片段中其他类型观察结果的通用机制。该功能尚处于实验和开发阶段：
+        <a class="dropdown-item" href="observations.html">观察记录</a>
+      </li>
+      <li>带标注的参考文献：
+        <a class="dropdown-item" href="browse.html?type=biblio">参考文献</a>
+      </li>
+    </ul>
+  </div>
+</div>

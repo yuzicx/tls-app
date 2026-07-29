@@ -5,8 +5,9 @@ xquery version "3.1";
  :
  : UI messages live in interface/i18n. Rich interface fragments remain in
  : language-specific collections below interface/. Only nodes explicitly
- : marked with data-i18n or data-i18n-scope="ui" are translated, keeping TEI
- : source texts and other scholarly content outside the localization pass.
+ : marked with data-i18n or data-i18n-scope="ui" are translated. A nested
+ : data-i18n-scope="content" explicitly restores the content boundary, keeping
+ : TEI source texts and other scholarly content outside the localization pass.
  :)
 
 module namespace i18n="http://hxwd.org/lib/i18n";
@@ -188,8 +189,10 @@ declare %private function i18n:localize-node(
         case element() return
             let $is-html := local-name($node) = "html"
             let $is-raw-text := local-name($node) = ("script", "style")
+            let $scope := normalize-space(string($node/@data-i18n-scope))
             let $ui-scope :=
-                ($inside-ui or $node/@data-i18n-scope = "ui") and not($is-raw-text)
+                (($inside-ui and $scope ne "content") or $scope = "ui")
+                and not($is-raw-text)
             let $message-key := normalize-space(string($node/@data-i18n))
             return
                 element { node-name($node) } {

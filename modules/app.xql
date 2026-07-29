@@ -296,7 +296,7 @@ let $reltypes := collection($config:tls-data-root)//tei:TEI[@xml:id="word-relati
         order by $h 
         return $r
 return
-<div><h4><span  class="font-weight-bold ml-2">Word relation type: </span>
+<div><h4><span class="font-weight-bold ml-2" data-i18n-scope="ui">Word relation type: </span>
                  <span><select id="rel-type" onChange="modify_rel_display()">
                  {for $l at $pos in $rt 
                   let $h := normalize-space($l/tei:head/text())
@@ -307,8 +307,8 @@ return
                  else
                  <option value="{data($l/@xml:id)}">{$h} ({$cnt})</option>}
                  </select></span>  
-                 <span  class="font-weight-bold ml-2"> Sort by:　</span>
-                 <span><select id="rel-type-sort" onChange="modify_rel_display()">
+                 <span class="font-weight-bold ml-2" data-i18n-scope="ui"> Sort by:　</span>
+                 <span><select id="rel-type-sort" onChange="modify_rel_display()" data-i18n-scope="ui">
                  <option value="lw">Left word</option>
                  <option value="rw">Right word</option>
                  <option value="lc">Left concept</option>
@@ -327,7 +327,7 @@ return
  : currently (2020-02-26) this has been removed from the menu.  Needs rethinking
 :)
 declare function app:browse-word($type as xs:string?, $filter as xs:string?)
-{<div><h4>Words by decreasing number of concepts</h4><small>1</small>
+{<div><h4 data-i18n-scope="ui">Words by decreasing number of concepts</h4><small>1</small>
    { for $hit at $pos in collection($config:tls-data-root||"/core")//tei:div[@type=$type]
      let $head := $hit/tei:head
      ,$id := $hit/@xml:id
@@ -500,8 +500,8 @@ declare function app:textlist(){
     , $krptexts := collection($config:tls-texts-root||"/KR")//tei:TEI/@xml:id
     return
     <div>
-    <h1>Available texts: <span class="badge badge-pill badge-light">{$count + $chantcount + count($krptexts)}</span></h1>
-    <ul class="nav nav-tabs" id="textTab" role="tablist">
+    <h1 data-i18n-scope="ui">Available texts: <span class="badge badge-pill badge-light" data-i18n-scope="content">{$count + $chantcount + count($krptexts)}</span></h1>
+    <ul class="nav nav-tabs" id="textTab" role="tablist" data-i18n-scope="ui">
     <li class="nav-item"> <a class="nav-link" id="coretext-tab" role="tab" 
     href="#coretexts" data-toggle="tab">Core Texts
     <span class="badge badge-pill badge-light">{$count}</span></a></li>
@@ -1433,7 +1433,7 @@ function app:review($node as node()*, $model as map(*), $type as xs:string, $iss
 declare 
     %templates:wrap
 function app:recent($node as node()*, $model as map(*)){
-<div><h2>Recent activity as of {current-dateTime()}</h2>
+<div data-i18n-scope="ui"><h2>Recent activity as of <span data-i18n-scope="content">{current-dateTime()}</span></h2>
 {
 let $notes := $config:tls-data-root || "/notes"
 , $trans := $config:tls-data-root || "/translations"
@@ -1447,9 +1447,9 @@ return
 <div>
 <div>
  <h3>Attributions</h3>
- <p>Total number of attributions made since Aug. 28, 2019: {count($atts)}</p>
+ <p>Total number of attributions made since Aug. 28, 2019: <span data-i18n-scope="content">{count($atts)}</span></p>
 
- <ul>
+ <ul data-i18n-scope="content">
 {for $a in $atts
 let $px := substring-after($a/@resp,"#")
 group by $px
@@ -1463,11 +1463,11 @@ return
  for $a in subsequence($atts, 1, 1)
  let $att := $a/ancestor::tls:ann
  return 
- <div><span>The most recent attribution was {lrh:display-duration(xs:dateTime(current-dateTime()) - xs:dateTime(data($a/@created)))} ago :</span>
-{(
+ <div><span>The most recent attribution was <span>{lrh:display-duration(xs:dateTime(current-dateTime()) - xs:dateTime(data($a/@created)))}</span> ago:</span>
+<div data-i18n-scope="content">{(
 lrh:show-att-display($att),
 lrh:format-swl($att, map{"type" : "row"})
-)}
+)}</div>
 </div>
 } 
 </div>
@@ -1494,10 +1494,10 @@ return
 
 <div>
 <h3>Lines of translations</h3>
-<p>Total number of lines translated since Aug. 28, 2019: {lu:seg-count($segs)}<br/>
-This does not include AI generated output, which is {$ai-segs} lines, but some hand-generated AI requests using the 'AI' button.
+<p>Total number of lines translated since Aug. 28, 2019: <span data-i18n-scope="content">{lu:seg-count($segs)}</span><br/>
+This does not include AI generated output, which is <span data-i18n-scope="content">{$ai-segs}</span> lines, but some hand-generated AI requests using the 'AI' button.
 </p>
-<ul>
+<ul data-i18n-scope="content">
 {for $seg in $segs
 let $px := substring($seg/@resp, 2)
 group by $px
@@ -1517,18 +1517,18 @@ return
 declare
     %templates:wrap
 function app:footer($node as node()*, $model as map(*)){
-            <div class="container">
+            <div class="container" data-i18n-scope="ui">
                 <span id="copyright"/>
-                    <p>Copyright TLS Project 2026, licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons Attribution-ShareAlike 4.0 International License">CC BY SA</a> license (except some translations)</p>
-                <p>Developed at the <strong>Center for Innovative Informatics of the Humanities, Institute for Research in Humanities, Kyoto University</strong>, with support from the 
-                <strong>Dean for Research, Department of East Asian Studies</strong>, and
+                <p><span data-i18n="footer.copyright-prefix">Copyright TLS Project 2026, licensed under a</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons Attribution-ShareAlike 4.0 International License">CC BY SA</a> <span data-i18n="footer.copyright-suffix">license (except some translations)</span></p>
+                <p><span data-i18n="footer.developed-at">Developed at the</span> <strong>Center for Innovative Informatics of the Humanities, Institute for Research in Humanities, Kyoto University</strong><span data-i18n="footer.with-support">, with support from the</span>
+                <strong>Dean for Research, Department of East Asian Studies</strong><span data-i18n="footer.and-comma">, and</span>
                 <strong>Program in East Asian Studies, Princeton University</strong>.</p>    
-                <p>Development supported by the <strong>sin-aps</strong> research group at <strong>Friedrich-Alexander-Universität Erlangen Nürnberg</strong>, with financial support from the <strong>Alexander von Humboldt Foundation</strong>.  </p>
-                <p>Hosted by <strong>Princeton University, Department of East Asian Studies</strong>, in cooperation with <strong>Ruhr University Bochum, Center for the Study of Traditional Chinese Cultures </strong>.  </p>
-                <p>Support from 
+                <p><span data-i18n="footer.development-supported">Development supported by the</span> <strong>sin-aps</strong> <span data-i18n="footer.research-group-at">research group at</span> <strong>Friedrich-Alexander-Universität Erlangen Nürnberg</strong><span data-i18n="footer.financial-support">, with financial support from the</span> <strong>Alexander von Humboldt Foundation</strong>.  </p>
+                <p><span data-i18n="footer.hosted-by">Hosted by</span> <strong>Princeton University, Department of East Asian Studies</strong><span data-i18n="footer.cooperation">, in cooperation with</span> <strong>Ruhr University Bochum, Center for the Study of Traditional Chinese Cultures </strong>.  </p>
+                <p><span data-i18n="footer.support-from">Support from</span>
                     <strong>Heidelberg University - Cluster of Excellence - Asia and Europe in a Global Context</strong>
-                    and <strong>IKOS - University of Oslo</strong>
-                    gratefully acknowledged.
+                    <span data-i18n="footer.and">and</span> <strong>IKOS - University of Oslo</strong>
+                    <span data-i18n="footer.acknowledged">gratefully acknowledged.</span>
                 </p>
                 <p class="small text-right">This site uses cookies to maintain login state. The cookies are not used for any other purposes. By using this site you agree to this.</p>
             </div>
@@ -1563,7 +1563,7 @@ let $d := for $d1 in collection($config:tls-data-root||"/statistics/")//div[@typ
    return $d1
 return
 <div>
-<h3>Overview of the content of the database (last updated: {format-dateTime(xs:dateTime(data($d[1]/@modified)), "[MNn] [D], [Y]", "en", (), ())})</h3>
+<h3 data-i18n-scope="ui">Overview of the content of the database (last updated: <span data-i18n-scope="content">{format-dateTime(xs:dateTime(data($d[1]/@modified)), "[MNn] [D], [Y]", "en", (), ())}</span>)</h3>
 {$d[1]//table[@id='stat-overview']}
 </div>        
 
@@ -1860,7 +1860,7 @@ declare function app:obs($node as node(), $model as map(*)){
      (session:create(),
     <div class="card">
     <div class="card-header">
-    <h4 class="card-title">Observations in the TLS　　&#160;<button type="button" class="btn btn-primary" onclick="add_obs()">Add new template</button></h4>
+    <h4 class="card-title" data-i18n-scope="ui">Observations in the TLS　　&#160;<button type="button" class="btn btn-primary" onclick="add_obs()">Add new template</button></h4>
     </div>
     <p></p>
     <div class="card-text">{    
@@ -1868,12 +1868,12 @@ declare function app:obs($node as node(), $model as map(*)){
      let $t := $f/@type
      group by $t 
      return 
-     <div><h4><span class="text-muted">{data($t)}</span></h4>{
+     <div><h4><span class="text-muted" data-i18n-scope="ui">{data($t)}</span></h4>{
      for $ff in $f return
      (
      <p>{$ff/tei:head}　　
-     <button class="btn badge badge-primary ml-2" type="button" onclick="show_obs('{$ff/@xml:id}')">Edit template</button>     
-     <button class="btn badge badge-secondary ml-2" type="button" onclick="show_obs('{$ff/@xml:id}')">Show observations</button></p>,
+     <button class="btn badge badge-primary ml-2" type="button" data-i18n-scope="ui" onclick="show_obs('{$ff/@xml:id}')">Edit template</button>
+     <button class="btn badge badge-secondary ml-2" type="button" data-i18n-scope="ui" onclick="show_obs('{$ff/@xml:id}')">Show observations</button></p>,
      <div id="{$ff/@xml:id}-obs"></div>
      )
      }</div>
@@ -1956,7 +1956,7 @@ map {"current-time" : current-dateTime(), "shared-secret" : util:uuid(), "captch
 declare function app:render($node as node()*, $model as map(*)){
 let $question := map{"12x13" : "What is twelve times thirteen? (write the answer in numbers)" }
 return
-<p>
+<p data-i18n-scope="ui">
      <input type="hidden" name="ss" value="{$model?shared-secret}"/>
      <input type="hidden" name="vk" value="{$model?captcha}"/>
      <label>To make sure, only humans sign up, here is a random question:</label>

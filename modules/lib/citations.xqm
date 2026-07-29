@@ -51,7 +51,7 @@ declare function lct:citations-form($node as node()*, $model as map(*), $item as
 let $n := if (string-length($model?n)>0) then $model?n else 20
 return
 (
-<div class="row">
+<div class="row" data-i18n-scope="ui">
  <div class="col-md-1"></div>
  {lrh:form-control-input(
    map{
@@ -421,4 +421,3 @@ declare function local:cit-add-n($map as map(*), $n){
    return $n
   default return $n
 };
-

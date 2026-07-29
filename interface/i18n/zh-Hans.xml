@@ -160,4 +160,231 @@
     <message key="toast.bookmark-saved" source="Bookmark has been saved.">书签已保存。</message>
     <message key="toast.bookmark-deleted" source="Bookmark has been deleted.">书签已删除。</message>
     <message key="toast.password-changed" source="Your password has been changed. You will be logged out.">密码已更改，系统将退出当前登录。</message>
+
+    <message key="home.founding-editor" source="Founding Editor:">创始编辑：</message>
+    <message key="home.associate-editor" source="Associate Editor:">副编辑：</message>
+    <message key="home.general-editor" source="General Editor:">总编辑：</message>
+    <message key="home.technical-editor" source="Technical Editor:">技术编辑：</message>
+    <message key="home.problems" source="Problems and suggestions can be reported and discussed also on">问题与建议也可通过以下页面报告和讨论：</message>
+    <message key="home.overview" source="Overview of the content of the database (last updated:">数据库内容概览（最后更新：</message>
+
+    <message key="footer.copyright-prefix" source="Copyright TLS Project 2026, licensed under a">TLS 项目版权所有（2026），采用</message>
+    <message key="footer.copyright-suffix" source="license (except some translations)">许可协议发布（部分翻译除外）</message>
+    <message key="footer.cc-title" source="Creative Commons Attribution-ShareAlike 4.0 International License">知识共享署名—相同方式共享 4.0 国际许可协议</message>
+    <message key="footer.developed-at" source="Developed at the">开发单位：</message>
+    <message key="footer.with-support" source=", with support from the">；并得到以下单位支持：</message>
+    <message key="footer.and-comma" source=", and">，以及</message>
+    <message key="footer.development-supported" source="Development supported by the">开发工作得到</message>
+    <message key="footer.research-group-at" source="research group at">研究组支持，该研究组隶属于</message>
+    <message key="footer.financial-support" source=", with financial support from the">；经费支持来自</message>
+    <message key="footer.hosted-by" source="Hosted by">托管单位：</message>
+    <message key="footer.cooperation" source=", in cooperation with">；合作单位：</message>
+    <message key="footer.support-from" source="Support from">谨此感谢以下单位的支持：</message>
+    <message key="footer.and" source="and">以及</message>
+    <message key="footer.acknowledged" source="gratefully acknowledged.">。</message>
+    <message key="footer.cookies" source="This site uses cookies to maintain login state. The cookies are not used for any other purposes. By using this site you agree to this.">本站使用 Cookie 维持登录状态，不会将其用于其他目的。继续使用本站即表示您同意这一做法。</message>
+
+    <message key="browse.word-relation-type" source="Word relation type:">词语关系类型：</message>
+    <message key="browse.sort-by" source="Sort by:">排序方式：</message>
+    <message key="browse.left-word" source="Left word">左侧词语</message>
+    <message key="browse.right-word" source="Right word">右侧词语</message>
+    <message key="browse.left-concept" source="Left concept">左侧概念</message>
+    <message key="browse.right-concept" source="Right concept">右侧概念</message>
+    <message key="browse.words-by-concepts" source="Words by decreasing number of concepts">按关联概念数量降序排列的词语</message>
+
+    <message key="citations.warning-tree-prefix" source="The options ending in '(tree)' are still a mockup and do">名称以“(tree)”结尾的选项仍为原型，</message>
+    <message key="citations.warning-tree-suffix" source="not yet have the correct data">目前尚无正确数据</message>
+    <message key="citations.item" source="Item:">项目：</message>
+    <message key="citations.perspectives" source="Perspectives:">分析角度：</message>
+    <message key="citations.grouping-key1" source="Grouping: Key 1">分组：主键</message>
+    <message key="citations.key2" source="Key 2">次键</message>
+    <message key="citations.show" source="Show">显示</message>
+    <message key="citations.contributors" source="Contributors">贡献者</message>
+    <message key="citations.syntactical-functions" source="Syntactical Functions">句法功能</message>
+    <message key="citations.diachronic" source="Diachronic">历时</message>
+    <message key="citations.diachronic-tree" source="Diachronic(tree)">历时（树状）</message>
+    <message key="citations.by-character" source="By character">按汉字</message>
+    <message key="citations.by-concept" source="By Concept">按概念</message>
+    <message key="citations.by-concept-tree" source="By Concept(tree)">按概念（树状）</message>
+    <message key="citations.by-text" source="By text">按文本</message>
+    <message key="citations.by-synfunc" source="By Syntactic Function">按句法功能</message>
+    <message key="citations.by-synfunc-tree" source="By Syntactic Function(tree)">按句法功能（树状）</message>
+    <message key="citations.by-semantic-feature" source="By Semantic Feature">按语义特征</message>
+    <message key="citations.by-pos" source="By Part Of Speech">按词性</message>
+    <message key="citations.none" source="None">无</message>
+    <message key="citations.total" source="Total:">总计：</message>
+
+    <message key="signup.project-description" source="The TLS Project is a collaborative research project, concerned with all aspects of the Chinese culture as transmitted through its textual sources.">TLS 是一项协作研究项目，关注通过文献传承下来的中国文化各个方面。</message>
+    <message key="signup.platform-description" source="This website is the main platform for this work. It allows to prepare, edit, analyze, annotate and translate the texts.">本网站是项目工作的主要平台，可用于整理、编辑、分析、标注和翻译文本。</message>
+    <message key="signup.privacy-description" source="This system is still work in progress, but a limited number of accounts are available at this moment. The accounts are free of charge and there is no advertisement or tracking on the site. Your personal data will only be kept on the server and not shared with anyone. If you request deletion of the account, all personal information will be deleted, except your name as far as it is associated with data items.">本系统仍在开发中，目前可提供数量有限的账号。账号免费，网站不含广告，也不会跟踪用户。您的个人资料仅保存在服务器上，不会与任何人共享。申请删除账号后，除与数据项目关联的姓名外，所有个人信息都将被删除。</message>
+    <message key="signup.languages" source="If you are interested, please fill in the information below and let us now. You may use English, Chinese, Japanese, Korean or German when filling out this form.">如有兴趣，请填写以下信息与我们联系。表格可使用英语、中文、日语、韩语或德语填写。</message>
+    <message key="signup.important" source="Important:">重要：</message>
+    <message key="signup.nickname-prefix" source="this nickname can only contain">用户名只能包含</message>
+    <message key="signup.letters" source="letters">字母</message>
+    <message key="signup.and-or" source="and/or">和/或</message>
+    <message key="signup.numbers" source="numbers">数字</message>
+    <message key="signup.nickname-restriction" source=". No other characters, such as a">。不得使用其他字符，例如</message>
+    <message key="signup.space-character" source="space character">空格</message>
+    <message key="signup.allowed" source="are allowed.">。</message>
+    <message key="signup.password-help" source="Make sure you take note of this password and remember it, you will need it to log in to your account!">请记下并妥善保管此密码，登录账号时需要使用。</message>
+    <message key="signup.email-help" source="Make sure the email is spelled correctly and will receive messages from">请确认邮箱地址拼写正确，并能接收来自以下地址的邮件：</message>
+    <message key="signup.website-help" source="If you have a private or institutional website, please let us now.">如有个人或机构网站，请在此填写。</message>
+    <message key="signup.license-prefix" source="All data on this site, with the exception of translations, is made available by the TLS Project under a">除翻译外，本站所有数据均由 TLS 项目依据</message>
+    <message key="signup.license-suffix" source="license. This applies to all of your input as well.">许可协议提供；您提交的所有数据也适用该协议。</message>
+    <message key="signup.translation-license" source="As far as your translations are concerned, you retain your copyright, and are free to publish them wherever you like. You do grant a irrevocable license to the TLS Project to display the translations in the context of the website, but not anywhere else.">对于您提交的翻译，版权仍归您所有，您可自行在任何地方发表。同时，您授予 TLS 项目一项不可撤销的许可，允许项目仅在本网站语境中展示这些翻译，不得用于其他场合。</message>
+    <message key="signup.agree" source="By submitting this form, you agree to these conditions!">提交本表格即表示您同意上述条件。</message>
+    <message key="signup.next-description" source="Shortly after sending this form, you should receive an automated message to verify your email address. You will have to click on a link that has been sent to you. Only after the mail has been verified will the review process begin. If you are accepted, you will receive an email notification and can start to use your account.">提交表格后，您很快会收到一封用于验证邮箱地址的自动邮件，请点击邮件中的链接。邮箱验证完成后，账号审核才会开始。如申请获批，您将收到邮件通知，随后即可使用账号。</message>
+    <message key="signup.password-mismatch" source="Passwords do not match.">两次输入的密码不一致。</message>
+    <message key="signup.captcha-label" source="To make sure, only humans sign up, here is a random question:">为确认申请由本人提交，请回答以下随机问题：</message>
+    <message key="signup.captcha-question" source="What is twelve times thirteen? (write the answer in numbers)">十二乘以十三是多少？（请填写数字）</message>
+
+    <message key="settings.intro-prefix" source="Here are settings to fine-tune the place, type and number of">以下设置可细调不同位置所显示</message>
+    <message key="settings.items" source="items">项目</message>
+    <message key="settings.intro-middle" source="to display in different">的类型、数量及其</message>
+    <message key="settings.contexts" source="contexts:">显示情境：</message>
+    <message key="settings.wikidata" source="Wikidata Search and Links">Wikidata 搜索与链接</message>
+    <message key="settings.links" source="Links to external resources">外部资源链接</message>
+    <message key="settings.add-reference" source="Add reference">添加参考资料</message>
+    <message key="settings.add-bibliography" source="Add bibliographic item">添加参考文献条目</message>
+    <message key="settings.context-label" source="Context:">显示情境：</message>
+    <message key="settings.select-option" source="Select here from the following options:">请从以下选项中选择：</message>
+    <message key="settings.help-title" source="Open documentation for this item">打开此项目的使用文档</message>
+    <message key="settings.concept-page" source="The page displaying a Concept">概念页面</message>
+    <message key="settings.rhetdev-page" source="The page displaying a Rhetorical Device">修辞手法页面</message>
+    <message key="settings.word-definition" source="The definition of a word">词语释义</message>
+    <message key="settings.attribution-floater" source="The attribution floater">义项标注浮窗</message>
+    <message key="settings.search-results" source="The area at the beginning of the display of search results for texts and words.">文本和词语搜索结果顶部区域</message>
+    <message key="settings.text-info" source="A section in the text info display">文本信息显示区</message>
+    <message key="settings.delete-context" source="Delete this context.">删除此显示情境。</message>
+    <message key="settings.bookmarks-prefix" source="Here are your currently defined bookmarks. Bookmarks register a">以下是您当前保存的书签。书签会记录文本中的</message>
+    <message key="settings.specific-location" source="specific location">特定位置</message>
+    <message key="settings.bookmarks-middle" source="in a text for you to come back any time. If you">，方便随时返回。如果您为</message>
+    <message key="settings.rate" source="rate">评分</message>
+    <message key="settings.bookmarks-access" source="a text, you can access the">某一文本，还可以访问其</message>
+    <message key="settings.recent-location" source="most recent location">最近阅读位置</message>
+    <message key="settings.bookmarks-menu" source="through red-star">，入口位于上方的红星</message>
+    <message key="settings.menu-above" source="menu above.">菜单中。</message>
+    <message key="settings.delete-instruction-prefix" source="In the list below, click on the">在下方列表中，点击</message>
+    <message key="settings.delete-instruction-suffix" source="to delete a bookmark.">即可删除书签。</message>
+    <message key="settings.delete-bookmark" source="Delete this bookmark.">删除此书签。</message>
+    <message key="settings.additional-prefix" source="additional resources or">其他资源，或</message>
+    <message key="settings.select-lower" source="select">选择</message>
+    <message key="settings.additional-suffix" source="which to show.">需要显示的资源。</message>
+    <message key="settings.available-resources" source="Available resources:">可用资源：</message>
+    <message key="settings.basic" source="Basic">基本资源</message>
+    <message key="settings.additional" source="Additional">其他资源</message>
+
+    <message key="observations.title" source="Observations in the TLS">TLS 中的观察记录</message>
+    <message key="observations.add-template" source="Add new template">新增模板</message>
+    <message key="observations.edit-template" source="Edit template">编辑模板</message>
+    <message key="observations.show" source="Show observations">显示观察记录</message>
+    <message key="observations.inline" source="inline">行内</message>
+    <message key="observations.block" source="block">区块</message>
+    <message key="observations.ingredient" source="Ingredient">成分</message>
+    <message key="observations.disease" source="Disease condition">疾病状况</message>
+    <message key="observations.person" source="Person">人物</message>
+    <message key="observations.place" source="Place">地点</message>
+    <message key="observations.rhetorical-device" source="Rhetorical Device">修辞手法</message>
+    <message key="observations.comment" source="Comment">评论</message>
+    <message key="observations.recipe" source="Recipe">配方</message>
+    <message key="observations.biographical" source="Biographical entry">传记条目</message>
+
+    <message key="activity.recent" source="Recent activity as of">截至以下时间的最近活动：</message>
+    <message key="activity.attributions" source="Attributions">义项标注</message>
+    <message key="activity.attribution-total" source="Total number of attributions made since Aug. 28, 2019:">自 2019 年 8 月 28 日以来的义项标注总数：</message>
+    <message key="activity.most-recent" source="The most recent attribution was">最近一次义项标注发生在</message>
+    <message key="activity.ago" source="ago:">前：</message>
+    <message key="activity.translation-lines" source="Lines of translations">翻译行数</message>
+    <message key="activity.translation-total" source="Total number of lines translated since Aug. 28, 2019:">自 2019 年 8 月 28 日以来的人工翻译总行数：</message>
+    <message key="activity.ai-prefix" source="This does not include AI generated output, which is">此数字不包括 AI 生成内容；AI 生成内容共有</message>
+    <message key="activity.ai-suffix" source="lines, but some hand-generated AI requests using the 'AI' button.">行，其中也包含部分通过“AI”按钮人工发起的请求。</message>
+    <message key="duration.years" source="{count} years">{count} 年</message>
+    <message key="duration.year" source="{count} year">{count} 年</message>
+    <message key="duration.months" source="{count} months">{count} 个月</message>
+    <message key="duration.month" source="{count} month">{count} 个月</message>
+    <message key="duration.days" source="{count} days">{count} 天</message>
+    <message key="duration.day" source="{count} day">{count} 天</message>
+    <message key="duration.hours" source="{count} hours">{count} 小时</message>
+    <message key="duration.hour" source="{count} hour">{count} 小时</message>
+    <message key="duration.minutes" source="{count} minutes">{count} 分钟</message>
+    <message key="duration.minute" source="{count} minute">{count} 分钟</message>
+    <message key="duration.seconds" source="{count} seconds">{count} 秒</message>
+    <message key="duration.second" source="{count} second">{count} 秒</message>
+
+    <message key="textlist.available" source="Available texts:">可用文本：</message>
+    <message key="textlist.core" source="Core Texts">核心文本</message>
+    <message key="textlist.more" source="More Texts">更多文本</message>
+    <message key="textlist.starred" source="Starred Texts">已加星标的文本</message>
+    <message key="textlist.new" source="New Texts">新增文本</message>
+    <message key="textlist.recent-title" source="Recently added texts">最近添加的文本</message>
+
+    <message key="ui.show-annotations" source="Press here to show annotations.">点击此处显示标注。</message>
+    <message key="ui.end-editing-title" source="Click here to end editing">点击此处结束编辑</message>
+    <message key="ui.ai-translation-title" source="Translation generated by AI">AI 生成的翻译</message>
+    <message key="ui.opened-exide" source="Opened code in existing eXide window.">代码已在现有 eXide 窗口中打开。</message>
+    <message key="ui.cancel-move" source="Cancelling move to store data. Please press button again.">已取消移动并保留数据。请再次按下按钮。</message>
+    <message key="ui.new-concept-prompt" source="Please enter the name of the new concept:">请输入新概念的名称：</message>
+    <message key="ui.new-synfunc-prompt" source="No syntactic function '{function}' defined. If you want to define a new one, please enter the definition here:">尚未定义句法功能“{function}”。如需新建，请在此输入定义：</message>
+    <message key="ui.new-synfunc-saved" source="New syntactic function has been saved.">新句法功能已保存。</message>
+    <message key="ui.sw-definition-required" source="Newly defined SW need a definition. Can not save SW to concept.">新定义的句法词必须填写定义，无法保存到概念中。</message>
+    <message key="ui.no-concept-confirm" source="No existing concept selected. Do you want create a new concept named {concept} ?">尚未选择已有概念。是否新建名为“{concept}”的概念？</message>
+    <message key="ui.no-synfunc" source="No syntactic function defined. Can not save SW to concept.">尚未定义句法功能，无法将句法词保存到概念中。</message>
+    <message key="ui.guangyun-required" source="Guangyun has not been selected!">尚未选择《广韵》条目。</message>
+    <message key="ui.email-sent" source="Email has been sent to {email}">邮件已发送至 {email}</message>
+    <message key="ui.email-unregistered" source="Email is not registered {email}">邮箱 {email} 尚未注册</message>
+    <message key="ui.concept-id-required" source="Concept ID not set. Please select the concept name with the mouse!">尚未设置概念 ID，请使用鼠标选择概念名称。</message>
+    <message key="ui.unsaved-nedit" source="Unsaved data exist, do you want to save (nedit)?">存在未保存的数据，是否保存（nedit）？</message>
+    <message key="ui.unsaved-translation" source="Unsaved data exist, do you want to save? (tr)">存在未保存的数据，是否保存（tr）？</message>
+    <message key="ui.click-yellow-eye" source="Click the yellow eye to end the editing.">点击黄色眼睛图标结束编辑。</message>
+    <message key="ui.delete-line-confirm" source="'{line}' ({id}) will be deleted and removed, do you want to proceed?.">将删除并移除“{line}”（{id}），是否继续？</message>
+    <message key="ui.new-rhetdev-prompt" source="No existing rhetorical device selected. Do you want to create a new one?">尚未选择已有修辞手法。是否新建？</message>
+    <message key="ui.delete-used-confirm" source="'{item}' has been used in attributions, do you want to proceed? All attributions will be deleted as well.">“{item}”已用于义项标注。是否继续？相关标注也将全部删除。</message>
+    <message key="ui.url-copied" source="URL: {url} copied to clipboard!">URL：{url} 已复制到剪贴板。</message>
+    <message key="ui.delete-translation-confirm" source="Do you really want to delete this translation?">确定要删除此翻译吗？</message>
+    <message key="ui.select-user" source="Please select a user!">请选择用户。</message>
+
+    <message key="toast.unknown-detail" source="An unknown error happened on the system.{detail}">系统发生未知错误。{detail}</message>
+    <message key="toast.could-not-save" source="Could not save: {reason}">无法保存：{reason}</message>
+    <message key="toast.word-moving-name" source="Word {word} is being moved.">正在移动词语“{word}”。</message>
+    <message key="toast.word-move-complete" source="Move of {word} has been completed.">词语“{word}”已移动完成。</message>
+    <message key="toast.concept-reload" source="Concept has been modified/deleted. Please reload page to see the effect.">概念已修改或删除，请重新加载页面查看结果。</message>
+    <message key="toast.definition-saved" source="Modification for definition saved.">定义修改已保存。</message>
+    <message key="toast.problem-response" source="PROBLEM: {status} {response}">发生问题：{status} {response}</message>
+    <message key="toast.problem-detail" source="PROBLEM: {detail}">发生问题：{detail}</message>
+    <message key="toast.problem-compact" source="PROBLEM{detail}">发生问题：{detail}</message>
+    <message key="toast.translation-line-saved" source="Translation for line {line} saved.">第 {line} 行的翻译已保存。</message>
+    <message key="toast.line-saved" source="Modification for line {line} saved.">第 {line} 行的修改已保存。</message>
+    <message key="toast.line-deleted" source="Deletion for line {id} completed.">第 {id} 行已删除。</message>
+    <message key="toast.synfunc-updated" source="Syntactic function updated.">句法功能已更新。</message>
+    <message key="toast.semfeat-updated" source="Semantic feature updated.">语义特征已更新。</message>
+    <message key="toast.list-display" source="List display option changed.">列表显示方式已更改。</message>
+    <message key="toast.observation-saved" source="Observation location {item} saved.">观察位置“{item}”已保存。</message>
+    <message key="toast.observation-error" source="Could not save observation. {detail}">无法保存观察记录。{detail}</message>
+    <message key="toast.synonyms-saved" source="New synonyms for {concept} saved.">概念“{concept}”的新同义词已保存。</message>
+    <message key="toast.item-saved" source="New item {item} saved.">新项目“{item}”已保存。</message>
+    <message key="toast.checking-usage" source="Checking for usage, please wait.">正在检查使用情况，请稍候。</message>
+    <message key="toast.synfunc-deleted" source="Syntactic function entry had been deleted.">句法功能条目已删除。</message>
+    <message key="toast.generic-item-saved" source="{item} has been saved.">{item} 已保存。</message>
+    <message key="toast.generic-item-deleted" source="{item} has been deleted.">{item} 已删除。</message>
+    <message key="toast.pinyin-saved" source="Pinyin has been saved. Please reload page to see all changes.">拼音已保存，请重新加载页面查看全部更改。</message>
+    <message key="toast.pronunciation-deleted" source="Pronounciation has been deleted.">读音已删除。</message>
+    <message key="toast.pronunciation-used" source="Pronounciation is in use, can not be deleted.">该读音正在使用，无法删除。</message>
+    <message key="toast.gloss-saved" source="Gloss has been saved.">释义已保存。</message>
+    <message key="toast.text-category-saved" source="Text category has been saved.">文本类别已保存。</message>
+    <message key="toast.text-date-saved" source="Textdate has been saved.">文本年代已保存。</message>
+    <message key="toast.vote" source="Your vote has been registered. Thank you">您的投票已记录，谢谢。</message>
+    <message key="toast.request-deleted" source="The request has been deleted.">请求已删除。</message>
+    <message key="toast.request-approved" source="The request has been approved. Thank you">请求已批准，谢谢。</message>
+    <message key="toast.tag-saved" source="Tag {tag} for {count} item(s) saved.">已为 {count} 个项目保存标签“{tag}”。</message>
+    <message key="toast.url-saved" source="New URL saved.">新 URL 已保存。</message>
+    <message key="toast.resource-saved" source="Resource saved.">资源已保存。</message>
+    <message key="toast.translation-deleted" source="Translation has been deleted.">翻译已删除。</message>
+    <message key="toast.pagebreak-saved" source="Pagebreak saved.">分页符已保存。</message>
+    <message key="toast.variant-recorded" source="Variant recorded.">异文已记录。</message>
+    <message key="toast.request-received" source="Request received. Please leave a few days for processing">请求已收到，请预留数日处理时间。</message>
+    <message key="toast.request-processed" source="Request processed">请求已处理。</message>
+    <message key="toast.permission-added" source="Permission added for user {user}">已为用户 {user} 添加权限。</message>
+    <message key="toast.permission-add-error" source="Error occured when trying to add permission">添加权限时发生错误。</message>
+    <message key="toast.permission-revoked" source="Permission revoked for user {user}">已撤销用户 {user} 的权限。</message>
+    <message key="toast.permission-revoke-error" source="Error occured when trying to revoke permission">撤销权限时发生错误。</message>
 </catalogue>
