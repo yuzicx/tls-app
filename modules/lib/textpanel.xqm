@@ -154,7 +154,7 @@ declare function ltp:prepare-chunk($chunk as node()*, $map as map(*)){
       {if (count($atypes) > 1) then 
       <div id="swlrow" class="col-sm-12 swl collapse" data-toggle="collapse">
        <div class="row">
-         <div class="col-sm-2" id="swlrow-1"><span class="font-weight-bold">Select type of annotation:</span></div>
+         <div class="col-sm-2" id="swlrow-1"><span class="font-weight-bold" data-i18n="textview.select-annotation">Select type of annotation:</span></div>
          <div class="col-sm-5" id="swlrow-2">{for $a in $atypes return <button id="{$a}-select" onclick="showhide('{$a}')" title="{ltp:annotation-types($a)[2]}" class="btn btn-primary ml-2" type="button">{ltp:annotation-types($a)[1]}</button>}</div>
       </div>
       </div>
@@ -166,12 +166,12 @@ declare function ltp:prepare-chunk($chunk as node()*, $map as map(*)){
       with selection for translation etc, we use this as a header line :)()}
        <div class="row">
         <div class="col .no-gutters"><img class="icon state-{$state}"  src="{$config:circle}"/></div>
-        <div class="{$zh-width}" id="toprow-1"><span class="font-weight-bold">{$head}</span><span class="btn badge badge-light">line {$xpos} / {$percent}%</span> 
+        <div class="{$zh-width}" id="toprow-1"><span class="font-weight-bold">{$head}</span><span class="btn badge badge-light" data-i18n-scope="ui">{"line " || $xpos || " / " || $percent || "%"}</span>
         {if (string-length($facs) > 0) then 
         let $pg := substring-before(tokenize($facs, '/')[last()], '.')
         return
-          <span class="btn badge badge-light ed-{$ed}" title="Click here to display a facsimile of this page &#10; {$pg}" onclick="get_facs_for_page('slot1', '{$fpref}{$facs}', '{$ed}', '{data($tseg/@xml:id)}')" >{$config:wits?($ed)}:{$n}</span>
-         else <span title="No facsimile available" class="btn badge badge-light">{$n}</span>
+          <span class="btn badge badge-light ed-{$ed}" title="Click here to display a facsimile of this page: {$pg}" data-i18n-scope="ui" onclick="get_facs_for_page('slot1', '{$fpref}{$facs}', '{$ed}', '{data($tseg/@xml:id)}')" ><span data-i18n-scope="content">{$config:wits?($ed)}:{$n}</span></span>
+         else <span title="No facsimile available" data-i18n-title="textview.no-facsimile" class="btn badge badge-light">{$n}</span>
          }
         <!-- zh --></div>
         <!-- 2024-09-06 this is rubbish, this needs also to be moved to textpanel and not hardcode the width -->
@@ -195,24 +195,24 @@ declare function ltp:prepare-chunk($chunk as node()*, $map as map(*)){
       <div class="row">
       <div class="col-sm-2">
       {if ($dseg) then  
-       <button type="button" class="btn" onclick="page_move('{$chunk/div/nav/@first}')" title="Go to the first page"><span style="color: blue">First</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$chunk/div/nav/@first}')" title="Go to the first page"><span style="color: blue">First</span></button>
        else ()}
        </div>
       <div class="col-sm-2">
       {if (1) then  
-       <button type="button" class="btn" onclick="page_move('{$chunk/div/nav/@prev}')" title="Go to the previous page"><span style="color: blue">Previous</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$chunk/div/nav/@prev}')" title="Go to the previous page"><span style="color: blue">Previous</span></button>
        else ()}
        </div>
        <div class="col-sm-2">
        {
        if (1) then
-       <button id="nextpagebutton" type="button" class="btn" onclick="page_move('{$chunk/div/nav/@next}')" title="Go to the next page"><span style="color: blue">Next</span></button>
+       <button id="nextpagebutton" type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$chunk/div/nav/@next}')" title="Go to the next page"><span style="color: blue">Next</span></button>
        else ()}
        </div> 
        <div class="col-sm-2">
        {
        if (1) then
-       <button type="button" class="btn" onclick="page_move('{$chunk/div/nav/@last}')" title="Go to the last page"><span style="color: blue">Last</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$chunk/div/nav/@last}')" title="Go to the last page"><span style="color: blue">Last</span></button>
        else ()}
        </div> 
         {if (lpm:show-setting('wd', 'concept')) then wd:quick-search-form('title') else ()}
@@ -491,5 +491,3 @@ declare function ltp:chunkcol-left($dseg, $model, $tr, $slot1-id, $slot2-id, $lo
           'zh-width' : 'col-sm-3',
           'pos' : $pos + $cnt, "ann" : "xfalse.x"})))
 };
-
-

@@ -189,24 +189,24 @@ return
 (
       <div class="col-sm-2">
       {if ($dseg) then  
-       <button type="button" class="btn" onclick="page_move('{tokenize($dseg/@xml:id, "_")[1]}&amp;first=true')" title="Go to the first page"><span style="color: blue">First</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{tokenize($dseg/@xml:id, "_")[1]}&amp;first=true')" title="Go to the first page"><span style="color: blue">First</span></button>
        else ()}
        </div>
 ,      <div class="col-sm-2">
       {if ($dseg[1]/preceding::tei:seg[1]/@xml:id) then  
-       <button type="button" class="btn" onclick="page_move('{$dseg[1]/preceding::tei:seg[1]/@xml:id}&amp;prec={$foll+$prec -2}&amp;foll=2')" title="Go to the previous page"><span style="color: blue">Previous</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$dseg[1]/preceding::tei:seg[1]/@xml:id}&amp;prec={$foll+$prec -2}&amp;foll=2')" title="Go to the previous page"><span style="color: blue">Previous</span></button>
        else ()}
        </div>
 ,       <div class="col-sm-2">
        {
        if ($dseg[last()]/following::tei:seg[1]/@xml:id) then
-       <button type="button" class="btn" onclick="page_move('{$dseg[last()]/following::tei:seg[1]/@xml:id}&amp;prec=2&amp;foll={$foll+$prec -2}')" title="Go to the next page"><span style="color: blue">Next</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$dseg[last()]/following::tei:seg[1]/@xml:id}&amp;prec=2&amp;foll={$foll+$prec -2}')" title="Go to the next page"><span style="color: blue">Next</span></button>
        else ()}
        </div> 
 ,       <div class="col-sm-2">
        {
        if ($dseg/following::tei:seg[last()]/@xml:id) then
-       <button type="button" class="btn" onclick="page_move('{$dseg/following::tei:seg[last()]/@xml:id}&amp;prec={$foll+$prec -2}&amp;foll=0')" title="Go to the last page"><span style="color: blue">Last</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$dseg/following::tei:seg[last()]/@xml:id}&amp;prec={$foll+$prec -2}&amp;foll=0')" title="Go to the last page"><span style="color: blue">Last</span></button>
        else ()}
        </div> 
 )

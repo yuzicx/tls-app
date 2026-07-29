@@ -133,7 +133,7 @@ declare function src:show-item-results($map as map(*)){
       <tr>
         <td class="chn-font">{$c0 + $map?start -1}({$c})</td>
         <td><a href="textview.html?location={$loc}&amp;query={$map?query}">{$title, " / ", $head}</a>
-        <span class="btn badge badge-light " onclick="show_dialog('text-info', {{'textid': '{lmd:get-metadata($cseg, 'textid')}'}})" title="Information about this text">
+        <span class="btn badge badge-light " onclick="show_dialog('text-info', {{'textid': '{lmd:get-metadata($cseg, 'textid')}'}})" title="Information about this text" data-i18n-title="search.text-info-title">
            <img class="icon "  src="resources/icons/octicons/svg/info.svg"/></span>
         </td>
         <td class="chn-font">{ try { 
@@ -145,7 +145,7 @@ declare function src:show-item-results($map as map(*)){
         } catch * {$err:description}
     }
     </table>
-    <nav aria-label="Page navigation">
+    <nav aria-label="Page navigation" data-i18n-aria-label="pagination.label">
       <ul class="pagination">
         <li class="page-item"><a class="page-link {if (xs:int($map?start) = 1) then "disabled" else ()}" href="#" onclick="krx_items('{xs:int($map?start) - xs:int($map?resno)}')">&#171;</a></li>
         <li class="page-item"><a class="page-link" href="#" onclick="krx_items('{xs:int($map?start) + xs:int($map?resno)}')">&#187;</a></li>
@@ -269,8 +269,8 @@ function src:hit-count($node as node()*, $model as map(*), $query as xs:string?)
 (: $sset/tls:item[@type='search-ratio']/@value :)
 (: section is the search section of the settings file :)
 declare %private function src:src-options($section as node()){
-<p><b title="This algorithm is used to evaluate the matches in every category against the expected matches.">Select algorithm for display</b>
-<select class="form-control chn-font" id="search-ratio">
+<p data-i18n-scope="ui"><b title="This algorithm is used to evaluate the matches in every category against the expected matches.">Select algorithm for display</b>
+<select class="form-control chn-font" id="search-ratio" data-i18n-scope="ui">
 {for $c in map:keys($src:rtype)
 return
 if ($section/tls:item[@type='search-ratio']/@value = $c) then
@@ -279,7 +279,7 @@ else
 <option value="{$c}">{$src:rtype?($c)}</option> 
 }
 </select>
-<b title="Cutoff value used for the different display colors.">Select cutoff value {data($section/tls:item[@type='search-cutoff']/@value)}</b>
+<b title="Cutoff value used for the different display colors.">{"Select cutoff value " || data($section/tls:item[@type='search-cutoff']/@value)}</b>
 <select class="form-control chn-font" id="search-cutoff">
 {for $c in $src:cutoff
 return
@@ -425,23 +425,23 @@ let $st :=  if (string-length($type) > 0) then map:get($config:search-map, $map?
 return
 (if ($map?search-type = $src:search-bib ) then () else
  if ($map?search-type = $src:ngtype) then (
- <h1 id="search-results-top">Searching in <strong>{if (count(map:keys($map?cat)) > 0) then string-join(for $c in map:keys($map?cat) return lmd:cat-title($map?cat?($c)), " / ") else $st}</strong> for <mark class="chn-font">{$map?query}</mark></h1>
+ <h1 id="search-results-top"><span data-i18n="search.searching-in">Searching in</span> <strong data-i18n-scope="content">{if (count(map:keys($map?cat)) > 0) then string-join(for $c in map:keys($map?cat) return lmd:cat-title($map?cat?($c)), " / ") else $st}</strong> <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
 ) else
  if ($map?search-type = $src:search-trans) then (
- <h1 id="search-results-top">Searching in <strong>{$st}</strong>{if (string-length($map?textid) > 0) then " for " || lu:get-title($map?textid) else ()} for <mark class="chn-font">{$map?query} </mark> </h1>
+ <h1 id="search-results-top"><span data-i18n="search.searching-in">Searching in</span> <strong data-i18n-scope="content">{$st}</strong>{if (string-length($map?textid) > 0) then (" ", <span data-i18n="search.within-text">within text</span>, " ", <span data-i18n-scope="content">{lu:get-title($map?textid)}</span>) else ()} <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
 ) else
  if ($map?search-type = $src:textlist) then
    let $count := count($map?hits)
    return 
    if($count >0) then
-    <h1 id="search-results-top">Catalog  {if (count(map:keys($map?cat)) > 0) then "excerpt for subcategory " || string-join(for $c in map:keys($map?cat) return lmd:cat-title($map?cat?($c)), " / ") else ()}
-    <span>({$count} items)</span> </h1>
+    <h1 id="search-results-top"><span data-i18n="search.catalog">Catalog</span> {if (count(map:keys($map?cat)) > 0) then (<span data-i18n="search.subcategory-excerpt">excerpt for subcategory</span>, " ", <span data-i18n-scope="content">{string-join(for $c in map:keys($map?cat) return lmd:cat-title($map?cat?($c)), " / ")}</span>) else ()}
+    <span data-i18n-scope="ui">{"(" || $count || " items)"}</span> </h1>
    else src:textlist-doc()
  else
 <div id="search-results-top">
-<h1>Searching in <strong>{$st}</strong> for <mark class="chn-font">{$map?query}</mark></h1>
+<h1><span data-i18n="search.searching-in">Searching in</span> <strong data-i18n-scope="content">{$st}</strong> <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
 
-<p>Time: {util:system-dateTime() - $map?s-time}</p>
+<p><span data-i18n="search.time">Time:</span> <span data-i18n-scope="content">{util:system-dateTime() - $map?s-time}</span></p>
 </div>
 )
 };
@@ -459,11 +459,11 @@ return
 (: if type = 10 do not display here :) 
 if ($model?search-type = ($src:search-bib, $src:textlist)) then () else 
 <div id="search-results-count">
-<h4>Found {$cnt} {if ($cnt = 1) then " match" else " matches"}, <span>showing {$start} to {min(($cnt, $start + $model?resno -1))}</span></h4>
+<h4 data-i18n-scope="ui">{"Found " || $cnt || (if ($cnt = 1) then " match, showing " else " matches, showing ") || $start || " to " || min(($cnt, $start + $model?resno -1))}</h4>
 {if (count($model?hits) < $sortmax or $sortmax < 1) then () else
  <div class="row">
  <div class="col-md-7">
- <p class="bg-warning" onclick="show_dialog('update-setting', {{'setting': 'search-sortmax', 'value': '{$sortmax}', 'hint': 'This is the number of hits beyond which searching will be disabled. The current value is {$sortmax}. Enter 0 to switch off the disabling.'}})">Sorting is disabled, since we have more than {$sortmax} hits. <br/>Select a facet from the display to the left to filter and reduce the number of hits and apply sorting or click here to change the setting.</p>
+ <p class="bg-warning" data-i18n-scope="ui" onclick="show_dialog('update-setting', {{'setting': 'search-sortmax', 'value': '{$sortmax}', 'hint': TLSI18n.fromSource('This is the number of hits beyond which searching will be disabled. The current value is {$sortmax}. Enter 0 to switch off the disabling.')}})"><span>{"Sorting is disabled, since we have more than " || $sortmax || " hits."}</span><br/><span>Select a facet from the display to the left to filter and reduce the number of hits and apply sorting or click here to change the setting.</span></p>
  </div>
  </div>
 }  
@@ -492,7 +492,7 @@ declare function src:find-similar-segments($inp-seg){
       where count($id) > $ns and not($id = $seg/@xml:id)
       return $sg[1]
  return
- <ul><li>Total:<span class="btn badge badge-light">{count($ret1)}</span></li>{(
+ <ul><li><span data-i18n="common.total">Total:</span><span class="btn badge badge-light">{count($ret1)}</span></li>{(
  for $rs at $pos in $ret1 
    let $text := string-join($rs//text())
    group by $text
@@ -501,7 +501,7 @@ declare function src:find-similar-segments($inp-seg){
  return 
   if ($cnt > 1) then
   <li cnt="{$cnt}" t="{$text}">{$text}
-  <button title="Click to show" class="btn badge badge-light" type="button" 
+  <button title="Click to show" data-i18n-title="common.click-to-show" class="btn badge badge-light" type="button"
       data-toggle="collapse" data-target="#list-{$pos[1]}">{$cnt}</button>
       <ul class="collapse"  id="list-{$pos[1]}">{
           src:show-result-segs(
@@ -512,7 +512,7 @@ declare function src:find-similar-segments($inp-seg){
  else 
  src:show-result-segs($rs, "list")
  , if (lpm:can-use-linked-items()) then 
- <li> <span class="btn" onclick="show_new_link_dialog('{$uuid}')">Link selected items to this line</span></li> else ()
+ <li> <span class="btn" data-i18n="search.link-selected" onclick="show_new_link_dialog('{$uuid}')">Link selected items to this line</span></li> else ()
  )}</ul>
 };
 
@@ -683,7 +683,7 @@ declare function src:facets-prune($n){
 declare function src:facets-table($node, $map, $baseid, $url, $state){
   <div  id="{$baseid}--table">
   <table class="table table-bordered">
-<tr>
+<tr data-i18n-scope="ui">
 <td>Category</td>
 <td>Texts</td>
 <td>Sum</td>
@@ -751,11 +751,11 @@ declare function src:facets-html($node, $map, $baseid, $url, $state){
       if ($map?notav) then 
        if (string-length($url) > 0) then 
          if (contains($url, "filter=")) then   
-         <li id="{$baseid}---notav"><a href="{$url};{$baseid}:notav" onclick="#">Not assigned <span>{$map?notav}</span></a></li>
+         <li id="{$baseid}---notav"><a href="{$url};{$baseid}:notav" onclick="#"><span data-i18n="search.not-assigned">Not assigned</span> <span data-i18n-scope="content">{$map?notav}</span></a></li>
         else
-         <li id="{$baseid}---notav"><a href="{$url}&amp;filter={$baseid}:notav" onclick="#">Not assigned <span>{$map?notav}</span></a></li>
+         <li id="{$baseid}---notav"><a href="{$url}&amp;filter={$baseid}:notav" onclick="#"><span data-i18n="search.not-assigned">Not assigned</span> <span data-i18n-scope="content">{$map?notav}</span></a></li>
        else
-        <li id="{$baseid}---notav">Not assigned</li>
+        <li id="{$baseid}---notav" data-i18n="search.not-assigned">Not assigned</li>
        else ()
       else ()
     }    
@@ -765,7 +765,7 @@ declare function src:facets-html($node, $map, $baseid, $url, $state){
     return
     if ($n/@rend = "top") then 
     (<span class="anchor" id="{$baseid}--head">XX</span>,
-    <h3 data-toggle="collapse" data-target="#{$baseid}--body">{if (string-length($hx) > 0) then $hx else "Not assigned"}</h3>)
+    <h3 data-toggle="collapse" data-target="#{$baseid}--body" data-i18n-scope="ui">{if (string-length($hx) > 0) then $hx else "Not assigned"}</h3>)
     else ()
   default return $n
   }
@@ -779,23 +779,23 @@ declare function src:facets-html-node($n, $baseid, $url, $cutoff){
    {if (string-length($url) > 0) then 
    <span>
     {if (contains($url, "filter=")) then   
-   <a title="Click here to filter on this category" class="mr-2 ml-2" href="{$url};{$baseid}:{$n/@xml:id}">{$n/tei:catDesc/text()}</a>
+   <a title="Click here to filter on this category" data-i18n-title="search.filter-category-title" class="mr-2 ml-2" href="{$url};{$baseid}:{$n/@xml:id}">{$n/tei:catDesc/text()}</a>
     else 
-   <a title="Click here to filter on this category" class="mr-2 ml-2" href="{$url}&amp;filter={$baseid}:{$n/@xml:id}">{$n/tei:catDesc/text()}</a>
+   <a title="Click here to filter on this category" data-i18n-title="search.filter-category-title" class="mr-2 ml-2" href="{$url}&amp;filter={$baseid}:{$n/@xml:id}">{$n/tei:catDesc/text()}</a>
    }
-   {if ($n/@sum) then <span title="Aggregate over this and lower levels" class="badge badge-primary">{data($n/@sum)}</span> else ()}
-   {if ($n/@n) then <span title="Count on this level only" class="badge badge-secondary">{data($n/@n)}</span> else ()}
+   {if ($n/@sum) then <span title="Aggregate over this and lower levels" data-i18n-title="search.aggregate-title" class="badge badge-primary">{data($n/@sum)}</span> else ()}
+   {if ($n/@n) then <span title="Count on this level only" data-i18n-title="search.count-level-title" class="badge badge-secondary">{data($n/@n)}</span> else ()}
    {  if ($n/@res-ratio) then (<span>　</span>,
      let $r := (xs:float($n/@res-ratio))
      , $f := format-number($r, "##.#")
      return
      if ($r > (1 + $cutoff)) then
-       <span title="{$n/@res-ratio}: &#xA;This result is larger than expected" data-ratio="{$n/@res-ratio}" class="rat badge-danger">{$f}</span>
+       <span title="{$n/@res-ratio}: &#xA;This result is larger than expected" data-i18n-scope="ui" data-ratio="{$n/@res-ratio}" class="rat badge-danger">{$f}</span>
      else 
       if ($r < (1 - $cutoff)) then 
-      <span title="{$n/@res-ratio}: &#xA;This result is smaller than expected" data-ratio="{$n/@res-ratio}" class="rat badge badge-warning">{$f}</span>
+      <span title="{$n/@res-ratio}: &#xA;This result is smaller than expected" data-i18n-scope="ui" data-ratio="{$n/@res-ratio}" class="rat badge badge-warning">{$f}</span>
       else
-      <span title="{$n/@res-ratio}: &#xA;This result is in the expected range" data-ratio="{$n/@res-ratio}" class="rat badge badge-success">{$f}</span>)
+      <span title="{$n/@res-ratio}: &#xA;This result is in the expected range" data-i18n-scope="ui" data-ratio="{$n/@res-ratio}" class="rat badge badge-success">{$f}</span>)
    else () 
    
    }
@@ -837,8 +837,8 @@ declare function src:facets($node as node()*, $model as map(*), $query as xs:str
             let $genres := ("tls-internal", "tls-dates", "kr-categories")
             return
             <div class="col-md-3">
-              <h1>TLS Text list</h1>
-              <p>There are currently <mark>{count($hits)}</mark> texts available. <br/>Please click on the links in the list below to browse the titles or search for titles in the search box.</p>
+              <h1 data-i18n="textlist.title">TLS Text list</h1>
+              <p data-i18n-scope="ui"><span>{"There are currently " || count($hits) || " texts available."}</span><br/><span>Please click on the links in the list below to browse the titles or search for titles in the search box.</span></p>
               <div>
                 {for $g in $genres
 (:                            , $g := "kr-categories":)
@@ -858,18 +858,18 @@ declare function src:facets($node as node()*, $model as map(*), $query as xs:str
             let $genres := ("tls-dates", "kr-categories")
            return 
            <div class="col-md-3" id="facets-top">
-            <h1>Facets</h1>
+            <h1 data-i18n="search.facets">Facets</h1>
             <div id="search-settings-details">
-            <h3 data-toggle="collapse" data-target="#search-details" class="badge badge-light">Configure...</h3>
+            <h3 data-toggle="collapse" data-target="#search-details" class="badge badge-light" data-i18n="search.configure">Configure...</h3>
             <div id="search-details" class="collapse">
-            <p>Time: {util:system-dateTime() - $model?s-time}</p>
-            <p>Total number of hits: {count($model?totalhits)}</p>
+            <p><span data-i18n="search.time">Time:</span> <span data-i18n-scope="content">{util:system-dateTime() - $model?s-time}</span></p>
+            <p><span data-i18n="search.total-hits">Total number of hits:</span> <span data-i18n-scope="content">{count($model?totalhits)}</span></p>
             {if ($sset) then src:src-options($sset) else ()}
-            {if (count($fkeys) = 0 and ($tabexists or $coll)) then  <p><a href="#" onclick="showtab('{$uuid}')">Result matrix</a></p> else ()}
+            {if (count($fkeys) = 0 and ($tabexists or $coll)) then  <p><a href="#" onclick="showtab('{$uuid}')" data-i18n="search.result-matrix">Result matrix</a></p> else ()}
             </div>
             </div>
-            <p>{if (count($fkeys) > 0) then <span title="To release filters find 'Click here to display all matches' in the center of the page">Applied filters: <br/>
-            {string-join(for $f in $fkeys return lmd:cat-title($model?cat?($f)), " / ")}
+            <p>{if (count($fkeys) > 0) then <span title="To release filters find 'Click here to display all matches' in the center of the page" data-i18n-title="search.release-filters-title"><span data-i18n="search.applied-filters">Applied filters:</span> <br/>
+            <span data-i18n-scope="content">{string-join(for $f in $fkeys return lmd:cat-title($model?cat?($f)), " / ")}</span>
             </span>
             else ()}</p>{
             for $g in $genres
@@ -1009,16 +1009,16 @@ let $query := $model?query
      let $txtmatchcount := (: count(for $h in $model?hits let $x := $h/@xml:id where starts-with($x, $textid) return $h) :) 0
      , $trmatch := (:count(for $h in $model?hits let $x := "#" || $h/@xml:id
                    return collection($config:tls-translation-root)//tei:seg[@corresp=$x]):) 0
-    , $p :=     <p>
+    , $p :=     <p data-i18n-scope="ui">
      {if ($start = 1) then      
       src:search-top-menu($search-type, $query, $txtmatchcount, $title, $trmatch, $textid, $qc, count($hits), $mode) else () }
      { if ($user = "guest") then () else
        if ($mode = "rating") then 
-    ("&#160;Sorting by text rating. " , <a class="btn badge badge-light" href="{$burl}&amp;start=1&amp;mode=date">Click here to sort by text date instead. </a> )
+    (<span>Sorting by text rating.</span>, " ", <a class="btn badge badge-light" href="{$burl}&amp;start=1&amp;mode=date">Click here to sort by text date instead.</a> )
      else
      if ($search-type = $src:search-trans) then () else 
-    ("&#160;Sorting by text date. " , <a class="btn badge badge-light" href="{$burl}&amp;start=1&amp;mode=rating" title="{$rat}">Click here to sort your favorite texts first. </a>)}</p>
-    , $nav := <nav aria-label="Page navigation">
+    (<span>Sorting by text date.</span>, " ", <a class="btn badge badge-light" href="{$burl}&amp;start=1&amp;mode=rating" title="{$rat}">Click here to sort your favorite texts first.</a>)}</p>
+    , $nav := <nav aria-label="Page navigation" data-i18n-aria-label="pagination.label">
   <ul class="pagination">
     <li class="page-item"><a class="page-link {if ($start = 1) then "disabled" else ()}" href="{$burl}&amp;start={$start - $resno}{src:maybe-query("mode", $mode)}">&#171;</a></li>
     <li class="page-item"><a class="page-link" href="{$burl}&amp;start={$start + $resno}{src:maybe-query("mode", $mode)}">&#187;</a></li>
@@ -1070,23 +1070,23 @@ declare function src:search-top-menu($search-type, $query, $txtmatchcount, $titl
   switch($search-type)
 (:  case "8":)
   case "3" return
-       (<a class="btn badge badge-light" href="search.html?query={$query}&amp;start=1&amp;search-type=3&amp;&amp;mode={$mode}">Click here to display all  matches</a>,<br/>)
+       (<a class="btn badge badge-light" data-i18n-scope="ui" href="search.html?query={$query}&amp;start=1&amp;search-type=3&amp;&amp;mode={$mode}">Click here to display all matches</a>,<br/>)
   case "5" return
-       (<a class="btn badge badge-light" href="search.html?query={$query}&amp;start=1&amp;search-type=1&amp;textid={$textid}&amp;mode={$mode}">Click here to display all  matches</a>,<br/>)
+       (<a class="btn badge badge-light" data-i18n-scope="ui" href="search.html?query={$query}&amp;start=1&amp;search-type=1&amp;textid={$textid}&amp;mode={$mode}">Click here to display all matches</a>,<br/>)
   case "8" return
-       (<a class="btn badge badge-light" href="search.html?query={$query}&amp;start=1&amp;search-type=1&amp;textid={$textid}&amp;mode={$mode}">Click here to display all  matches</a>,<br/>)
+       (<a class="btn badge badge-light" data-i18n-scope="ui" href="search.html?query={$query}&amp;start=1&amp;search-type=1&amp;textid={$textid}&amp;mode={$mode}">Click here to display all matches</a>,<br/>)
   default return
    (if ($count < 6000) then 
-    ( <a class="btn badge badge-light" href="search.html?query={$query}&amp;start=1&amp;search-type=8&amp;textid={$textid}&amp;mode={$mode}">Click here to display matches tabulated by text</a>,<br/>) else (),
+    ( <a class="btn badge badge-light" data-i18n-scope="ui" href="search.html?query={$query}&amp;start=1&amp;search-type=8&amp;textid={$textid}&amp;mode={$mode}">Click here to display matches tabulated by text</a>,<br/>) else (),
       
      if ($trmatch > 0 and not ($search-type="6")) then
-     (<a class="btn badge badge-light" href="search.html?query={$query}&amp;start=1&amp;search-type=6&amp;mode={$mode}">Click here to display only {$trmatch} matching lines that have a translation</a>,<br/>)
+     (<a class="btn badge badge-light" data-i18n-scope="ui" href="search.html?query={$query}&amp;start=1&amp;search-type=6&amp;mode={$mode}">{"Click here to display only " || $trmatch || " matching lines that have a translation"}</a>,<br/>)
      else 
-    (<a class="btn badge badge-light" href="search.html?query={$query}&amp;start=1&amp;search-type=1&amp;mode={$mode}">Click here to display all  matches</a>,<br/>)
+    (<a class="btn badge badge-light" data-i18n-scope="ui" href="search.html?query={$query}&amp;start=1&amp;search-type=1&amp;mode={$mode}">Click here to display all matches</a>,<br/>)
     ,
     
   if (string-length($title) > 0 and $txtmatchcount > 0) then 
-    (<a class="btn badge badge-light" href="search.html?query={$query}&amp;start=1&amp;search-type=5&amp;textid={$textid}&amp;mode={$mode}">Click here to display only {$txtmatchcount} matches in {$title}</a>,<br/>)
+    (<a class="btn badge badge-light" data-i18n-scope="ui" href="search.html?query={$query}&amp;start=1&amp;search-type=5&amp;textid={$textid}&amp;mode={$mode}">{"Click here to display only " || $txtmatchcount || " matches in " || $title}</a>,<br/>)
   else ()
   ), 
   if ($search-type = "3") then () else tlslib:linkheader($qc),
@@ -1117,7 +1117,7 @@ declare function src:show-field-results($map as map(*)){
     if (string-length($map?type) > 0) then 
 <div>{
       src:get-more($map?type, xs:int($map?start), $map?resno)}
-    <nav aria-label="Page navigation">
+    <nav aria-label="Page navigation" data-i18n-aria-label="pagination.label">
       <ul class="pagination">
         <li class="page-item"><a class="page-link {if (xs:int($map?start) = 1) then "disabled" else ()}" href="search.html?query={$map?query}&amp;search-type={$map?search-type}&amp;type={$map?type}&amp;start={$map?start - $map?resno}">&#171;</a></li>
         <li class="page-item"><a class="page-link" href="search.html?query={$map?query}&amp;search-type={$map?search-type}&amp;type={$map?type}&amp;start={$map?start + $map?resno}">&#187;</a></li>
@@ -1138,7 +1138,7 @@ declare function src:show-field-results($map as map(*)){
      <ul>{      src:get-more($t, 1, 3) }
      </ul>
      { if ($hitcount > 3) then 
-     <a href="search.html?query={$map?query}&amp;search-type={$map?search-type}&amp;type={$t}&amp;start=1">Show more...</a>
+     <a href="search.html?query={$map?query}&amp;search-type={$map?search-type}&amp;type={$t}&amp;start=1" data-i18n="common.show-more">Show more...</a>
      else ()}
      </div>
      }
@@ -1176,7 +1176,7 @@ declare function src:show-text-results($map as map(*)){
       <tr>
         <td class="chn-font">{$c + $map?start -1}</td>
         <td><a href="textview.html?location={$loc}&amp;query={$map?query}">{$title, " / ", $head}</a>
-        <span class="btn badge badge-light " onclick="show_dialog('text-info', {{'textid': '{lmd:get-metadata($cseg, 'textid')}', 'title': '{$title}'}})" title="Information about this text">
+        <span class="btn badge badge-light " onclick="show_dialog('text-info', {{'textid': '{lmd:get-metadata($cseg, 'textid')}', 'title': '{$title}'}})" title="Information about this text" data-i18n-title="search.text-info-title">
            <img class="icon "  src="resources/icons/octicons/svg/info.svg"/></span>
         </td>
         {if ($map?search-type = $src:search-trans) then  
@@ -1189,7 +1189,7 @@ declare function src:show-text-results($map as map(*)){
         if (exists($tr)) then ( for $t in $tr[position()<4] 
           let $ai := ltr:get-translation-css($t)
           , $aitit := if (contains($ai, 'ai')) then "Translation generated by AI" else ""
-        return (<br/>,"..." , <span class="{$ai}" title="{$aitit}">{string-join($t, '')}</span> , "...") ) else ()
+        return (<br/>,"..." , <span class="{$ai}" title="{$aitit}" data-i18n-title="{if (contains($ai, 'ai')) then 'ui.ai-translation-title' else ''}">{string-join($t, '')}</span> , "...") ) else ()
         } </td>
         }
         </tr>
@@ -1203,7 +1203,7 @@ declare function src:show-text-results($map as map(*)){
 
 
 declare function src:show-tab-results($map as map(*)){
-    <div><p>Found {count($map?hits)} matches, shown by text.<br/>
+    <div><p><span data-i18n-scope="ui">{"Found " || count($map?hits) || " matches, shown by text."}</span><br/>
     {$map?p}
     </p><ul>{
     for $h in $map?hits
@@ -1213,7 +1213,7 @@ declare function src:show-tab-results($map as map(*)){
     group by $loc
     order by sum($hcnt) descending
     return
-    <li><a href="search.html?query={$map?query}&amp;start=1&amp;search-type=5&amp;textid={$loc}&amp;mode={$map?mode}">{data($loc[1])}　{$tit[1]} </a>　{sum($hcnt)} match(es)</li>
+    <li><a href="search.html?query={$map?query}&amp;start=1&amp;search-type=5&amp;textid={$loc}&amp;mode={$map?mode}">{data($loc[1])}　{$tit[1]} </a>　<span data-i18n-scope="ui">{sum($hcnt) || " match(es)"}</span></li>
     }
     </ul></div>
 };
@@ -1227,7 +1227,7 @@ declare function src:textlist($cat as map(*)?){
 };
 
 declare function src:show-title-results ($map as map(*)){
-    <div><h2>Existing texts in TLS:</h2>
+    <div><h2 data-i18n="search.existing-tls-texts">Existing texts in TLS:</h2>
     <ul>{
     for $h in $map?hits
     let $loc := $h/ancestor::tei:TEI/@xml:id
@@ -1235,7 +1235,7 @@ declare function src:show-title-results ($map as map(*)){
     <li><a href="textview.html?location={$loc}">{data($loc) || " " || data($h)}</a> 
     {if (lpm:show-setting('wd', 'concept')) then wd:display-qitems(data($loc),'title',data($h)) else ()}</li>}
     </ul>
-    <h2>Texts in the Kanseki Repository:</h2>
+    <h2 data-i18n="search.kanseki-texts">Texts in the Kanseki Repository:</h2>
     <ul>{
        for $w in 
        if (matches($map?query, "^[A-Z]"))  then  
@@ -1248,7 +1248,7 @@ declare function src:show-title-results ($map as map(*)){
       let $h :=  $w/title
       , $kid := data($w/@krid)
       , $tls := $w/@tls-added
-      , $req := if ($w/@request) then <span id="{$kid}-req">　Requests: {count(tokenize($w/@request, ','))}</span> else ()
+      , $req := if ($w/@request) then <span id="{$kid}-req">　<span data-i18n="search.requests">Requests:</span> <span data-i18n-scope="content">{count(tokenize($w/@request, ','))}</span></span> else ()
       , $but := ()
 (:      , $but := <button type="button" class="btn btn-primary btn-sm" onclick="text_request('{$kid}')">Request for TLS</button>:)
       , $av := not($w/note) 
@@ -1263,7 +1263,7 @@ declare function src:show-title-results ($map as map(*)){
            {if (lpm:show-setting('wd', 'concept')) then wd:display-qitems(data($kid),'title',data($h)) else ()}
            {if ($av) then 
              <span class="ml-2">{
-              <a class="btn badge badge-light" target="kanripo" title="View {data($h)} in Kanseki Repository (External link)" style="background-color:paleturquoise" href="https://www.kanripo.org/text/{data($kid)}/">KR</a>}</span> 
+              <a class="btn badge badge-light" target="kanripo" title="View {data($h)} in Kanseki Repository (External link)" data-i18n-scope="ui" style="background-color:paleturquoise" href="https://www.kanripo.org/text/{data($kid)}/"><span data-i18n-scope="content">KR</span></a>}</span>
             else ()}
            </li>
     }
@@ -1325,11 +1325,11 @@ declare function src:get-kwic($node as element(), $config as element(config), $l
 
 declare function src:textlist-doc(){
    <div>
-     <h1>TLS Text list</h1>
-     <p>This page allows you to browse the contents of the TLS and discover what texts are available.  The texts are basically classified into the four traditional bibliographic categories.       However, the Daoist and Buddhist texts, which are usually part of the <i>KR3 子部</i> in the traditional classification are treated as top level categories, for a total of six top level categories, as shown in Table 1.
+     <h1 data-i18n="textlist.title">TLS Text list</h1>
+     <p><span data-i18n="textlist.doc-intro-prefix">This page allows you to browse the contents of the TLS and discover what texts are available. The texts are basically classified into the four traditional bibliographic categories. However, the Daoist and Buddhist texts, which are usually part of the</span> <i data-i18n-scope="content">KR3 子部</i> <span data-i18n="textlist.doc-intro-suffix">in the traditional classification are treated as top level categories, for a total of six top level categories, as shown in Table 1.</span>
      </p>
 <table id="orgca5db22" border="2" cellspacing="0" cellpadding="6" rules="groups" frame="hsides">
-<caption class="t-above"><span class="table-number">Table 1:</span> The six top categories (as in the <a href="https://www.kanripo.org">Kanseki Repository</a>)</caption>
+<caption class="t-above"><span class="table-number" data-i18n="textlist.table-one">Table 1:</span> <span data-i18n="textlist.six-categories-prefix">The six top categories (as in the</span> <a href="https://www.kanripo.org" data-i18n-scope="content">Kanseki Repository</a><span data-i18n="textlist.close-parenthesis">)</span></caption>
 
 <colgroup>
 <col  class="org-left" />
@@ -1342,44 +1342,44 @@ declare function src:textlist-doc(){
 <tr>
 <td class="org-left">KR1</td>
 <td class="org-left">經部 <i>Jing bu</i></td>
-<td class="org-left">Confucian Classics (incl. music, dictionaries and elementary learning)</td>
+<td class="org-left" data-i18n="textlist.kr1-description">Confucian Classics (incl. music, dictionaries and elementary learning)</td>
 </tr>
 
 <tr>
 <td class="org-left">KR2</td>
 <td class="org-left">史部 <i>Shi bu</i></td>
-<td class="org-left">Historiography and politics</td>
+<td class="org-left" data-i18n="textlist.kr2-description">Historiography and politics</td>
 </tr>
 
 <tr>
 <td class="org-left">KR3</td>
 <td class="org-left">子部 <i>Zi bu</i></td>
-<td class="org-left">Masters, philosophers and treatises; medical and mathematical texts</td>
+<td class="org-left" data-i18n="textlist.kr3-description">Masters, philosophers and treatises; medical and mathematical texts</td>
 </tr>
 
 <tr>
 <td class="org-left">KR4</td>
 <td class="org-left">集部 <i>Ji bu</i></td>
-<td class="org-left">Anthologies (Poetry and Collected Writings)</td>
+<td class="org-left" data-i18n="textlist.kr4-description">Anthologies (Poetry and Collected Writings)</td>
 </tr>
 
 <tr>
 <td class="org-left">KR5</td>
 <td class="org-left">道部 <i>Dao bu</i></td>
-<td class="org-left">Daoist texts</td>
+<td class="org-left" data-i18n="textlist.kr5-description">Daoist texts</td>
 </tr>
 
 <tr>
 <td class="org-left">KR6</td>
 <td class="org-left">佛部 <i>Fo bu</i></td>
-<td class="org-left">Buddhist texts</td>
+<td class="org-left" data-i18n="textlist.kr6-description">Buddhist texts</td>
 </tr>
 </tbody>
 </table>
-     <p>In the classified catalog, the four categories have been folded into one (artificial) top level, in order to allow direct comparison to the Daoist and Buddhist texts.</p>
-<h3>Usage</h3>
-     <p>To access the classified catalog, <b>click on any of the links</b> shown to the left. </p>
-     <p>If you are looking for a specific title, use the <b>search function in the upper right corner</b> and select "titles" from the dropdown selector.</p>
+     <p data-i18n="textlist.catalog-explanation">In the classified catalog, the four categories have been folded into one (artificial) top level, in order to allow direct comparison to the Daoist and Buddhist texts.</p>
+<h3 data-i18n="textlist.usage">Usage</h3>
+     <p><span data-i18n="textlist.access-prefix">To access the classified catalog,</span> <b data-i18n="textlist.click-links">click on any of the links</b> <span data-i18n="textlist.access-suffix">shown to the left.</span></p>
+     <p><span data-i18n="textlist.specific-prefix">If you are looking for a specific title, use the</span> <b data-i18n="textlist.search-function">search function in the upper right corner</b> <span data-i18n="textlist.specific-suffix">and select "titles" from the dropdown selector.</span></p>
    </div>
 };
 
@@ -1420,6 +1420,6 @@ declare function src:get-log-file(){
 
 
 declare function src:advanced-search($query, $mode){
-<div><h3>Advanced Search</h3>
+<div><h3 data-i18n="search.advanced-title">Advanced Search</h3>
 </div>
 };

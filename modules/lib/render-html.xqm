@@ -309,7 +309,7 @@ declare function lrh:format-button($onclick as xs:string, $title as xs:string, $
  return
  if (contains($usergroups, $groups)) then
  if (string-length($style) > 0) then
-   <button type="button" class="btn {$class}" onclick="{$onclick}"
+   <button type="button" class="btn {$class}" data-i18n-scope="ui" onclick="{$onclick}"
    title="{$title}">
     {if (ends-with($icon, ".svg")) then 
     <img class="icon" style="width:12px;height:15px;top:0;align:top" src="resources/icons/{$icon}"/>
@@ -317,7 +317,7 @@ declare function lrh:format-button($onclick as xs:string, $title as xs:string, $
     <small><span class="initialism" >{$icon}</span></small>}
    </button>
  else 
-   <button type="button" class="btn {$class}" onclick="{$onclick}"
+   <button type="button" class="btn {$class}" data-i18n-scope="ui" onclick="{$onclick}"
     title="{$title}">
     {if (ends-with($icon, ".svg")) then 
      <img class="icon"  src="resources/icons/{$icon}"/>
@@ -537,7 +537,7 @@ return
 <div class="col-sm-2"><a href="textview.html?location={$target}{if ($type='remote')then '&amp;mode=remote'else()}" class="font-weight-bold">{$src, $loc}</a></div>
 <div class="col-sm-3"><span data-target="{$target}" data-toggle="popover">{$line}</span></div>
 <div class="col-sm-7">
-   <button class="btn small" type="button" title="More translations" onclick="show_dialog('att-tr-dialog', {{'line': '{$line}', 'seg_id' : '{$target}', 'att_id' : '{$a/@xml:id/string()}'}})">
+   <button class="btn small" type="button" title="More translations" data-i18n-title="search.more-translations" onclick="show_dialog('att-tr-dialog', {{'line': '{$line}', 'seg_id' : '{$target}', 'att_id' : '{$a/@xml:id/string()}'}})">
 <img class="icon"  src="resources/icons/octicons/svg/info.svg"/></button>
 <span id="{$a/@xml:id/string()}-tr">{$tr/text()}</span>
 {if ((sm:has-access(document-uri(fn:root($a)), "w") and $a/@xml:id) and not(contains(sm:id()//sm:group, 'tls-test'))) then 
@@ -760,4 +760,3 @@ if ($style = 'by-p') then $style else 'by-seg'
 };
 
 (: ruby rendering :)
-

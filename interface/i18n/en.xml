@@ -53,6 +53,136 @@
     <message key="search.searching" source="Searching, please wait...">Searching, please wait...</message>
     <message key="search.loading" source="Loading the list, please wait a moment.">Loading the list, please wait a moment.</message>
     <message key="search.retrieving" source="Retrieving data, please wait...">Retrieving data, please wait...</message>
+    <message key="search.searching-in" source="Searching in">Searching in</message>
+    <message key="search.for" source="for">for</message>
+    <message key="search.within-text" source="within text">within text</message>
+    <message key="search.catalog" source="Catalog">Catalog</message>
+    <message key="search.subcategory-excerpt" source="excerpt for subcategory">excerpt for subcategory</message>
+    <message key="search.items" source="({count} items)">({count} items)</message>
+    <message key="search.time" source="Time:">Time:</message>
+    <message key="search.found-one" source="Found {count} match, showing {start} to {end}">Found {count} match, showing {start} to {end}</message>
+    <message key="search.found-many" source="Found {count} matches, showing {start} to {end}">Found {count} matches, showing {start} to {end}</message>
+    <message key="search.sorting-disabled" source="Sorting is disabled, since we have more than {count} hits.">Sorting is disabled, since we have more than {count} hits.</message>
+    <message key="search.filter-help" source="Select a facet from the display to the left to filter and reduce the number of hits and apply sorting or click here to change the setting.">Select a facet from the display to the left to filter and reduce the number of hits and apply sorting or click here to change the setting.</message>
+    <message key="search.facets" source="Facets">Facets</message>
+    <message key="search.configure" source="Configure...">Configure...</message>
+    <message key="search.total-hits" source="Total number of hits:">Total number of hits:</message>
+    <message key="search.result-matrix" source="Result matrix">Result matrix</message>
+    <message key="search.applied-filters" source="Applied filters:">Applied filters:</message>
+    <message key="search.release-filters-title" source="To release filters find 'Click here to display all matches' in the center of the page">To release filters find 'Click here to display all matches' in the center of the page</message>
+    <message key="search.not-assigned" source="Not assigned">Not assigned</message>
+    <message key="search.filter-category-title" source="Click here to filter on this category">Click here to filter on this category</message>
+    <message key="search.aggregate-title" source="Aggregate over this and lower levels">Aggregate over this and lower levels</message>
+    <message key="search.count-level-title" source="Count on this level only">Count on this level only</message>
+    <message key="search.ratio-larger" source="{ratio}: This result is larger than expected">{ratio}: This result is larger than expected</message>
+    <message key="search.ratio-smaller" source="{ratio}: This result is smaller than expected">{ratio}: This result is smaller than expected</message>
+    <message key="search.ratio-expected" source="{ratio}: This result is in the expected range">{ratio}: This result is in the expected range</message>
+    <message key="search.annotations" source="Annotations">Annotations</message>
+    <message key="search.creation-period" source="Period of creation of text">Period of creation of text</message>
+    <message key="search.classified-catalog" source="Classified catalog">Classified catalog</message>
+    <message key="search.all-matches" source="Click here to display all matches">Click here to display all matches</message>
+    <message key="search.tabulated" source="Click here to display matches tabulated by text">Click here to display matches tabulated by text</message>
+    <message key="search.only-translated" source="Click here to display only {count} matching lines that have a translation">Click here to display only {count} matching lines that have a translation</message>
+    <message key="search.only-in-text" source="Click here to display only {count} matches in {title}">Click here to display only {count} matches in {title}</message>
+    <message key="search.sorting-rating" source="Sorting by text rating.">Sorting by text rating.</message>
+    <message key="search.sort-date" source="Click here to sort by text date instead.">Click here to sort by text date instead.</message>
+    <message key="search.sorting-date" source="Sorting by text date.">Sorting by text date.</message>
+    <message key="search.sort-favorites" source="Click here to sort your favorite texts first.">Click here to sort your favorite texts first.</message>
+    <message key="search.rating-menu-help" source="Go to the menu -&gt; Browse -&gt; Texts to rate your favorite texts.">Go to the menu -&gt; Browse -&gt; Texts to rate your favorite texts.</message>
+    <message key="search.more-translations" source="More translations">More translations</message>
+    <message key="search.text-info-title" source="Information about this text">Information about this text</message>
+    <message key="search.tab-found" source="Found {count} matches, shown by text.">Found {count} matches, shown by text.</message>
+    <message key="search.match-count" source="{count} match(es)">{count} match(es)</message>
+    <message key="search.existing-tls-texts" source="Existing texts in TLS:">Existing texts in TLS:</message>
+    <message key="search.kanseki-texts" source="Texts in the Kanseki Repository:">Texts in the Kanseki Repository:</message>
+    <message key="search.requests" source="Requests:">Requests:</message>
+    <message key="search.view-kanseki" source="View {title} in Kanseki Repository (External link)">View {title} in Kanseki Repository (External link)</message>
+    <message key="search.meaning-taxonomy" source="Taxonomy of meanings:">Taxonomy of meanings:</message>
+    <message key="search.phonetic-profile" source="Phonetic profile:">Phonetic profile:</message>
+    <message key="search.show-meaning-taxonomy" source="Show taxonomy of meanings for {character}">Show taxonomy of meanings for {character}</message>
+    <message key="search.show-phonetic-profile" source="Show phonetic profile for {character}">Show phonetic profile for {character}</message>
+    <message key="search.kanseki-search" source="Search {query} in Kanseki Repository">Search {query} in Kanseki Repository</message>
+    <message key="search.algorithm-label" source="Select algorithm for display">Select algorithm for display</message>
+    <message key="search.algorithm-title" source="This algorithm is used to evaluate the matches in every category against the expected matches.">This algorithm is used to evaluate the matches in every category against the expected matches.</message>
+    <message key="search.none" source="None">None</message>
+    <message key="search.ratio-characters" source="Matches / Total Characters (MF/ICF)">Matches / Total Characters (MF/ICF)</message>
+    <message key="search.ratio-segments" source="Matches / Segments (MF/ISF)">Matches / Segments (MF/ISF)</message>
+    <message key="search.cutoff-label" source="Select cutoff value {value}">Select cutoff value {value}</message>
+    <message key="search.cutoff-title" source="Cutoff value used for the different display colors.">Cutoff value used for the different display colors.</message>
+    <message key="search.save-settings" source="Save Settings">Save Settings</message>
+    <message key="search.update-page" source="Update Page">Update Page</message>
+    <message key="search.category" source="Category">Category</message>
+    <message key="search.texts-heading" source="Texts">Texts</message>
+    <message key="search.sum" source="Sum">Sum</message>
+    <message key="search.matches" source="Matches">Matches</message>
+    <message key="search.sort-limit-hint" source="This is the number of hits beyond which searching will be disabled. The current value is {count}. Enter 0 to switch off the disabling.">This is the number of hits beyond which searching will be disabled. The current value is {count}. Enter 0 to switch off the disabling.</message>
+    <message key="search.link-selected" source="Link selected items to this line">Link selected items to this line</message>
+    <message key="search.advanced-title" source="Advanced Search">Advanced Search</message>
+
+    <message key="pagination.label" source="Page navigation">Page navigation</message>
+    <message key="pagination.first" source="First">First</message>
+    <message key="pagination.previous" source="Previous">Previous</message>
+    <message key="pagination.next" source="Next">Next</message>
+    <message key="pagination.last" source="Last">Last</message>
+    <message key="pagination.go-first" source="Go to the first page">Go to the first page</message>
+    <message key="pagination.go-previous" source="Go to the previous page">Go to the previous page</message>
+    <message key="pagination.go-next" source="Go to the next page">Go to the next page</message>
+    <message key="pagination.go-last" source="Go to the last page">Go to the last page</message>
+
+    <message key="textview.more-information" source="Click here for more information">Click here for more information</message>
+    <message key="textview.source" source="Source:">Source:</message>
+    <message key="textview.translation-by" source="Translation by">Translation by</message>
+    <message key="textview.select-annotation" source="Select type of annotation:">Select type of annotation:</message>
+    <message key="textview.line-position" source="line {line} / {percent}%">line {line} / {percent}%</message>
+    <message key="textview.facsimile-title" source="Click here to display a facsimile of this page: {page}">Click here to display a facsimile of this page: {page}</message>
+    <message key="textview.no-facsimile" source="No facsimile available">No facsimile available</message>
+    <message key="textview.edition" source="Edition:">Edition:</message>
+    <message key="textview.catalog-category" source="Catalog category:">Catalog category:</message>
+    <message key="textview.edit-category" source="Edit category">Edit category</message>
+    <message key="textview.dates" source="Dates:">Dates:</message>
+    <message key="textview.edit-date" source="Edit date">Edit date</message>
+    <message key="textview.add-date" source="Add date">Add date</message>
+    <message key="textview.rating" source="Rating:">Rating:</message>
+    <message key="textview.rating-title" source="Click on one of the stars to rate the text and add to the ★ menu.">Click on one of the stars to rate the text and add to the ★ menu.</message>
+    <message key="textview.text-length" source="Text length:">Text length:</message>
+    <message key="textview.characters" source="{count} characters.">{count} characters.</message>
+    <message key="textview.comment" source="Comment:">Comment:</message>
+    <message key="textview.wikidata" source="Wikidata:">Wikidata:</message>
+    <message key="textview.references" source="References:">References:</message>
+    <message key="textview.show-bibliography" source="Show bibliography">Show bibliography</message>
+    <message key="textview.add-reference-title" source="Add new reference">Add new reference</message>
+    <message key="textview.add-reference" source="Add reference to source or witness">Add reference to source or witness</message>
+    <message key="textview.responsible" source="Resp: {person}">Resp: {person}</message>
+
+    <message key="textlist.title" source="TLS Text list">TLS Text list</message>
+    <message key="textlist.count" source="There are currently {count} texts available.">There are currently {count} texts available.</message>
+    <message key="textlist.browse-help" source="Please click on the links in the list below to browse the titles or search for titles in the search box.">Please click on the links in the list below to browse the titles or search for titles in the search box.</message>
+    <message key="textlist.doc-intro-prefix" source="This page allows you to browse the contents of the TLS and discover what texts are available. The texts are basically classified into the four traditional bibliographic categories. However, the Daoist and Buddhist texts, which are usually part of the">This page allows you to browse the contents of the TLS and discover what texts are available. The texts are basically classified into the four traditional bibliographic categories. However, the Daoist and Buddhist texts, which are usually part of the</message>
+    <message key="textlist.doc-intro-suffix" source="in the traditional classification are treated as top level categories, for a total of six top level categories, as shown in Table 1.">in the traditional classification are treated as top level categories, for a total of six top level categories, as shown in Table 1.</message>
+    <message key="textlist.table-one" source="Table 1:">Table 1:</message>
+    <message key="textlist.six-categories-prefix" source="The six top categories (as in the">The six top categories (as in the</message>
+    <message key="textlist.close-parenthesis" source=")">)</message>
+    <message key="textlist.kr1-description" source="Confucian Classics (incl. music, dictionaries and elementary learning)">Confucian Classics (incl. music, dictionaries and elementary learning)</message>
+    <message key="textlist.kr2-description" source="Historiography and politics">Historiography and politics</message>
+    <message key="textlist.kr3-description" source="Masters, philosophers and treatises; medical and mathematical texts">Masters, philosophers and treatises; medical and mathematical texts</message>
+    <message key="textlist.kr4-description" source="Anthologies (Poetry and Collected Writings)">Anthologies (Poetry and Collected Writings)</message>
+    <message key="textlist.kr5-description" source="Daoist texts">Daoist texts</message>
+    <message key="textlist.kr6-description" source="Buddhist texts">Buddhist texts</message>
+    <message key="textlist.catalog-explanation" source="In the classified catalog, the four categories have been folded into one (artificial) top level, in order to allow direct comparison to the Daoist and Buddhist texts.">In the classified catalog, the four categories have been folded into one (artificial) top level, in order to allow direct comparison to the Daoist and Buddhist texts.</message>
+    <message key="textlist.usage" source="Usage">Usage</message>
+    <message key="textlist.access-prefix" source="To access the classified catalog,">To access the classified catalog,</message>
+    <message key="textlist.click-links" source="click on any of the links">click on any of the links</message>
+    <message key="textlist.access-suffix" source="shown to the left.">shown to the left.</message>
+    <message key="textlist.specific-prefix" source="If you are looking for a specific title, use the">If you are looking for a specific title, use the</message>
+    <message key="textlist.search-function" source="search function in the upper right corner">search function in the upper right corner</message>
+    <message key="textlist.specific-suffix" source="and select &quot;titles&quot; from the dropdown selector.">and select "titles" from the dropdown selector.</message>
+
+    <message key="browse.about-word-relations" source="About word relations:">About word relations:</message>
+    <message key="browse.left-word-heading" source="Left Word">Left Word</message>
+    <message key="browse.right-word-heading" source="Right Word">Right Word</message>
+    <message key="browse.text-reference-heading" source="Text / Ref">Text / Ref</message>
+
+    <message key="citations.analyze-count" source="Analyze the {count} citations currently defined in the system.">Analyze the {count} citations currently defined in the system.</message>
 
     <message key="account.login" source="Login">Login</message>
     <message key="account.logout" source="Logout">Logout</message>
@@ -78,6 +208,11 @@
     <message key="common.loading" source="Loading…">Loading…</message>
     <message key="common.not-implemented" source="Not yet implemented">Not yet implemented</message>
     <message key="common.problem" source="A problem occurred.">A problem occurred.</message>
+    <message key="common.period" source=".">.</message>
+    <message key="common.semicolon" source=";">;</message>
+    <message key="common.show-more" source="Show more...">Show more...</message>
+    <message key="common.total" source="Total:">Total:</message>
+    <message key="common.click-to-show" source="Click to show">Click to show</message>
     <message key="common.unknown-error" source="An unknown error happened on the system.">An unknown error happened on the system.</message>
     <message key="common.saved" source="Modification saved.">Modification saved.</message>
     <message key="common.hxwd-says" source="HXWD says:">HXWD says:</message>

@@ -618,11 +618,11 @@ declare function tlslib:tv-header($node as node()*, $model as map(*)){
    </li>
    ,
       <li class="nav-item">
-      <span class="navbar-text ml-2" title="Click here for more information" data-toggle="collapse" data-target="#srcref">Source: 
-      {$tsrc}
+      <span class="navbar-text ml-2" title="Click here for more information" data-i18n-title="textview.more-information" data-toggle="collapse" data-target="#srcref"><span data-i18n="textview.source">Source:</span>
+      <span data-i18n-scope="content">{$tsrc}</span>
       </span>
       {if ($model("transl")) then 
-      (<br/>,<small class="nav-brand ml-2">Translation by {$model("transl")}</small>) else () }
+      (<br/>,<small class="nav-brand ml-2"><span data-i18n="textview.translation-by">Translation by</span> <span data-i18n-scope="content">{$model("transl")}</span></small>) else () }
       </li>
 
       )
@@ -724,7 +724,7 @@ declare function tlslib:display-chunk($targetseg as node(), $model as map(*), $p
       {if (count($atypes) > 1) then 
       <div id="swlrow" class="col-sm-12 swl collapse" data-toggle="collapse">
        <div class="row">
-         <div class="col-sm-2" id="swlrow-1"><span class="font-weight-bold">Select type of annotation:</span></div>
+         <div class="col-sm-2" id="swlrow-1"><span class="font-weight-bold" data-i18n="textview.select-annotation">Select type of annotation:</span></div>
          <div class="col-sm-5" id="swlrow-2">{for $a in $atypes return <button id="{$a}-select" onclick="showhide('{$a}')" title="{tlslib:annotation-types($a)[2]}" class="btn btn-primary ml-2" type="button">{tlslib:annotation-types($a)[1]}</button>}</div>
       </div>
       </div>
@@ -736,12 +736,12 @@ declare function tlslib:display-chunk($targetseg as node(), $model as map(*), $p
       with selection for translation etc, we use this as a header line :)()}
        <div class="row">
         <div class="col .no-gutters"><img class="icon state-{$state}"  src="{$config:circle}"/></div>
-        <div class="{$zh-width}" id="toprow-1"><span class="font-weight-bold">{$head}</span><span class="btn badge badge-light">line {$model?seg//stats/@xpos=>data()} / {$model?seg//stats/@percent=>data()}%</span> 
+        <div class="{$zh-width}" id="toprow-1"><span class="font-weight-bold">{$head}</span><span class="btn badge badge-light" data-i18n-scope="ui">{"line " || data($model?seg//stats/@xpos) || " / " || data($model?seg//stats/@percent) || "%"}</span>
         {if (string-length($model?seg//pb/@facs=>data()) > 0) then 
         let $pg := substring-before(tokenize(data($model?seg//pb/@facs), '/')[last()], '.')
         return
-          <span class="btn badge badge-light ed-{data($model?seg//pb/@ed)}" title="Click here to display a facsimile of this page &#10; {$pg}" onclick="get_facs_for_page('slot1', '{$fpref}{$pb/@facs}', '{data($pb/@ed)}', '{data($targetseg/@xml:id)}')" >{$config:wits?(data($pb/@ed))}:{data($pb/@n)}</span>
-         else <span title="No facsimile available" class="btn badge badge-light">{data($pb/@n)}</span>
+          <span class="btn badge badge-light ed-{data($model?seg//pb/@ed)}" title="Click here to display a facsimile of this page: {$pg}" data-i18n-scope="ui" onclick="get_facs_for_page('slot1', '{$fpref}{$pb/@facs}', '{data($pb/@ed)}', '{data($targetseg/@xml:id)}')" ><span data-i18n-scope="content">{$config:wits?(data($pb/@ed))}:{data($pb/@n)}</span></span>
+         else <span title="No facsimile available" data-i18n-title="textview.no-facsimile" class="btn badge badge-light">{data($pb/@n)}</span>
          }
         <!-- zh --></div>
         <!-- 2024-09-06 this is rubbish, this needs also to be moved to textpanel and not hardcode the width -->
@@ -767,18 +767,18 @@ declare function tlslib:display-chunk($targetseg as node(), $model as map(*), $p
       <div class="row">
       <div class="col-sm-2">
       {if ($dseg) then  
-       <button type="button" class="btn" onclick="page_move('{tokenize($dseg[1]/@xml:id, "_")[1]}&amp;first=true')" title="Go to the first page"><span style="color: blue">First</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{tokenize($dseg[1]/@xml:id, "_")[1]}&amp;first=true')" title="Go to the first page"><span style="color: blue">First</span></button>
        else ()}
        </div>
       <div class="col-sm-2">
       {if ($dseg[1]/preceding::tei:seg[1]/@xml:id) then  
-       <button type="button" class="btn" onclick="page_move('{$dseg[1]/preceding::tei:seg[1]/@xml:id}&amp;prec={$foll+$prec -2}&amp;foll=2')" title="Go to the previous page"><span style="color: blue">Previous</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$dseg[1]/preceding::tei:seg[1]/@xml:id}&amp;prec={$foll+$prec -2}&amp;foll=2')" title="Go to the previous page"><span style="color: blue">Previous</span></button>
        else ()}
        </div>
        <div class="col-sm-2">
        {
        if ($dseg[last()]/following::tei:seg[1]/@xml:id) then
-       <button id="nextpagebutton" type="button" class="btn" onclick="page_move('{$dseg[last()]/following::tei:seg[1]/@xml:id}&amp;prec=2&amp;foll={$foll+$prec -2}')" title="Go to the next page"><span style="color: blue">Next</span></button>
+       <button id="nextpagebutton" type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$dseg[last()]/following::tei:seg[1]/@xml:id}&amp;prec=2&amp;foll={$foll+$prec -2}')" title="Go to the next page"><span style="color: blue">Next</span></button>
        else ()}
        </div> 
        <div class="col-sm-2">
@@ -786,7 +786,7 @@ declare function tlslib:display-chunk($targetseg as node(), $model as map(*), $p
        if ($dseg[last()]/following::tei:seg[1]/@xml:id) then
        let $last-seg := ($targetseg/ancestor::tei:body//tei:seg)[last()]
        return
-       <button type="button" class="btn" onclick="page_move('{$last-seg/@xml:id}&amp;prec={$foll+$prec -2}&amp;foll=0')" title="Go to the last page"><span style="color: blue">Last</span></button>
+       <button type="button" class="btn" data-i18n-scope="ui" onclick="page_move('{$last-seg/@xml:id}&amp;prec={$foll+$prec -2}&amp;foll=0')" title="Go to the last page"><span style="color: blue">Last</span></button>
        else ()}
        </div> 
         {wd:quick-search-form('title')}
@@ -1481,10 +1481,10 @@ declare function tlslib:format-phonetic($gy as node()){
 };
 
 declare function tlslib:linkheader($qc) {
-("Taxonomy of meanings: ", for $c in $qc return  <a class="btn badge badge-light chn-font" title="Show taxonomy of meanings for {$c}" href="char.html?char={$c}">{$c}</a>,
-         " Phonetic profile: ",
+(<span data-i18n="search.meaning-taxonomy">Taxonomy of meanings:</span>, " ", for $c in $qc return  <a class="btn badge badge-light chn-font" title="Show taxonomy of meanings for {$c}" data-i18n-scope="ui" href="char.html?char={$c}"><span data-i18n-scope="content">{$c}</span></a>,
+         " ", <span data-i18n="search.phonetic-profile">Phonetic profile:</span>, " ",
      for $c in $qc return  
-     <a class="btn badge badge-light chn-font" style="background-color:palegreen" title="Show phonetic profile for {$c}" href="syllables.html?char={$c}">{$c}</a>,
+     <a class="btn badge badge-light chn-font" style="background-color:palegreen" title="Show phonetic profile for {$c}" data-i18n-scope="ui" href="syllables.html?char={$c}"><span data-i18n-scope="content">{$c}</span></a>,
 (:     <span>{" 國學大師: ", 
      for $c in $qc return
      tlslib:guoxuedashi($c)
@@ -1492,7 +1492,7 @@ declare function tlslib:linkheader($qc) {
      tlslib:guguolin($qc)     
      ,
      <span id="krx_search">{" 漢リポ: ",
-     <a class="btn badge badge-light chn-font" target="kanripo" title="Search {string-join($qc, '')} in Kanseki Repository" style="background-color:paleturquoise" onclick="krx_items()">{$qc}</a>
+     <a class="btn badge badge-light chn-font" target="kanripo" title="Search {string-join($qc, '')} in Kanseki Repository" data-i18n-scope="ui" style="background-color:paleturquoise" onclick="krx_items()"><span data-i18n-scope="content">{$qc}</span></a>
      }</span>
      , lrh:maybe-show-items(map{'qc' : $qc})
 )
@@ -1589,64 +1589,64 @@ return
       <div class="col">
          <div class="row">
            <div class="col-sm-1"/>
-           <div class="col-sm-2"><span class="font-weight-bold float-right">Edition:</span></div>
+           <div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n="textview.edition">Edition:</span></div>
            <div class="col-sm-9"><span class="sm" id="textinfo-edition">{lmd:get-metadata($d, "edition")}</span></div>　
          </div>  
          <div class="row">
            <div class="col-sm-1"/>
-           <div class="col-sm-2"><span class="font-weight-bold float-right">Catalog category:</span></div>
+           <div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n="textview.catalog-category">Catalog category:</span></div>
            <div class="col-sm-9"><span class="sm" id="text-cat" data-text-cat="{$cat}">{lmd:cat-title($cat)}</span>
-           {if (sm:is-authenticated() and $d) then <span class="badge badge-pill badge-light" onclick="edit_textcat('{$textid}')">Edit category</span> else ()} </div>　
+           {if (sm:is-authenticated() and $d) then <span class="badge badge-pill badge-light" data-i18n="textview.edit-category" onclick="edit_textcat('{$textid}')">Edit category</span> else ()} </div>　
          </div>  
          <div class="row">
            <div class="col-sm-1"/>
-           <div class="col-sm-2"><span class="font-weight-bold float-right">Dates:</span></div>
+           <div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n="textview.dates">Dates:</span></div>
            <div class="col-sm-9"><span class="sm badge badge-pill" id="date-cat" data-date-cat="{$datecat}">{lmd:cat-title($datecat)}</span>　{
            if ($date) then 
             (<span id="textdate-outer"><span id="textdate" data-not-before="{$date/@notBefore}" data-not-after="{$date/@notAfter}">{$date/text()}<span id="textdate-note" class="text-muted">{$date/note/text()}</span></span></span>,
-            if (sm:is-authenticated() and $d) then <span class="badge badge-pill badge-light" onclick="edit_textdate('{$textid}')">Edit date</span> else 
+            if (sm:is-authenticated() and $d) then <span class="badge badge-pill badge-light" data-i18n="textview.edit-date" onclick="edit_textdate('{$textid}')">Edit date</span> else
             ()
             ) 
            else
-           if (sm:is-authenticated() and $d) then (<span id="textdate-outer"><span id="textdate">　</span></span>,<span class="badge badge-pill badge-light" onclick="edit_textdate('{$textid}')">Add date</span>) else 
+           if (sm:is-authenticated() and $d) then (<span id="textdate-outer"><span id="textdate">　</span></span>,<span class="badge badge-pill badge-light" data-i18n="textview.add-date" onclick="edit_textdate('{$textid}')">Add date</span>) else
             "　"}　</div>
          </div>
          <div class="row">
            <div class="col-sm-1"/>
-           <div class="col-sm-2">{ if (sm:is-authenticated()) then <span class="font-weight-bold float-right" title="Click on one of the stars to rate the text and add to the ★ menu.">Rating:</span> else ()}</div>
+           <div class="col-sm-2">{ if (sm:is-authenticated()) then <span class="font-weight-bold float-right" title="Click on one of the stars to rate the text and add to the ★ menu." data-i18n-scope="ui">Rating:</span> else ()}</div>
            <div class="col-sm-9">{ if (sm:is-authenticated()) then
            <input id="input-{$textid}" name="input-name" type="number" class="rating"
     min="1" max="10" step="2" data-theme="krajee-svg" data-size="xs" value="{tlslib:get-rating($textid)}"/> else ()}</div> 
         </div>
          <div class="row">        
            <div class="col-sm-1"/>
-           <div class="col-sm-2"><span class="font-weight-bold float-right">Textlength:</span></div>
-           <div class="col-sm-9"><span id="textinfo-charcount">{$charcount} characters.</span></div>
+           <div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n="textview.text-length">Text length:</span></div>
+           <div class="col-sm-9"><span id="textinfo-charcount" data-i18n-scope="ui">{$charcount || " characters."}</span></div>
          </div>   
          <div class="row">
            <div class="col-sm-1"/>
-           <div class="col-sm-2"><span class="font-weight-bold float-right">Comment:</span></div>
+           <div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n="textview.comment">Comment:</span></div>
            <div class="col-sm-9"><span class="tr-x" id="{$textid}-com" contenteditable="{if ($d) then 'true' else ''}">　</span></div>    
          </div>  
          <div class="row">
            <div class="col-sm-1"/>
-           <div class="col-sm-2"><span class="font-weight-bold float-right">Wikidata:</span></div>
+           <div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n="textview.wikidata">Wikidata:</span></div>
            <div class="col-sm-9">{wd:display-qitems($textid, 'title', lu:get-title($textid))}</div>    
          </div>  
          <div class="row">
            <div class="col-sm-1"/>
-           <div class="col-sm-2"><span class="font-weight-bold float-right">References:</span></div>
+           <div class="col-sm-2"><span class="font-weight-bold float-right" data-i18n="textview.references">References:</span></div>
            <div class="col-sm-9"><span>{if ($loewe) then <span>{$loewe/tei:author}, in Loewe(ed), <i>Early Chinese Texts</i> (1995), p.{$loewe/tei:citedRange/text()}<br/></span> else '　'}</span>
            <span>{for $r in $d//tei:witness 
            let $ref := $r//tei:ref/@target
            return <span>{
              if ($ref) then 
-             <a class="badge badge-pill badge-light" title="Show bibliography" href="bibliography.html?uuid={substring($r//tei:ref/@target, 2)}&amp;textid={$textid}"><span>{data($r/@xml:id)}:</span>{$r/text()}<br/></a> 
+	             <a class="badge badge-pill badge-light" title="Show bibliography" data-i18n-title="textview.show-bibliography" href="bibliography.html?uuid={substring($r//tei:ref/@target, 2)}&amp;textid={$textid}"><span>{data($r/@xml:id)}:</span>{$r/text()}<br/></a>
              else 
              <span class="badge badge-pill badge-light">{data($r/@xml:id)}:{$r/text()}<br/></span>
              }</span>
            }</span>
-           { if (sm:is-authenticated() and $d) then <a class="badge badge-pill badge-light"  href="search.html?query={lu:get-title($textid)}&amp;textid={$textid}&amp;search-type=10" title="Add new reference">Add reference to source or witness</a> else ()}</div>    
+           { if (sm:is-authenticated() and $d) then <a class="badge badge-pill badge-light" data-i18n-scope="ui" href="search.html?query={lu:get-title($textid)}&amp;textid={$textid}&amp;search-type=10" title="Add new reference">Add reference to source or witness</a> else ()}</div>
          </div>  
       </div>
 };
@@ -1892,21 +1892,21 @@ let $rels := collection($config:tls-data-root)//tei:TEI[@xml:id="word-relations"
 , $cnt := if ($map?cnt) then $map?cnt else 2000
 return
 (<div>
-<p><span class="font-weight-bold ml-2">About word relations:</span><span class="ml-2">{$rels[1]/ancestor::tei:TEI//tei:front/tei:p/text()}</span></p></div>,
+<p><span class="font-weight-bold ml-2" data-i18n="browse.about-word-relations">About word relations:</span><span class="ml-2" data-i18n-scope="content">{$rels[1]/ancestor::tei:TEI//tei:front/tei:p/text()}</span></p></div>,
 <h3><span class="font-weight-bold ml-2">{$rels/tei:head/text()}:</span><span class="ml-2">{$rels[1]/tei:div[@type="word-rels"]/tei:p/text()}</span></h3>
 ,
  <div class="row">
  <div class="col-md-1">
  　
  </div> 
- <div class="col-md-2">
+ <div class="col-md-2" data-i18n="browse.left-word-heading">
  Left Word
  </div>
- <div class="col-md-2">
+ <div class="col-md-2" data-i18n="browse.right-word-heading">
  Right Word
  </div>
- <div class="col-md-2">
- 　　Text / Ref
+ <div class="col-md-2" data-i18n="browse.text-reference-heading">
+　　Text / Ref
  </div>
  </div>, 
 for $r in subsequence($rels//tei:div[@type='word-rel'], $start, $cnt)

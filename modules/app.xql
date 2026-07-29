@@ -1522,9 +1522,9 @@ function app:footer($node as node()*, $model as map(*)){
                 <p><span data-i18n="footer.copyright-prefix">Copyright TLS Project 2026, licensed under a</span> <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/" title="Creative Commons Attribution-ShareAlike 4.0 International License">CC BY SA</a> <span data-i18n="footer.copyright-suffix">license (except some translations)</span></p>
                 <p><span data-i18n="footer.developed-at">Developed at the</span> <strong>Center for Innovative Informatics of the Humanities, Institute for Research in Humanities, Kyoto University</strong><span data-i18n="footer.with-support">, with support from the</span>
                 <strong>Dean for Research, Department of East Asian Studies</strong><span data-i18n="footer.and-comma">, and</span>
-                <strong>Program in East Asian Studies, Princeton University</strong>.</p>    
-                <p><span data-i18n="footer.development-supported">Development supported by the</span> <strong>sin-aps</strong> <span data-i18n="footer.research-group-at">research group at</span> <strong>Friedrich-Alexander-Universität Erlangen Nürnberg</strong><span data-i18n="footer.financial-support">, with financial support from the</span> <strong>Alexander von Humboldt Foundation</strong>.  </p>
-                <p><span data-i18n="footer.hosted-by">Hosted by</span> <strong>Princeton University, Department of East Asian Studies</strong><span data-i18n="footer.cooperation">, in cooperation with</span> <strong>Ruhr University Bochum, Center for the Study of Traditional Chinese Cultures </strong>.  </p>
+                <strong>Program in East Asian Studies, Princeton University</strong><span data-i18n="common.period">.</span></p>
+                <p><span data-i18n="footer.development-supported">Development supported by the</span> <strong>sin-aps</strong> <span data-i18n="footer.research-group-at">research group at</span> <strong>Friedrich-Alexander-Universität Erlangen Nürnberg</strong><span data-i18n="footer.financial-support">, with financial support from the</span> <strong>Alexander von Humboldt Foundation</strong><span data-i18n="common.period">.</span></p>
+                <p><span data-i18n="footer.hosted-by">Hosted by</span> <strong>Princeton University, Department of East Asian Studies</strong><span data-i18n="footer.cooperation">, in cooperation with</span> <strong>Ruhr University Bochum, Center for the Study of Traditional Chinese Cultures </strong><span data-i18n="common.period">.</span></p>
                 <p><span data-i18n="footer.support-from">Support from</span>
                     <strong>Heidelberg University - Cluster of Excellence - Asia and Europe in a Global Context</strong>
                     <span data-i18n="footer.and">and</span> <strong>IKOS - University of Oslo</strong>
@@ -1871,7 +1871,7 @@ declare function app:obs($node as node(), $model as map(*)){
      <div><h4><span class="text-muted" data-i18n-scope="ui">{data($t)}</span></h4>{
      for $ff in $f return
      (
-     <p>{$ff/tei:head}　　
+     <p><span data-i18n-scope="ui">{$ff/tei:head}</span>　　
      <button class="btn badge badge-primary ml-2" type="button" data-i18n-scope="ui" onclick="show_obs('{$ff/@xml:id}')">Edit template</button>
      <button class="btn badge badge-secondary ml-2" type="button" data-i18n-scope="ui" onclick="show_obs('{$ff/@xml:id}')">Show observations</button></p>,
      <div id="{$ff/@xml:id}-obs"></div>
