@@ -17,7 +17,7 @@ declare namespace tls="http://hxwd.org/ns/1.0";
     Determine the application root collection from the current module load path.
 :)
 declare variable $config:test := system:get-module-load-path();
-declare variable $config:login-domain := "org.hxwd.tls";
+declare variable $config:login-domain := "org.hxwd.tls.multilingual";
 
 declare variable $config:app-root := 
     let $rawPath := system:get-module-load-path()

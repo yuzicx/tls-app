@@ -16,9 +16,9 @@
         <!-- Web Site URL -->
         <url>https://hxwd.org/</url>
         <!-- Root of app for building dynamic links. Default is eXist app root -->
-        <nav-base>/exist/apps/tls-app</nav-base>
+        <nav-base>/exist/apps/tls-app-multilingual</nav-base>
         <!-- eXist app root for app deployment-->
-        <app-root>tls-app</app-root>
+        <app-root>tls-app-multilingual</app-root>
         <!-- eXist data app root for TEI application.  -->
         <data-root>tls-data</data-root>
         <text-root>tls-texts</text-root>

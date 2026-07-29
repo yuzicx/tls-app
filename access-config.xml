@@ -12,7 +12,7 @@
         <!-- Branch to sync, if empty assumes master -->
         <github-branch/>
         <!-- Collection in eXistdb to sync app to. example: /db/apps/tcadrt -->
-        <exist-collection>/db/apps/tls-app</exist-collection>
+        <exist-collection>/db/apps/tls-app-multilingual</exist-collection>
         <!-- App root in git repository. example: srophe-app -->
         <repo-name>tls-app</repo-name>
     </git-config>

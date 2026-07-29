@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <meta xmlns="http://exist-db.org/xquery/repo">
-    <description>TLS - 漢學文典</description>
+    <description>TLS - 漢學文典 multilingual preview</description>
     <author>Christian Wittern</author>
     <website>http://wittern.org</website>
     <status>alpha</status>
     <license>GNU-LGPL</license>
     <copyright>true</copyright>
     <type>application</type>
-    <target>tls-app</target>
+    <target>tls-app-multilingual</target>
     <prepare>pre-install.xql</prepare>
     <finish>post-install.xql</finish>
     <permissions xmlns:repo="http://exist-db.org/xquery/repo" password="tls" user="tls" group="tls-user" mode="rwxrwxr-x"/>
