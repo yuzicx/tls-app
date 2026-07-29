@@ -1,6 +1,6 @@
 {
   "name": "tls-app-multilingual",
-  "version": "0.7.4-ml.2",
+  "version": "0.7.4-ml.3",
   "description": "TLS - 漢學文典",
   "scripts": {
     "test": "mocha test/mocha/ --recursive --exit",
