@@ -80,6 +80,72 @@
     <message key="search.annotations" source="Annotations">Annotations</message>
     <message key="search.creation-period" source="Period of creation of text">Period of creation of text</message>
     <message key="search.classified-catalog" source="Classified catalog">Classified catalog</message>
+    <message key="facet.category.annotation" source="Annotated texts" mode="key-only">Annotated texts</message>
+    <message key="facet.category.core" source="Core texts" mode="key-only">Core texts</message>
+    <message key="facet.category.swl" source="Syntactic Annotations" mode="key-only">Syntactic Annotations</message>
+    <message key="facet.category.semantic" source="Semantic Annotations" mode="key-only">Semantic Annotations</message>
+    <message key="facet.category.rhet-dev" source="Rhetorical Devices" mode="key-only">Rhetorical Devices</message>
+    <message key="facet.category.word-rel" source="Word Relations" mode="key-only">Word Relations</message>
+    <message key="facet.category.has-translation" source="Translations" mode="key-only">Translations</message>
+    <message key="facet.category.tr-en" source="English translations" mode="key-only">English translations</message>
+    <message key="facet.category.tr-fr" source="French translations" mode="key-only">French translations</message>
+    <message key="facet.category.tr-de" source="German translations" mode="key-only">German translations</message>
+    <message key="facet.category.tr-zh" source="Modern Chinese translations" mode="key-only">Modern Chinese translations</message>
+    <message key="facet.category.tr-ja" source="Japanese translations" mode="key-only">Japanese translations</message>
+    <message key="facet.category.tr-ja-ku" source="Japanese Kundoku" mode="key-only">Japanese Kundoku</message>
+    <message key="facet.category.tr-ru" source="Russian translations" mode="key-only">Russian translations</message>
+    <message key="facet.category.tr-ko" source="Korean translations" mode="key-only">Korean translations</message>
+    <message key="facet.category.tr-la" source="Latin translations" mode="key-only">Latin translations</message>
+    <message key="facet.category.tr-ogr" source="Old Greek translations" mode="key-only">Old Greek translations</message>
+    <message key="facet.category.tls-state" source="Editorial state" mode="key-only">Editorial state</message>
+    <message key="facet.category.state-red" source="Raw import" mode="key-only">Raw import</message>
+    <message key="facet.category.state-yellow" source="In preparation" mode="key-only">In preparation</message>
+    <message key="facet.category.state-green" source="Editing completed" mode="key-only">Editing completed</message>
+    <message key="facet.category.dat02100" source="modern Chinese" mode="key-only">modern Chinese</message>
+    <message key="facet.category.dat02200" source="Republic" mode="key-only">Republic</message>
+    <message key="facet.category.dat04000" source="pre-modern Chinese" mode="key-only">pre-modern Chinese</message>
+    <message key="facet.category.dat04100" source="Middle Chinese" mode="key-only">Middle Chinese</message>
+    <message key="facet.category.dat04200" source="Ming/Qing" mode="key-only">Ming/Qing</message>
+    <message key="facet.category.dat04210" source="Qing" mode="key-only">Qing</message>
+    <message key="facet.category.dat04250" source="Ming" mode="key-only">Ming</message>
+    <message key="facet.category.dat04300" source="Song/Yuan" mode="key-only">Song/Yuan</message>
+    <message key="facet.category.dat04310" source="Yuan" mode="key-only">Yuan</message>
+    <message key="facet.category.dat04350" source="Song" mode="key-only">Song</message>
+    <message key="facet.category.dat04360" source="S. Song" mode="key-only">S. Song</message>
+    <message key="facet.category.dat04370" source="N. Song" mode="key-only">N. Song</message>
+    <message key="facet.category.dat04380" source="Jin" mode="key-only">Jin</message>
+    <message key="facet.category.dat04400" source="Sui/Tang" mode="key-only">Sui/Tang</message>
+    <message key="facet.category.dat04410" source="Five Dynasties" mode="key-only">Five Dynasties</message>
+    <message key="facet.category.dat04430" source="Tang" mode="key-only">Tang</message>
+    <message key="facet.category.dat04450" source="Sui" mode="key-only">Sui</message>
+    <message key="facet.category.dat04500" source="Six Dynasties" mode="key-only">Six Dynasties</message>
+    <message key="facet.category.dat04510" source="Three Kingdoms" mode="key-only">Three Kingdoms</message>
+    <message key="facet.category.dat04520" source="Wei" mode="key-only">Wei</message>
+    <message key="facet.category.dat04530" source="Shu" mode="key-only">Shu</message>
+    <message key="facet.category.dat04540" source="Wu" mode="key-only">Wu</message>
+    <message key="facet.category.dat04550" source="Jin" mode="key-only">Jin</message>
+    <message key="facet.category.dat04560" source="N. and S. Dynasties" mode="key-only">N. and S. Dynasties</message>
+    <message key="facet.category.dat04570" source="Northern Dynasties" mode="key-only">Northern Dynasties</message>
+    <message key="facet.category.dat04580" source="Southern Dynasties" mode="key-only">Southern Dynasties</message>
+    <message key="facet.category.dat05000" source="Ancient Chinese" mode="key-only">Ancient Chinese</message>
+    <message key="facet.category.dat05100" source="Old Chinese" mode="key-only">Old Chinese</message>
+    <message key="facet.category.dat06000" source="Han" mode="key-only">Han</message>
+    <message key="facet.category.dat06100" source="Eastern Han" mode="key-only">Eastern Han</message>
+    <message key="facet.category.dat06110" source="late Eastern Han" mode="key-only">late Eastern Han</message>
+    <message key="facet.category.dat06120" source="middle Eastern Han" mode="key-only">middle Eastern Han</message>
+    <message key="facet.category.dat06130" source="early Eastern Han" mode="key-only">early Eastern Han</message>
+    <message key="facet.category.dat06200" source="Western Han" mode="key-only">Western Han</message>
+    <message key="facet.category.dat06210" source="late Western Han" mode="key-only">late Western Han</message>
+    <message key="facet.category.dat06220" source="middle Western Han" mode="key-only">middle Western Han</message>
+    <message key="facet.category.dat06230" source="early Western Han" mode="key-only">early Western Han</message>
+    <message key="facet.category.dat08000" source="pre-Han" mode="key-only">pre-Han</message>
+    <message key="facet.category.dat08100" source="Warring States" mode="key-only">Warring States</message>
+    <message key="facet.category.dat08110" source="late Warring States" mode="key-only">late Warring States</message>
+    <message key="facet.category.dat08120" source="middle Warring States" mode="key-only">middle Warring States</message>
+    <message key="facet.category.dat08130" source="early Warring States" mode="key-only">early Warring States</message>
+    <message key="facet.category.dat09100" source="Spring and Autumn" mode="key-only">Spring and Autumn</message>
+    <message key="facet.category.dat11011" source="late Zhou" mode="key-only">late Zhou</message>
+    <message key="facet.category.dat12010" source="Shang" mode="key-only">Shang</message>
     <message key="search.all-matches" source="Click here to display all matches">Click here to display all matches</message>
     <message key="search.tabulated" source="Click here to display matches tabulated by text">Click here to display matches tabulated by text</message>
     <message key="search.only-translated" source="Click here to display only {count} matching lines that have a translation">Click here to display only {count} matching lines that have a translation</message>

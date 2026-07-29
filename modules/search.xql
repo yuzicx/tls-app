@@ -779,9 +779,9 @@ declare function src:facets-html-node($n, $baseid, $url, $cutoff){
    {if (string-length($url) > 0) then 
    <span>
     {if (contains($url, "filter=")) then   
-   <a title="Click here to filter on this category" data-i18n-title="search.filter-category-title" class="mr-2 ml-2" href="{$url};{$baseid}:{$n/@xml:id}">{$n/tei:catDesc/text()}</a>
+   <a title="Click here to filter on this category" data-i18n-title="search.filter-category-title" data-i18n="facet.category.{$n/@xml:id}" class="mr-2 ml-2" href="{$url};{$baseid}:{$n/@xml:id}">{$n/tei:catDesc/text()}</a>
     else 
-   <a title="Click here to filter on this category" data-i18n-title="search.filter-category-title" class="mr-2 ml-2" href="{$url}&amp;filter={$baseid}:{$n/@xml:id}">{$n/tei:catDesc/text()}</a>
+   <a title="Click here to filter on this category" data-i18n-title="search.filter-category-title" data-i18n="facet.category.{$n/@xml:id}" class="mr-2 ml-2" href="{$url}&amp;filter={$baseid}:{$n/@xml:id}">{$n/tei:catDesc/text()}</a>
    }
    {if ($n/@sum) then <span title="Aggregate over this and lower levels" data-i18n-title="search.aggregate-title" class="badge badge-primary">{data($n/@sum)}</span> else ()}
    {if ($n/@n) then <span title="Count on this level only" data-i18n-title="search.count-level-title" class="badge badge-secondary">{data($n/@n)}</span> else ()}
@@ -801,7 +801,7 @@ declare function src:facets-html-node($n, $baseid, $url, $cutoff){
    }
    </span>
    else 
-   (<span><span class="md2">{$n/tei:catDesc/text()}</span>　(<small class="md-2 text-muted">{data($n/@xml:id)}</small>)</span>
+   (<span><span class="md2" data-i18n="facet.category.{$n/@xml:id}">{$n/tei:catDesc/text()}</span>　(<small class="md-2 text-muted">{data($n/@xml:id)}</small>)</span>
 (:   ,if (string-length($n/@sum) > 0) then <p>{data($n/@sum)}</p> else ():)
    )
    }

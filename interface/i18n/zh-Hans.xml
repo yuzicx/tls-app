@@ -80,6 +80,72 @@
     <message key="search.annotations" source="Annotations">标注</message>
     <message key="search.creation-period" source="Period of creation of text">文本创作时期</message>
     <message key="search.classified-catalog" source="Classified catalog">分类目录</message>
+    <message key="facet.category.annotation" source="Annotated texts" mode="key-only">已标注文本</message>
+    <message key="facet.category.core" source="Core texts" mode="key-only">核心文本</message>
+    <message key="facet.category.swl" source="Syntactic Annotations" mode="key-only">句法标注</message>
+    <message key="facet.category.semantic" source="Semantic Annotations" mode="key-only">语义标注</message>
+    <message key="facet.category.rhet-dev" source="Rhetorical Devices" mode="key-only">修辞手法</message>
+    <message key="facet.category.word-rel" source="Word Relations" mode="key-only">词语关系</message>
+    <message key="facet.category.has-translation" source="Translations" mode="key-only">翻译</message>
+    <message key="facet.category.tr-en" source="English translations" mode="key-only">英语翻译</message>
+    <message key="facet.category.tr-fr" source="French translations" mode="key-only">法语翻译</message>
+    <message key="facet.category.tr-de" source="German translations" mode="key-only">德语翻译</message>
+    <message key="facet.category.tr-zh" source="Modern Chinese translations" mode="key-only">现代汉语翻译</message>
+    <message key="facet.category.tr-ja" source="Japanese translations" mode="key-only">日语翻译</message>
+    <message key="facet.category.tr-ja-ku" source="Japanese Kundoku" mode="key-only">日语训读</message>
+    <message key="facet.category.tr-ru" source="Russian translations" mode="key-only">俄语翻译</message>
+    <message key="facet.category.tr-ko" source="Korean translations" mode="key-only">韩语翻译</message>
+    <message key="facet.category.tr-la" source="Latin translations" mode="key-only">拉丁语翻译</message>
+    <message key="facet.category.tr-ogr" source="Old Greek translations" mode="key-only">古希腊语翻译</message>
+    <message key="facet.category.tls-state" source="Editorial state" mode="key-only">编辑状态</message>
+    <message key="facet.category.state-red" source="Raw import" mode="key-only">原始导入</message>
+    <message key="facet.category.state-yellow" source="In preparation" mode="key-only">整理中</message>
+    <message key="facet.category.state-green" source="Editing completed" mode="key-only">编辑完成</message>
+    <message key="facet.category.dat02100" source="modern Chinese" mode="key-only">现代汉语</message>
+    <message key="facet.category.dat02200" source="Republic" mode="key-only">民国时期</message>
+    <message key="facet.category.dat04000" source="pre-modern Chinese" mode="key-only">近代汉语</message>
+    <message key="facet.category.dat04100" source="Middle Chinese" mode="key-only">中古汉语</message>
+    <message key="facet.category.dat04200" source="Ming/Qing" mode="key-only">明清</message>
+    <message key="facet.category.dat04210" source="Qing" mode="key-only">清代</message>
+    <message key="facet.category.dat04250" source="Ming" mode="key-only">明代</message>
+    <message key="facet.category.dat04300" source="Song/Yuan" mode="key-only">宋元</message>
+    <message key="facet.category.dat04310" source="Yuan" mode="key-only">元代</message>
+    <message key="facet.category.dat04350" source="Song" mode="key-only">宋代</message>
+    <message key="facet.category.dat04360" source="S. Song" mode="key-only">南宋</message>
+    <message key="facet.category.dat04370" source="N. Song" mode="key-only">北宋</message>
+    <message key="facet.category.dat04380" source="Jin" mode="key-only">金</message>
+    <message key="facet.category.dat04400" source="Sui/Tang" mode="key-only">隋唐</message>
+    <message key="facet.category.dat04410" source="Five Dynasties" mode="key-only">五代</message>
+    <message key="facet.category.dat04430" source="Tang" mode="key-only">唐代</message>
+    <message key="facet.category.dat04450" source="Sui" mode="key-only">隋代</message>
+    <message key="facet.category.dat04500" source="Six Dynasties" mode="key-only">六朝</message>
+    <message key="facet.category.dat04510" source="Three Kingdoms" mode="key-only">三国</message>
+    <message key="facet.category.dat04520" source="Wei" mode="key-only">魏</message>
+    <message key="facet.category.dat04530" source="Shu" mode="key-only">蜀</message>
+    <message key="facet.category.dat04540" source="Wu" mode="key-only">吴</message>
+    <message key="facet.category.dat04550" source="Jin" mode="key-only">晋</message>
+    <message key="facet.category.dat04560" source="N. and S. Dynasties" mode="key-only">南北朝</message>
+    <message key="facet.category.dat04570" source="Northern Dynasties" mode="key-only">北朝</message>
+    <message key="facet.category.dat04580" source="Southern Dynasties" mode="key-only">南朝</message>
+    <message key="facet.category.dat05000" source="Ancient Chinese" mode="key-only">古代汉语</message>
+    <message key="facet.category.dat05100" source="Old Chinese" mode="key-only">上古汉语</message>
+    <message key="facet.category.dat06000" source="Han" mode="key-only">汉代</message>
+    <message key="facet.category.dat06100" source="Eastern Han" mode="key-only">东汉</message>
+    <message key="facet.category.dat06110" source="late Eastern Han" mode="key-only">东汉晚期</message>
+    <message key="facet.category.dat06120" source="middle Eastern Han" mode="key-only">东汉中期</message>
+    <message key="facet.category.dat06130" source="early Eastern Han" mode="key-only">东汉早期</message>
+    <message key="facet.category.dat06200" source="Western Han" mode="key-only">西汉</message>
+    <message key="facet.category.dat06210" source="late Western Han" mode="key-only">西汉晚期</message>
+    <message key="facet.category.dat06220" source="middle Western Han" mode="key-only">西汉中期</message>
+    <message key="facet.category.dat06230" source="early Western Han" mode="key-only">西汉早期</message>
+    <message key="facet.category.dat08000" source="pre-Han" mode="key-only">先秦</message>
+    <message key="facet.category.dat08100" source="Warring States" mode="key-only">战国</message>
+    <message key="facet.category.dat08110" source="late Warring States" mode="key-only">战国晚期</message>
+    <message key="facet.category.dat08120" source="middle Warring States" mode="key-only">战国中期</message>
+    <message key="facet.category.dat08130" source="early Warring States" mode="key-only">战国早期</message>
+    <message key="facet.category.dat09100" source="Spring and Autumn" mode="key-only">春秋</message>
+    <message key="facet.category.dat11011" source="late Zhou" mode="key-only">周代晚期</message>
+    <message key="facet.category.dat12010" source="Shang" mode="key-only">商代</message>
     <message key="search.all-matches" source="Click here to display all matches">点击此处显示全部匹配项</message>
     <message key="search.tabulated" source="Click here to display matches tabulated by text">点击此处按文本汇总显示匹配项</message>
     <message key="search.only-translated" source="Click here to display only {count} matching lines that have a translation">点击此处仅显示已有翻译的 {count} 个匹配行</message>
