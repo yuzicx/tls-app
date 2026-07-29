@@ -144,7 +144,7 @@ if (string-length($item) > 0) then
     let $k := map:keys($res)
     , $total := sum(for $l in $k return map:get($res, $l)[1])
    return 
-   (<div class="col-md-1"><h3>Total: {$total}</h3></div>,
+   (<div class="col-md-1"><h3 data-i18n-scope="ui">Total: {$total}</h3></div>,
      <div class="col-md-10">
         {if ($map?parameters?grouping = $lct:use-tax) then
             <ul>{lct:add-n($res) => ltx:tax-sum-n() => ltx:tax-prune() => lct:format-result-tree()}</ul>
@@ -231,7 +231,7 @@ return
    case map() return lct:format-result-map($e, $level+1)
    default return ()
 }
-{if ($l = 'none') then () else if (lpm:can-use-linked-items()) then <div class="float-right">Select items to apply these actions: {ltg:tag-actions($uid)}</div> else ()}
+{if ($l = 'none') then () else if (lpm:can-use-linked-items()) then <div class="float-right"><span data-i18n="citations.select-actions">Select items to apply these actions:</span> {ltg:tag-actions($uid)}</div> else ()}
 </div>
 </div>
 }
@@ -362,12 +362,12 @@ return
   {lrh:swl-buttons(map{'ann': 'swl', 'resp': $resp, 'user' : sm:id()//sm:real/sm:username/text(), 'creator-id': $creator-id, 'node': $node, 'zi': $zi, 'context' : 'cit', 'marktext' : $marktext})}
   <span><br/>{"{"|| $creator-id ||"}　", $creation-date}</span>
 </div>
-<div class="col-sm-1" title="tags">{ if (lpm:can-use-linked-items()) then <input class="form-check-input" type="checkbox" name="res-check" value="" id="res-{$attid}"/> else ()}{ltg:show-tags($node, map{})}</div>
+<div class="col-sm-1" title="tags" data-i18n-title="common.tags">{ if (lpm:can-use-linked-items()) then <input class="form-check-input" type="checkbox" name="res-check" value="" id="res-{$attid}"/> else ()}{ltg:show-tags($node, map{})}</div>
 </div>
 };
 
 declare function lct:set-value($perspective, $item){
-<span class="btn badge badge-light" onclick="cit_set_value('{$perspective}', '{$item}')" title="set the item and perspective to this value">CIT</span>
+<span class="btn badge badge-light" onclick="cit_set_value('{$perspective}', '{$item}')" title="set the item and perspective to this value" data-i18n-title="citations.set-item">CIT</span>
 };
 
 declare function lct:set-valuex($perspective, $item){
