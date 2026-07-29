@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue xml:lang="zh-Hans">
+    <message key="language.label" source="Language">语言</message>
+    <message key="nav.toggle" source="Toggle navigation">切换导航</message>
+    <message key="nav.browse" source="Browse">浏览</message>
+    <message key="nav.texts" source="Texts">文本</message>
+    <message key="nav.concepts" source="Concepts">概念</message>
+    <message key="nav.characters" source="Characters">汉字</message>
+    <message key="nav.words" source="Words">词语</message>
+    <message key="nav.citations" source="Citations">引文</message>
+    <message key="nav.word-relations" source="Word relations">词语关系</message>
+    <message key="nav.syntactic-functions" source="Syntactic functions">句法功能</message>
+    <message key="nav.semantic-features" source="Semantic features">语义特征</message>
+    <message key="nav.rhetorical-devices" source="Rhetorical devices">修辞手法</message>
+    <message key="nav.observations" source="Observations">观察记录</message>
+    <message key="nav.bibliography" source="Bibliography">参考文献</message>
+    <message key="nav.about" source="About">关于</message>
+    <message key="nav.main-features" source="Main features">主要功能</message>
+    <message key="nav.statistics" source="Statistics">统计</message>
+    <message key="nav.advisory-board" source="Advisory Board">顾问委员会</message>
+    <message key="nav.documentation" source="Documentation">使用文档</message>
+    <message key="nav.ai-output" source="AI Output('translations')">AI 输出（“翻译”）</message>
+    <message key="nav.basic-texts" source="Some basic texts">基础文本</message>
+    <message key="nav.text-criticism" source="Critically establishing a text">文本校勘</message>
+    <message key="nav.genre-categories" source="Genre categories">文类分类</message>
+    <message key="nav.recent-changes" source="Recent changes">最近更改</message>
+    <message key="nav.help" source="Help">帮助</message>
+    <message key="nav.links" source="Links">链接</message>
+    <message key="nav.bookmarks" source="Bookmarks">书签</message>
+    <message key="nav.display-pastebox" source="Display Pastebox">显示粘贴框</message>
+    <message key="nav.internal" source="內部">内部</message>
+    <message key="nav.review-swls" source="Review SWLs">审核句法词</message>
+    <message key="nav.add-pronunciation-glosses" source="Add pronounciation glosses">添加读音注释</message>
+    <message key="nav.special-pages" source="Special pages">特殊页面</message>
+    <message key="nav.account-requests" source="Account requests">账号申请</message>
+    <message key="nav.edit-chinese-text" source="Edit Chinese text">编辑中文文本</message>
+    <message key="nav.change-editing-permissions" source="Change editing permissions">更改编辑权限</message>
+    <message key="nav.ai-requests" source="AI output requests">AI 输出请求</message>
+
+    <message key="search.search" source="Search">搜索</message>
+    <message key="search.in" source="in">范围</message>
+    <message key="search.texts" source="texts">文本</message>
+    <message key="search.titles" source="titles">标题</message>
+    <message key="search.dictionary" source="dictionary">词典</message>
+    <message key="search.translations" source="translations">翻译</message>
+    <message key="search.everything" source="everything">全部</message>
+    <message key="search.one-text" source="one text only">仅当前文本</message>
+    <message key="search.lines-with-translation" source="lines with translation">有翻译的行</message>
+    <message key="search.advanced" source="advanced search">高级搜索</message>
+    <message key="search.research-notes" source="research notes">研究笔记</message>
+    <message key="search.title-list" source="title list">标题列表</message>
+    <message key="search.bibliography" source="bibliography">参考文献</message>
+    <message key="search.searching" source="Searching, please wait...">正在搜索，请稍候……</message>
+    <message key="search.loading" source="Loading the list, please wait a moment.">正在加载列表，请稍候。</message>
+    <message key="search.retrieving" source="Retrieving data, please wait...">正在获取数据，请稍候……</message>
+
+    <message key="account.login" source="Login">登录</message>
+    <message key="account.logout" source="Logout">退出</message>
+    <message key="account.settings" source="Settings">设置</message>
+    <message key="account.report-problems" source="Report problems">报告问题</message>
+    <message key="account.user" source="User:">用户：</message>
+    <message key="account.password" source="Password:">密码：</message>
+    <message key="account.email" source="Email:">电子邮箱：</message>
+    <message key="account.send-mail" source="Send mail">发送邮件</message>
+    <message key="account.login-failed-title" source="Login failed!">登录失败！</message>
+    <message key="account.login-failed-help" source="Try again or request to get your login information sent to the email you provided upon registration and re-entered above.">请重试，或申请将登录信息发送至注册时填写的邮箱，然后重新输入。</message>
+    <message key="account.logged-out" source="You have been logged out.">您已退出登录。</message>
+
+    <message key="common.save" source="Save">保存</message>
+    <message key="common.cancel" source="Cancel">取消</message>
+    <message key="common.close" source="Close">关闭</message>
+    <message key="common.delete" source="Delete">删除</message>
+    <message key="common.edit" source="Edit">编辑</message>
+    <message key="common.add" source="Add">新增</message>
+    <message key="common.select" source="Select">选择</message>
+    <message key="common.use" source="Use">使用</message>
+    <message key="common.count" source="Count">计数</message>
+    <message key="common.loading" source="Loading…">正在加载……</message>
+    <message key="common.not-implemented" source="Not yet implemented">尚未实现</message>
+    <message key="common.problem" source="A problem occurred.">发生了问题。</message>
+    <message key="common.unknown-error" source="An unknown error happened on the system.">系统发生未知错误。</message>
+    <message key="common.saved" source="Modification saved.">修改已保存。</message>
+    <message key="common.hxwd-says" source="HXWD says:">汉学文典提示：</message>
+    <message key="common.tls-says" source="漢學文典 says:">汉学文典提示：</message>
+
+    <message key="browse.filter" source="Type to filter...">输入内容以筛选……</message>
+    <message key="browse.show-tree" source="Show tree">显示树状结构</message>
+    <message key="browse.show-alternate-labels" source="Show alternate labels">显示其他名称</message>
+    <message key="browse.formula" source="Formula">形式</message>
+    <message key="browse.definition" source="Definition">定义</message>
+    <message key="browse.alternate-labels" source="Alternate Labels">其他名称</message>
+    <message key="browse.remarks" source="Remarks">备注</message>
+    <message key="browse.analyzed-characters" source="Analyzed characters by frequency">按频率排列的已分析汉字</message>
+    <message key="browse.syntactic-words" source="Syntactic words">句法词</message>
+    <message key="browse.show-references" source="Show references">显示参考文献</message>
+    <message key="browse.syntactic-functions-title" source="Syntactic Functions">句法功能</message>
+    <message key="browse.semantic-features-title" source="Semantic Features">语义特征</message>
+    <message key="browse.rhetorical-devices-title" source="Rhetorical Devices">修辞手法</message>
+
+    <message key="settings.title" source="Customizable settings for">自定义设置：</message>
+    <message key="settings.display" source="Display settings">显示设置</message>
+    <message key="settings.external-resources" source="External resources">外部资源</message>
+    <message key="settings.changed" source="Setting has been changed.">设置已更改。</message>
+    <message key="settings.hide" source="Don't show this at all">完全不显示</message>
+    <message key="settings.show" source="Show this wherever possible">尽可能显示</message>
+    <message key="settings.context" source="Show this in these contexts:">在以下情境中显示：</message>
+
+    <message key="welcome.back" source="Welcome back!">欢迎回来！</message>
+    <message key="welcome.acknowledge" source="Please acknowledge your use of TLS in your publications.">在出版物中使用 TLS 时，请注明本项目。</message>
+    <message key="welcome.browse" source="Browse the database">浏览数据库</message>
+    <message key="welcome.development" source="This website is under development.">本网站仍在开发中。</message>
+
+    <message key="citations.title" source="Citations">引文</message>
+    <message key="citations.analyze" source="Analyze the">分析系统中当前定义的</message>
+    <message key="citations.defined" source="citations currently defined in the system.">条引文。</message>
+    <message key="common.warning" source="Warning:">警告：</message>
+
+    <message key="signup.title" source="Application for membership in the TLS Project">申请加入 TLS 项目</message>
+    <message key="signup.form" source="Signup form">注册申请表</message>
+    <message key="signup.personal" source="Personal information">个人信息</message>
+    <message key="signup.required" source="All input (except the website) is required">除个人网站外，所有项目均为必填项</message>
+    <message key="signup.full-name" source="Full name">姓名</message>
+    <message key="signup.nickname" source="Requested nickname">申请用户名</message>
+    <message key="signup.password" source="Password">密码</message>
+    <message key="signup.repeat-password" source="Repeat password">重复密码</message>
+    <message key="signup.email" source="Email">电子邮箱</message>
+    <message key="signup.professional" source="Professional information">专业信息</message>
+    <message key="signup.research-areas" source="Research areas of interest to you">感兴趣的研究领域</message>
+    <message key="signup.affiliation" source="Affiliated university or research institution">所属高校或研究机构</message>
+    <message key="signup.contribution" source="How would you like to contribute to the project?">希望如何参与本项目？</message>
+    <message key="signup.website" source="Website">个人网站</message>
+    <message key="signup.agreement" source="Agreement">协议</message>
+    <message key="signup.next" source="What happens next?">后续流程</message>
+    <message key="signup.submit" source="Submit">提交</message>
+
+    <message key="error.title" source="An error has occurred">发生错误</message>
+    <message key="error.description" source="An error has been generated by the application.">应用程序产生了一个错误。</message>
+
+    <message key="toast.select-related-word" source="Now select the right word and then set the relation type.">请选择右侧词语，然后设置关系类型。</message>
+    <message key="toast.word-relation-moved" source="Word relation has been moved.">词语关系已移动。</message>
+    <message key="toast.relation-type-saved" source="Relation type has been saved.">关系类型已保存。</message>
+    <message key="toast.word-relation-deleted" source="Word relation has been deleted.">词语关系已删除。</message>
+    <message key="toast.requesting-lines" source="Requesting more text lines, please wait a moment.">正在请求更多文本行，请稍候。</message>
+    <message key="toast.translation-change" source="Translation change requested. Please wait a moment.">已请求更改翻译，请稍候。</message>
+    <message key="toast.translation-draft" source="Translation draft requested. Please wait a moment.">已请求翻译草稿，请稍候。</message>
+    <message key="toast.work-saved" source="New work has been saved.">新作品已保存。</message>
+    <message key="toast.translation-saved" source="The translation has been saved.">翻译已保存。</message>
+    <message key="toast.saving-attribution" source="Saving the attribution...">正在保存义项标注……</message>
+    <message key="toast.concept-exists" source="Concept already exists.">该概念已存在。</message>
+    <message key="toast.concept-saved" source="Concept has been saved.">概念已保存。</message>
+    <message key="toast.rating-saved" source="Your rating has been saved.">评分已保存。</message>
+    <message key="toast.rating-cleared" source="Your rating has been cleared.">评分已清除。</message>
+    <message key="toast.merged" source="Merged into target.">已合并到目标项。</message>
+    <message key="toast.word-moving" source="SW is being moved.">正在移动句法词。</message>
+    <message key="toast.word-deleted" source="Word has been deleted.">词语已删除。</message>
+    <message key="toast.attribution-marked" source="Attribution has been marked.">义项标注已标记。</message>
+    <message key="toast.deleting-attribution" source="Deleting the attribution...">正在删除义项标注……</message>
+    <message key="toast.attribution-deleted" source="Attribution deleted.">义项标注已删除。</message>
+    <message key="toast.review-saved" source="Review has been saved. Thank you for your effort!">审核已保存，感谢您的工作！</message>
+    <message key="toast.bookmark-saved" source="Bookmark has been saved.">书签已保存。</message>
+    <message key="toast.bookmark-deleted" source="Bookmark has been deleted.">书签已删除。</message>
+    <message key="toast.password-changed" source="Your password has been changed. You will be logged out.">密码已更改，系统将退出当前登录。</message>
+</catalogue>

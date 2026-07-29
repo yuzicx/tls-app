@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue xml:lang="en">
+    <message key="language.label" source="Language">Language</message>
+    <message key="nav.toggle" source="Toggle navigation">Toggle navigation</message>
+    <message key="nav.browse" source="Browse">Browse</message>
+    <message key="nav.texts" source="Texts">Texts</message>
+    <message key="nav.concepts" source="Concepts">Concepts</message>
+    <message key="nav.characters" source="Characters">Characters</message>
+    <message key="nav.words" source="Words">Words</message>
+    <message key="nav.citations" source="Citations">Citations</message>
+    <message key="nav.word-relations" source="Word relations">Word relations</message>
+    <message key="nav.syntactic-functions" source="Syntactic functions">Syntactic functions</message>
+    <message key="nav.semantic-features" source="Semantic features">Semantic features</message>
+    <message key="nav.rhetorical-devices" source="Rhetorical devices">Rhetorical devices</message>
+    <message key="nav.observations" source="Observations">Observations</message>
+    <message key="nav.bibliography" source="Bibliography">Bibliography</message>
+    <message key="nav.about" source="About">About</message>
+    <message key="nav.main-features" source="Main features">Main features</message>
+    <message key="nav.statistics" source="Statistics">Statistics</message>
+    <message key="nav.advisory-board" source="Advisory Board">Advisory Board</message>
+    <message key="nav.documentation" source="Documentation">Documentation</message>
+    <message key="nav.ai-output" source="AI Output('translations')">AI Output('translations')</message>
+    <message key="nav.basic-texts" source="Some basic texts">Some basic texts</message>
+    <message key="nav.text-criticism" source="Critically establishing a text">Critically establishing a text</message>
+    <message key="nav.genre-categories" source="Genre categories">Genre categories</message>
+    <message key="nav.recent-changes" source="Recent changes">Recent changes</message>
+    <message key="nav.help" source="Help">Help</message>
+    <message key="nav.links" source="Links">Links</message>
+    <message key="nav.bookmarks" source="Bookmarks">Bookmarks</message>
+    <message key="nav.display-pastebox" source="Display Pastebox">Display Pastebox</message>
+    <message key="nav.internal" source="內部">內部</message>
+    <message key="nav.review-swls" source="Review SWLs">Review SWLs</message>
+    <message key="nav.add-pronunciation-glosses" source="Add pronounciation glosses">Add pronounciation glosses</message>
+    <message key="nav.special-pages" source="Special pages">Special pages</message>
+    <message key="nav.account-requests" source="Account requests">Account requests</message>
+    <message key="nav.edit-chinese-text" source="Edit Chinese text">Edit Chinese text</message>
+    <message key="nav.change-editing-permissions" source="Change editing permissions">Change editing permissions</message>
+    <message key="nav.ai-requests" source="AI output requests">AI output requests</message>
+
+    <message key="search.search" source="Search">Search</message>
+    <message key="search.in" source="in">in</message>
+    <message key="search.texts" source="texts">texts</message>
+    <message key="search.titles" source="titles">titles</message>
+    <message key="search.dictionary" source="dictionary">dictionary</message>
+    <message key="search.translations" source="translations">translations</message>
+    <message key="search.everything" source="everything">everything</message>
+    <message key="search.one-text" source="one text only">one text only</message>
+    <message key="search.lines-with-translation" source="lines with translation">lines with translation</message>
+    <message key="search.advanced" source="advanced search">advanced search</message>
+    <message key="search.research-notes" source="research notes">research notes</message>
+    <message key="search.title-list" source="title list">title list</message>
+    <message key="search.bibliography" source="bibliography">bibliography</message>
+    <message key="search.searching" source="Searching, please wait...">Searching, please wait...</message>
+    <message key="search.loading" source="Loading the list, please wait a moment.">Loading the list, please wait a moment.</message>
+    <message key="search.retrieving" source="Retrieving data, please wait...">Retrieving data, please wait...</message>
+
+    <message key="account.login" source="Login">Login</message>
+    <message key="account.logout" source="Logout">Logout</message>
+    <message key="account.settings" source="Settings">Settings</message>
+    <message key="account.report-problems" source="Report problems">Report problems</message>
+    <message key="account.user" source="User:">User:</message>
+    <message key="account.password" source="Password:">Password:</message>
+    <message key="account.email" source="Email:">Email:</message>
+    <message key="account.send-mail" source="Send mail">Send mail</message>
+    <message key="account.login-failed-title" source="Login failed!">Login failed!</message>
+    <message key="account.login-failed-help" source="Try again or request to get your login information sent to the email you provided upon registration and re-entered above.">Try again or request to get your login information sent to the email you provided upon registration and re-entered above.</message>
+    <message key="account.logged-out" source="You have been logged out.">You have been logged out.</message>
+
+    <message key="common.save" source="Save">Save</message>
+    <message key="common.cancel" source="Cancel">Cancel</message>
+    <message key="common.close" source="Close">Close</message>
+    <message key="common.delete" source="Delete">Delete</message>
+    <message key="common.edit" source="Edit">Edit</message>
+    <message key="common.add" source="Add">Add</message>
+    <message key="common.select" source="Select">Select</message>
+    <message key="common.use" source="Use">Use</message>
+    <message key="common.count" source="Count">Count</message>
+    <message key="common.loading" source="Loading…">Loading…</message>
+    <message key="common.not-implemented" source="Not yet implemented">Not yet implemented</message>
+    <message key="common.problem" source="A problem occurred.">A problem occurred.</message>
+    <message key="common.unknown-error" source="An unknown error happened on the system.">An unknown error happened on the system.</message>
+    <message key="common.saved" source="Modification saved.">Modification saved.</message>
+    <message key="common.hxwd-says" source="HXWD says:">HXWD says:</message>
+    <message key="common.tls-says" source="漢學文典 says:">漢學文典 says:</message>
+
+    <message key="browse.filter" source="Type to filter...">Type to filter...</message>
+    <message key="browse.show-tree" source="Show tree">Show tree</message>
+    <message key="browse.show-alternate-labels" source="Show alternate labels">Show alternate labels</message>
+    <message key="browse.formula" source="Formula">Formula</message>
+    <message key="browse.definition" source="Definition">Definition</message>
+    <message key="browse.alternate-labels" source="Alternate Labels">Alternate Labels</message>
+    <message key="browse.remarks" source="Remarks">Remarks</message>
+    <message key="browse.analyzed-characters" source="Analyzed characters by frequency">Analyzed characters by frequency</message>
+    <message key="browse.syntactic-words" source="Syntactic words">Syntactic words</message>
+    <message key="browse.show-references" source="Show references">Show references</message>
+    <message key="browse.syntactic-functions-title" source="Syntactic Functions">Syntactic Functions</message>
+    <message key="browse.semantic-features-title" source="Semantic Features">Semantic Features</message>
+    <message key="browse.rhetorical-devices-title" source="Rhetorical Devices">Rhetorical Devices</message>
+
+    <message key="settings.title" source="Customizable settings for">Customizable settings for</message>
+    <message key="settings.display" source="Display settings">Display settings</message>
+    <message key="settings.external-resources" source="External resources">External resources</message>
+    <message key="settings.changed" source="Setting has been changed.">Setting has been changed.</message>
+    <message key="settings.hide" source="Don't show this at all">Don't show this at all</message>
+    <message key="settings.show" source="Show this wherever possible">Show this wherever possible</message>
+    <message key="settings.context" source="Show this in these contexts:">Show this in these contexts:</message>
+
+    <message key="welcome.back" source="Welcome back!">Welcome back!</message>
+    <message key="welcome.acknowledge" source="Please acknowledge your use of TLS in your publications.">Please acknowledge your use of TLS in your publications.</message>
+    <message key="welcome.browse" source="Browse the database">Browse the database</message>
+    <message key="welcome.development" source="This website is under development.">This website is under development.</message>
+
+    <message key="citations.title" source="Citations">Citations</message>
+    <message key="citations.analyze" source="Analyze the">Analyze the</message>
+    <message key="citations.defined" source="citations currently defined in the system.">citations currently defined in the system.</message>
+    <message key="common.warning" source="Warning:">Warning:</message>
+
+    <message key="signup.title" source="Application for membership in the TLS Project">Application for membership in the TLS Project</message>
+    <message key="signup.form" source="Signup form">Signup form</message>
+    <message key="signup.personal" source="Personal information">Personal information</message>
+    <message key="signup.required" source="All input (except the website) is required">All input (except the website) is required</message>
+    <message key="signup.full-name" source="Full name">Full name</message>
+    <message key="signup.nickname" source="Requested nickname">Requested nickname</message>
+    <message key="signup.password" source="Password">Password</message>
+    <message key="signup.repeat-password" source="Repeat password">Repeat password</message>
+    <message key="signup.email" source="Email">Email</message>
+    <message key="signup.professional" source="Professional information">Professional information</message>
+    <message key="signup.research-areas" source="Research areas of interest to you">Research areas of interest to you</message>
+    <message key="signup.affiliation" source="Affiliated university or research institution">Affiliated university or research institution</message>
+    <message key="signup.contribution" source="How would you like to contribute to the project?">How would you like to contribute to the project?</message>
+    <message key="signup.website" source="Website">Website</message>
+    <message key="signup.agreement" source="Agreement">Agreement</message>
+    <message key="signup.next" source="What happens next?">What happens next?</message>
+    <message key="signup.submit" source="Submit">Submit</message>
+
+    <message key="error.title" source="An error has occurred">An error has occurred</message>
+    <message key="error.description" source="An error has been generated by the application.">An error has been generated by the application.</message>
+
+    <message key="toast.select-related-word" source="Now select the right word and then set the relation type.">Now select the right word and then set the relation type.</message>
+    <message key="toast.word-relation-moved" source="Word relation has been moved.">Word relation has been moved.</message>
+    <message key="toast.relation-type-saved" source="Relation type has been saved.">Relation type has been saved.</message>
+    <message key="toast.word-relation-deleted" source="Word relation has been deleted.">Word relation has been deleted.</message>
+    <message key="toast.requesting-lines" source="Requesting more text lines, please wait a moment.">Requesting more text lines, please wait a moment.</message>
+    <message key="toast.translation-change" source="Translation change requested. Please wait a moment.">Translation change requested. Please wait a moment.</message>
+    <message key="toast.translation-draft" source="Translation draft requested. Please wait a moment.">Translation draft requested. Please wait a moment.</message>
+    <message key="toast.work-saved" source="New work has been saved.">New work has been saved.</message>
+    <message key="toast.translation-saved" source="The translation has been saved.">The translation has been saved.</message>
+    <message key="toast.saving-attribution" source="Saving the attribution...">Saving the attribution...</message>
+    <message key="toast.concept-exists" source="Concept already exists.">Concept already exists.</message>
+    <message key="toast.concept-saved" source="Concept has been saved.">Concept has been saved.</message>
+    <message key="toast.rating-saved" source="Your rating has been saved.">Your rating has been saved.</message>
+    <message key="toast.rating-cleared" source="Your rating has been cleared.">Your rating has been cleared.</message>
+    <message key="toast.merged" source="Merged into target.">Merged into target.</message>
+    <message key="toast.word-moving" source="SW is being moved.">SW is being moved.</message>
+    <message key="toast.word-deleted" source="Word has been deleted.">Word has been deleted.</message>
+    <message key="toast.attribution-marked" source="Attribution has been marked.">Attribution has been marked.</message>
+    <message key="toast.deleting-attribution" source="Deleting the attribution...">Deleting the attribution...</message>
+    <message key="toast.attribution-deleted" source="Attribution deleted.">Attribution deleted.</message>
+    <message key="toast.review-saved" source="Review has been saved. Thank you for your effort!">Review has been saved. Thank you for your effort!</message>
+    <message key="toast.bookmark-saved" source="Bookmark has been saved.">Bookmark has been saved.</message>
+    <message key="toast.bookmark-deleted" source="Bookmark has been deleted.">Bookmark has been deleted.</message>
+    <message key="toast.password-changed" source="Your password has been changed. You will be logged out.">Your password has been changed. You will be logged out.</message>
+</catalogue>

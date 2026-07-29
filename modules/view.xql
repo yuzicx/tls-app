@@ -19,6 +19,7 @@ import module namespace lsf="http://hxwd.org/lib/syn-func" at "lib/syn-func.xqm"
 import module namespace lct="http://hxwd.org/citations" at "lib/citations.xqm";
 import module namespace lus="http://hxwd.org/lib/user-settings" at "lib/user-settings.xqm";
 import module namespace lrh="http://hxwd.org/lib/render-html" at "lib/render-html.xqm";
+import module namespace i18n="http://hxwd.org/lib/i18n" at "lib/i18n.xqm";
 
 import module namespace lc="http://hxwd.org/concept" at "lib/concept.xqm";
 
@@ -51,4 +52,4 @@ let $lookup := function($functionName as xs:string, $arity as xs:integer) {
  :)
 let $content := request:get-data()
 return
-    templates:apply($content, $lookup, (), $config)
+    i18n:localize-page(templates:apply($content, $lookup, (), $config))

@@ -215,18 +215,18 @@ function app:browse($node as node()*, $model as map(*), $type as xs:string?, $fi
    <div class="card">
     <div class="card-header" id="{$type}-card">
       <div class="row mb-0">
-      <span class="col-3"><h4><strong>{map:get($config:lmap, $type)}</strong>  {
-      if ($type = 'syn-func') then (" / ", <a class="ml-2" href="syn-func-tree.html">Show tree</a>)
-      else if ($type = 'concept') then (" / ", <a class="ml-2" href="browse.html?type=tax&amp;mode={$type}">Show tree</a>)
+      <span class="col-3"><h4><strong data-i18n-scope="ui">{map:get($config:lmap, $type)}</strong>  {
+      if ($type = 'syn-func') then (" / ", <a class="ml-2" href="syn-func-tree.html" data-i18n="browse.show-tree">Show tree</a>)
+      else if ($type = 'concept') then (" / ", <a class="ml-2" href="browse.html?type=tax&amp;mode={$type}" data-i18n="browse.show-tree">Show tree</a>)
       else ()
       }</h4></span>&#160;
       <span class="col-3">
-      <input class="form-control" id="myInput" type="text" placeholder="Type to filter..."/>
+      <input class="form-control" id="myInput" type="text" placeholder="Type to filter..." data-i18n-placeholder="browse.filter"/>
       </span>
       {if ($type = 'conceptxx') then 
-      <button type="button" class="btn btn-primary" onclick="toggle_alt_labels()">Show alternate labels</button>
+      <button type="button" class="btn btn-primary" onclick="toggle_alt_labels()" data-i18n="browse.show-alternate-labels">Show alternate labels</button>
       else
-      <button type="button" class="btn btn-primary" onclick="countrows()">Count</button>
+      <button type="button" class="btn btn-primary" onclick="countrows()" data-i18n="common.count">Count</button>
       }
       <span class="col-2" id="rowCount"></span>
       {(: if ($type = 'concept') then
@@ -239,9 +239,9 @@ function app:browse($node as node()*, $model as map(*), $type as xs:string?, $fi
     </div>
     <div class="card-body"><table id="filtertable" class="table">
     <thead><tr>
-    <th scope="col">Formula</th>
-    <th scope="col">Definition</th>
-    <th scope="col">{if ($type='concept') then 'Alternate Labels' else 'Remarks'}</th>    
+    <th scope="col" data-i18n="browse.formula">Formula</th>
+    <th scope="col" data-i18n="browse.definition">Definition</th>
+    <th scope="col">{if ($type='concept') then i18n:t('browse.alternate-labels') else i18n:t('browse.remarks')}</th>
     </tr></thead><tbody class="table-striped">{
     for $h in $hits
      let $domain := tokenize(util:collection-name($h), '/')[last()]
@@ -343,7 +343,7 @@ declare function app:browse-word($type as xs:string?, $filter as xs:string?)
  : core/taxchar.xml
  : taxchar if available, otherwise look for words? :)
 declare function app:browse-char($type as xs:string?, $filter as xs:string?)
-{<div><h4>Analyzed characters by frequency</h4><small>1</small>
+{<div><h4 data-i18n="browse.analyzed-characters">Analyzed characters by frequency</h4><small>1</small>
    { for $hit at $pos in collection($config:tls-data-root||"/core")//tei:div[@type=$type]
      let $head := $hit/tei:head
      ,$id := $hit/@xml:id
@@ -1297,7 +1297,7 @@ let $context := substring-before(tokenize(request:get-uri(), "/")[last()], ".htm
 let $user := sm:id()//sm:real/sm:username/text()
 return
 if ($user = 'guest' and $context = ('index', 'signup')) then () else
-<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top">
+<nav class="navbar navbar-expand-sm navbar-light bg-light fixed-top" data-i18n-scope="ui">
                 <span class="banner-icon"><a href="index.html">
                 {app:logo($node, $model)}</a>
                 </span>
@@ -1383,6 +1383,9 @@ if ($user = 'guest' and $context = ('index', 'signup')) then () else
                     -->
                     </form>
                     </li>
+                        <li class="nav-item ml-2">
+                            {i18n:language-switcher($node, $model)}
+                        </li>
                         {app:login($node, $model)}
                     </ul>
                     <!--
@@ -1569,7 +1572,7 @@ return
 declare
     %templates:wrap
 function app:dialogs($node as node()*, $model as map(*))
-{<div>
+{<div data-i18n-scope="ui">
         <div id="loginDialog" class="modal" tabindex="-1" role="dialog" style="display: none;">
             <p>Login</p>
             <div class="modal-dialog" style="z-index: 1080;" role="document">

@@ -1,0 +1,131 @@
+(function (window, document) {
+  'use strict';
+
+  var dataNode = document.getElementById('tls-i18n-catalog');
+  var data = { language: 'en', messages: {}, sources: {} };
+
+  if (dataNode) {
+    try {
+      data = JSON.parse(dataNode.textContent || '{}');
+    } catch (error) {
+      window.console.error('Could not parse the TLS interface catalogue.', error);
+    }
+  }
+
+  function interpolate(message, parameters) {
+    if (!parameters) return message;
+
+    return Object.keys(parameters).reduce(function (result, key) {
+      return result.split('{' + key + '}').join(String(parameters[key]));
+    }, message);
+  }
+
+  function translate(key, parameters, fallback) {
+    var message = data.messages[key];
+    if (typeof message !== 'string') message = fallback || key;
+    return interpolate(message, parameters);
+  }
+
+  function translateSource(source) {
+    if (typeof source !== 'string') return source;
+    var normalized = source.replace(/\s+/g, ' ').trim();
+    return data.sources[normalized] || source;
+  }
+
+  function translateElement(element, scoped) {
+    if (!element || element.nodeType !== Node.ELEMENT_NODE) return;
+    if (/^(SCRIPT|STYLE)$/i.test(element.tagName)) return;
+
+    var inScope = scoped || element.getAttribute('data-i18n-scope') === 'ui';
+    var key = element.getAttribute('data-i18n');
+
+    if (key) {
+      element.textContent = translate(key, null, element.textContent.trim());
+    } else if (inScope) {
+      Array.prototype.slice.call(element.childNodes).forEach(function (child) {
+        if (child.nodeType === Node.TEXT_NODE && child.nodeValue.trim()) {
+          var translated = translateSource(child.nodeValue);
+          if (translated !== child.nodeValue) child.nodeValue = translated;
+        } else if (child.nodeType === Node.ELEMENT_NODE) {
+          translateElement(child, true);
+        }
+      });
+    }
+
+    ['aria-label', 'placeholder', 'title', 'value'].forEach(function (name) {
+      if (!element.hasAttribute(name)) return;
+      var attributeKey = element.getAttribute('data-i18n-' + name);
+      var value = element.getAttribute(name);
+      var translatedValue = attributeKey
+        ? translate(attributeKey, null, value)
+        : (inScope ? translateSource(value) : value);
+      if (translatedValue !== value) element.setAttribute(name, translatedValue);
+    });
+  }
+
+  function localize(root) {
+    if (!root) return;
+
+    if (root.nodeType === Node.ELEMENT_NODE) {
+      var scoped = Boolean(root.closest('[data-i18n-scope="ui"]'));
+      translateElement(root, scoped);
+    }
+
+    if (root.querySelectorAll) {
+      root.querySelectorAll('[data-i18n], [data-i18n-scope="ui"]').forEach(function (element) {
+        var scoped = Boolean(element.closest('[data-i18n-scope="ui"]'));
+        translateElement(element, scoped);
+      });
+    }
+  }
+
+  window.tlsSetLanguage = function (language) {
+    var url = new URL(window.location.href);
+    url.searchParams.set('lang', language);
+    window.location.assign(url.toString());
+  };
+
+  window.TLSI18n = {
+    language: data.language || 'en',
+    t: translate,
+    fromSource: translateSource,
+    localize: localize
+  };
+
+  var nativeAlert = window.alert.bind(window);
+  var nativeConfirm = window.confirm.bind(window);
+  var nativePrompt = window.prompt.bind(window);
+
+  window.alert = function (message) {
+    return nativeAlert(translateSource(message));
+  };
+  window.confirm = function (message) {
+    return nativeConfirm(translateSource(message));
+  };
+  window.prompt = function (message, defaultValue) {
+    return nativePrompt(translateSource(message), defaultValue);
+  };
+
+  if (window.toastr) {
+    ['success', 'info', 'warning', 'error'].forEach(function (type) {
+      var original = window.toastr[type];
+      if (typeof original !== 'function') return;
+      window.toastr[type] = function (message, title, options) {
+        return original.call(window.toastr, translateSource(message), translateSource(title), options);
+      };
+    });
+  }
+
+  document.documentElement.setAttribute('lang', data.language || 'en');
+  localize(document);
+
+  if (document.body && window.MutationObserver) {
+    new MutationObserver(function (mutations) {
+      mutations.forEach(function (mutation) {
+        Array.prototype.slice.call(mutation.addedNodes).forEach(function (node) {
+          if (node.nodeType === Node.ELEMENT_NODE) localize(node);
+        });
+      });
+    }).observe(document.body, { childList: true, subtree: true });
+  }
+})(window, document);
