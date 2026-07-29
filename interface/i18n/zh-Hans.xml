@@ -212,6 +212,7 @@
     <message key="common.semicolon" source=";">；</message>
     <message key="common.show-more" source="Show more...">显示更多……</message>
     <message key="common.total" source="Total:">总计：</message>
+    <message key="common.tags" source="tags">标签</message>
     <message key="common.click-to-show" source="Click to show">点击显示</message>
     <message key="common.unknown-error" source="An unknown error happened on the system.">系统发生未知错误。</message>
     <message key="common.saved" source="Modification saved.">修改已保存。</message>
@@ -236,6 +237,7 @@
     <message key="wikidata.view" source="View {label} in Wikidata (External link)">在 Wikidata 中查看“{label}”（外部链接）</message>
     <message key="wikidata.change" source="Click here to change association of {label} with {item}">点击更改“{label}”与 {item} 的关联</message>
     <message key="wikidata.search" source="Click here to search for {label} in WikiData">点击在 Wikidata 中搜索“{label}”</message>
+    <message key="wikidata.search-empty" source="Click here to search for in WikiData">点击在 Wikidata 中搜索</message>
 
     <message key="biblio.browse" source="Browse the bibliography">浏览参考文献</message>
     <message key="biblio.authors" source="Authors">作者</message>
@@ -285,13 +287,19 @@
     <message key="concept.syntactic-function" source="Syntactic Function">句法功能</message>
     <message key="concept.semantic-feature" source="Semantic Feature">语义特征</message>
     <message key="concept.alternate-labels" source="Alternate labels">其他名称</message>
+    <message key="concept.alternate-labels-count" source="Alternate labels ({count})">其他名称（{count}）</message>
     <message key="concept.criteria-notes" source="Criteria and general notes">判据与综合说明</message>
+    <message key="concept.criteria-notes-count" source="Criteria and general notes ({count} characters)">判据与综合说明（{count} 字符）</message>
     <message key="concept.source-references" source="Source references">来源参考文献</message>
+    <message key="concept.source-references-count" source="Source references ({count} items)">来源参考文献（{count} 项）</message>
+    <message key="concept.bibliography-count" source="Bibliography ({count} items)">参考文献（{count} 项）</message>
     <message key="concept.ontology" source="Ontology">本体关系</message>
     <message key="concept.words-count" source="Words ({count} items)">词语（{count} 项）</message>
     <message key="concept.character-count" source="({count} characters)">（{count} 字符）</message>
     <message key="concept.separate-page" source="This moves to a separate page">前往独立页面</message>
     <message key="concept.attribution" source="Attribution">义项标注</message>
+    <message key="concept.attribution-count" source="{count} Attribution">{count} 个义项标注</message>
+    <message key="concept.attributions-count" source="{count} Attributions">{count} 个义项标注</message>
     <message key="concept.change-pinyin" source="Click here to change pinyin">点击修改拼音</message>
     <message key="concept.add-pinyin" source="Click here to add pinyin">点击添加拼音</message>
     <message key="concept.search-word" source="Search for this word">搜索此词</message>
@@ -323,6 +331,11 @@
 
     <message key="citations.processing" source="Processing data, just a moment please.">正在处理数据，请稍候。</message>
     <message key="citations.new-item-definition" source="If the new item is not from the list, please add a definition below!">如果新项目不在列表中，请在下方添加定义！</message>
+    <message key="citations.total-count" source="Total: {count}">总计：{count}</message>
+    <message key="citations.set-item" source="set the item and perspective to this value">将项目和分析角度设为此值</message>
+    <message key="citations.select-actions" source="Select items to apply these actions:">选择要执行以下操作的项目：</message>
+    <message key="citations.mark-prototypical" source="Mark this attribution as prototypical">将此义项标注标记为典型例</message>
+    <message key="citations.prototypical-level" source="Currently marked as prototypical {level}. Increase up to 3 then reset.">当前典型等级为 {level}；继续点击可升至 3，之后重置。</message>
 
     <message key="settings.title" source="Customizable settings for">自定义设置：</message>
     <message key="settings.display" source="Display settings">显示设置</message>

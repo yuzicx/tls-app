@@ -212,6 +212,7 @@
     <message key="common.semicolon" source=";">;</message>
     <message key="common.show-more" source="Show more...">Show more...</message>
     <message key="common.total" source="Total:">Total:</message>
+    <message key="common.tags" source="tags">tags</message>
     <message key="common.click-to-show" source="Click to show">Click to show</message>
     <message key="common.unknown-error" source="An unknown error happened on the system.">An unknown error happened on the system.</message>
     <message key="common.saved" source="Modification saved.">Modification saved.</message>
@@ -236,6 +237,7 @@
     <message key="wikidata.view" source="View {label} in Wikidata (External link)">View {label} in Wikidata (External link)</message>
     <message key="wikidata.change" source="Click here to change association of {label} with {item}">Click here to change association of {label} with {item}</message>
     <message key="wikidata.search" source="Click here to search for {label} in WikiData">Click here to search for {label} in WikiData</message>
+    <message key="wikidata.search-empty" source="Click here to search for in WikiData">Click here to search in WikiData</message>
 
     <message key="biblio.browse" source="Browse the bibliography">Browse the bibliography</message>
     <message key="biblio.authors" source="Authors">Authors</message>
@@ -285,13 +287,19 @@
     <message key="concept.syntactic-function" source="Syntactic Function">Syntactic Function</message>
     <message key="concept.semantic-feature" source="Semantic Feature">Semantic Feature</message>
     <message key="concept.alternate-labels" source="Alternate labels">Alternate labels</message>
+    <message key="concept.alternate-labels-count" source="Alternate labels ({count})">Alternate labels ({count})</message>
     <message key="concept.criteria-notes" source="Criteria and general notes">Criteria and general notes</message>
+    <message key="concept.criteria-notes-count" source="Criteria and general notes ({count} characters)">Criteria and general notes ({count} characters)</message>
     <message key="concept.source-references" source="Source references">Source references</message>
+    <message key="concept.source-references-count" source="Source references ({count} items)">Source references ({count} items)</message>
+    <message key="concept.bibliography-count" source="Bibliography ({count} items)">Bibliography ({count} items)</message>
     <message key="concept.ontology" source="Ontology">Ontology</message>
     <message key="concept.words-count" source="Words ({count} items)">Words ({count} items)</message>
     <message key="concept.character-count" source="({count} characters)">({count} characters)</message>
     <message key="concept.separate-page" source="This moves to a separate page">This moves to a separate page</message>
     <message key="concept.attribution" source="Attribution">Attribution</message>
+    <message key="concept.attribution-count" source="{count} Attribution">{count} Attribution</message>
+    <message key="concept.attributions-count" source="{count} Attributions">{count} Attributions</message>
     <message key="concept.change-pinyin" source="Click here to change pinyin">Click here to change pinyin</message>
     <message key="concept.add-pinyin" source="Click here to add pinyin">Click here to add pinyin</message>
     <message key="concept.search-word" source="Search for this word">Search for this word</message>
@@ -323,6 +331,11 @@
 
     <message key="citations.processing" source="Processing data, just a moment please.">Processing data, just a moment please.</message>
     <message key="citations.new-item-definition" source="If the new item is not from the list, please add a definition below!">If the new item is not from the list, please add a definition below!</message>
+    <message key="citations.total-count" source="Total: {count}">Total: {count}</message>
+    <message key="citations.set-item" source="set the item and perspective to this value">Set the item and perspective to this value</message>
+    <message key="citations.select-actions" source="Select items to apply these actions:">Select items to apply these actions:</message>
+    <message key="citations.mark-prototypical" source="Mark this attribution as prototypical">Mark this attribution as prototypical</message>
+    <message key="citations.prototypical-level" source="Currently marked as prototypical {level}. Increase up to 3 then reset.">Currently marked as prototypical {level}. Increase up to 3 then reset.</message>
 
     <message key="settings.title" source="Customizable settings for">Customizable settings for</message>
     <message key="settings.display" source="Display settings">Display settings</message>

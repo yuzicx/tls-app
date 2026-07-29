@@ -173,7 +173,10 @@
     }
 
     if (root.querySelectorAll) {
-      root.querySelectorAll('[data-i18n], [data-i18n-scope]').forEach(function (element) {
+      root.querySelectorAll(
+        '[data-i18n], [data-i18n-scope], [data-i18n-aria-label], ' +
+        '[data-i18n-placeholder], [data-i18n-title], [data-i18n-value]'
+      ).forEach(function (element) {
         var scoped = isInUiScope(element);
         translateElement(element, scoped);
       });
