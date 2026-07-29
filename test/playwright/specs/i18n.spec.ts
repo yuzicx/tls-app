@@ -25,4 +25,14 @@ test.describe('interface language', () => {
         await expect(page.locator('html')).toHaveAttribute('lang', 'en');
         await expect(page.locator('#navbarDropdown')).toContainText('Browse');
     });
+
+    test('keeps the expanded mobile navigation readable', async ({ page }) => {
+        await page.setViewportSize({ width: 390, height: 844 });
+        await page.goto(`${APP_PATH}/browse.html?type=welcome&lang=zh-Hans`);
+        await page.locator('.navbar-toggler').click();
+
+        await expect(page.locator('#navbarSupportedContent')).toBeVisible();
+        const navbarBox = await page.locator('nav.navbar').boundingBox();
+        expect(navbarBox?.height).toBeGreaterThan(50);
+    });
 });

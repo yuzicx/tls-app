@@ -3,6 +3,7 @@
 
   var dataNode = document.getElementById('tls-i18n-catalog');
   var data = { language: 'en', messages: {}, sources: {} };
+  var storageKey = 'tls.ui.language';
 
   if (dataNode) {
     try {
@@ -10,6 +11,49 @@
     } catch (error) {
       window.console.error('Could not parse the TLS interface catalogue.', error);
     }
+  }
+
+  function normalizeLanguage(language) {
+    if (!language) return null;
+    var normalized = String(language).trim().toLowerCase();
+    if (normalized === 'en' || normalized.indexOf('en-') === 0) return 'en';
+    if (normalized === 'zh' || normalized === 'zh-cn' || normalized === 'zh-sg' ||
+        normalized === 'zh-hans' || normalized.indexOf('zh-hans-') === 0) {
+      return 'zh-Hans';
+    }
+    return null;
+  }
+
+  function storedLanguage() {
+    try {
+      return normalizeLanguage(window.localStorage.getItem(storageKey));
+    } catch (error) {
+      return null;
+    }
+  }
+
+  function rememberLanguage(language) {
+    try {
+      window.localStorage.setItem(storageKey, language);
+    } catch (error) {
+      // Storage can be disabled without preventing server-side localization.
+    }
+  }
+
+  var currentUrl = new URL(window.location.href);
+  var requestedLanguage = normalizeLanguage(currentUrl.searchParams.get('lang'));
+  var renderedLanguage = normalizeLanguage(data.language) || 'en';
+
+  if (requestedLanguage) {
+    rememberLanguage(requestedLanguage);
+  } else {
+    var preferredLanguage = storedLanguage();
+    if (preferredLanguage && preferredLanguage !== renderedLanguage) {
+      currentUrl.searchParams.set('lang', preferredLanguage);
+      window.location.replace(currentUrl.toString());
+      return;
+    }
+    rememberLanguage(renderedLanguage);
   }
 
   function interpolate(message, parameters) {
@@ -80,8 +124,10 @@
   }
 
   window.tlsSetLanguage = function (language) {
+    var normalizedLanguage = normalizeLanguage(language) || 'en';
     var url = new URL(window.location.href);
-    url.searchParams.set('lang', language);
+    rememberLanguage(normalizedLanguage);
+    url.searchParams.set('lang', normalizedLanguage);
     window.location.assign(url.toString());
   };
 

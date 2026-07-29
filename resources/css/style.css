@@ -80,6 +80,17 @@ span.anchor {
     min-height: 50px;
     max-height: 50px;
 }
+
+@media (max-width: 575.98px) {
+  .navbar {
+    max-height: 100vh;
+    overflow-y: auto;
+  }
+
+  .navbar-collapse {
+    padding-bottom: 0.75rem;
+  }
+}
 /*@media (min-width: 920px) {
 
   #content {
