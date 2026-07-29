@@ -11,6 +11,7 @@ function loadCatalogue(language) {
   return document.childrenNamed('message').map((message) => ({
     key: message.attr.key,
     source: message.attr.source,
+    mode: message.attr.mode,
     value: message.val.trim()
   }))
 }
@@ -27,7 +28,12 @@ function placeholders(value) {
 
 function createBrowserI18n(messages) {
   const sources = Object.fromEntries(
-    messages.map((message) => [message.source.replace(/\s+/g, ' ').trim(), message.value])
+    messages
+      .filter((message) => message.mode !== 'key-only')
+      .map((message) => [message.source.replace(/\s+/g, ' ').trim(), message.value])
+  )
+  const keyedMessages = Object.fromEntries(
+    messages.map((message) => [message.key, message.value])
   )
   const window = {
     location: {
@@ -49,7 +55,7 @@ function createBrowserI18n(messages) {
     documentElement: { setAttribute() {} },
     getElementById() {
       return {
-        textContent: JSON.stringify({ language: 'zh-Hans', messages: {}, sources })
+        textContent: JSON.stringify({ language: 'zh-Hans', messages: keyedMessages, sources })
       }
     }
   }
@@ -172,5 +178,23 @@ describe('interface catalogues', function () {
       'account.login',
       'language.label'
     ].forEach((key) => expect(chinese.has(key), key).to.equal(true))
+  })
+
+  it('translates data-backed text facets by category id', function () {
+    const i18n = createBrowserI18n(simplifiedChinese)
+
+    expect(i18n.t('facet.category.annotation')).to.equal('已标注文本')
+    expect(i18n.t('facet.category.tr-zh')).to.equal('现代汉语翻译')
+    expect(i18n.t('facet.category.state-green')).to.equal('编辑完成')
+    expect(i18n.t('facet.category.dat04380')).to.equal('金')
+    expect(i18n.t('facet.category.dat04550')).to.equal('晋')
+    expect(i18n.fromSource('Jin')).to.equal('Jin')
+  })
+
+  it('marks taxonomy labels with category-specific translation keys', function () {
+    const source = fs.readFileSync('modules/search.xql', 'utf8')
+    const markers = source.match(/data-i18n="facet\.category\.\{\$n\/@xml:id\}"/g) || []
+
+    expect(markers.length).to.equal(3)
   })
 })

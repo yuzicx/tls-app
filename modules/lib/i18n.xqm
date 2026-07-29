@@ -100,11 +100,13 @@ declare function i18n:from-source(
     let $normalized-source := normalize-space($source)
     let $language := (i18n:normalize-language($language), $i18n:default-language)[1]
     let $message :=
-        i18n:catalog($language)/message[normalize-space(@source) = $normalized-source][1]
+        i18n:catalog($language)/message[
+            not(@mode = "key-only") and normalize-space(@source) = $normalized-source
+        ][1]
     let $default-message :=
         if ($language ne $i18n:default-language) then
             i18n:catalog($i18n:default-language)/message[
-                normalize-space(@source) = $normalized-source
+                not(@mode = "key-only") and normalize-space(@source) = $normalized-source
             ][1]
         else
             ()
@@ -122,7 +124,9 @@ declare function i18n:catalog-map($language as xs:string?) as map(*) {
 };
 
 declare function i18n:source-map($language as xs:string?) as map(*) {
-    let $messages := i18n:catalog($language)/message[normalize-space(@source)]
+    let $messages := i18n:catalog($language)/message[
+        normalize-space(@source) and not(@mode = "key-only")
+    ]
     return
         map:merge(
             for $message in $messages
