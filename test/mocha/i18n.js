@@ -135,6 +135,8 @@ describe('interface catalogues', function () {
       .to.equal('其他名称（0）')
     expect(i18n.fromSource('Criteria and general notes (1397 characters)'))
       .to.equal('判据与综合说明（1397 字符）')
+    expect(i18n.fromSource('504888 594347 characters.'))
+      .to.equal('504888 594347 字。')
     expect(i18n.fromSource('Bibliography (4 items)'))
       .to.equal('参考文献（4 项）')
     expect(i18n.fromSource('246 Attributions'))
@@ -196,5 +198,12 @@ describe('interface catalogues', function () {
     const markers = source.match(/data-i18n="facet\.category\.\{\$n\/@xml:id\}"/g) || []
 
     expect(markers.length).to.equal(3)
+  })
+
+  it('preserves multi-valued character counts for dynamic translation', function () {
+    const source = fs.readFileSync('modules/tlslib.xql', 'utf8')
+
+    expect(source).to.include('>{$charcount} characters.</span>')
+    expect(source).not.to.include('$charcount || " characters."')
   })
 })
