@@ -1,0 +1,696 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<catalogue xml:lang="ja">
+    <message key="language.label" source="Language">言語</message>
+    <message key="nav.toggle" source="Toggle navigation">ナビゲーションを切り替える</message>
+    <message key="nav.browse" source="Browse">閲覧</message>
+    <message key="nav.texts" source="Texts">テキスト</message>
+    <message key="nav.concepts" source="Concepts">概念</message>
+    <message key="nav.characters" source="Characters">漢字</message>
+    <message key="nav.words" source="Words">語</message>
+    <message key="nav.citations" source="Citations">用例</message>
+    <message key="nav.word-relations" source="Word relations">語の関係</message>
+    <message key="nav.syntactic-functions" source="Syntactic functions">統語機能</message>
+    <message key="nav.semantic-features" source="Semantic features">意味特徴</message>
+    <message key="nav.rhetorical-devices" source="Rhetorical devices">修辞技法</message>
+    <message key="nav.observations" source="Observations">観察</message>
+    <message key="nav.bibliography" source="Bibliography">参考文献</message>
+    <message key="nav.about" source="About">TLS について</message>
+    <message key="nav.main-features" source="Main features">主な機能</message>
+    <message key="nav.statistics" source="Statistics">統計</message>
+    <message key="nav.advisory-board" source="Advisory Board">顧問委員会</message>
+    <message key="nav.documentation" source="Documentation">ドキュメント</message>
+    <message key="nav.ai-output" source="AI Output('translations')">AI 出力（「翻訳」）</message>
+    <message key="nav.basic-texts" source="Some basic texts">基本テキスト</message>
+    <message key="nav.text-criticism" source="Critically establishing a text">本文校訂</message>
+    <message key="nav.genre-categories" source="Genre categories">ジャンル分類</message>
+    <message key="nav.recent-changes" source="Recent changes">最近の変更</message>
+    <message key="nav.help" source="Help">ヘルプ</message>
+    <message key="nav.links" source="Links">リンク</message>
+    <message key="nav.bookmarks" source="Bookmarks">ブックマーク</message>
+    <message key="nav.display-pastebox" source="Display Pastebox">ペーストボックスを表示</message>
+    <message key="nav.internal" source="內部">内部</message>
+    <message key="nav.review-swls" source="Review SWLs">SWL をレビュー</message>
+    <message key="nav.add-pronunciation-glosses" source="Add pronounciation glosses">発音注釈を追加</message>
+    <message key="nav.special-pages" source="Special pages">特別ページ</message>
+    <message key="nav.account-requests" source="Account requests">アカウント申請</message>
+    <message key="nav.edit-chinese-text" source="Edit Chinese text">中国語テキストを編集</message>
+    <message key="nav.change-editing-permissions" source="Change editing permissions">編集権限を変更</message>
+    <message key="nav.ai-requests" source="AI output requests">AI 出力リクエスト</message>
+
+    <message key="search.search" source="Search">検索</message>
+    <message key="search.in" source="in">対象</message>
+    <message key="search.texts" source="texts">テキスト本文</message>
+    <message key="search.titles" source="titles">書名</message>
+    <message key="search.dictionary" source="dictionary">辞書</message>
+    <message key="search.translations" source="translations">翻訳</message>
+    <message key="search.everything" source="everything">すべて</message>
+    <message key="search.one-text" source="one text only">単一テキスト</message>
+    <message key="search.lines-with-translation" source="lines with translation">翻訳付きの行</message>
+    <message key="search.advanced" source="advanced search">詳細検索</message>
+    <message key="search.research-notes" source="research notes">研究ノート</message>
+    <message key="search.title-list" source="title list">書名一覧</message>
+    <message key="search.bibliography" source="bibliography">参考文献</message>
+    <message key="search.searching" source="Searching, please wait...">検索中です。しばらくお待ちください…</message>
+    <message key="search.loading" source="Loading the list, please wait a moment.">リストを読み込んでいます。しばらくお待ちください。</message>
+    <message key="search.retrieving" source="Retrieving data, please wait...">データを取得中です。しばらくお待ちください…</message>
+    <message key="search.searching-in" source="Searching in">検索対象</message>
+    <message key="search.for" source="for">検索語</message>
+    <message key="search.within-text" source="within text">本文内</message>
+    <message key="search.catalog" source="Catalog">目録</message>
+    <message key="search.subcategory-excerpt" source="excerpt for subcategory">サブカテゴリーの抜粋</message>
+    <message key="search.items" source="({count} items)">（{count} 件）</message>
+    <message key="search.time" source="Time:">所要時間：</message>
+    <message key="search.found-one" source="Found {count} match, showing {start} to {end}">{count} 件が一致しました。{start}～{end} 件目を表示しています</message>
+    <message key="search.found-many" source="Found {count} matches, showing {start} to {end}">{count} 件が一致しました。{start}～{end} 件目を表示しています</message>
+    <message key="search.sorting-disabled" source="Sorting is disabled, since we have more than {count} hits.">{count} を超えるヒットがあるため、並べ替えは無効になっています。</message>
+    <message key="search.filter-help" source="Select a facet from the display to the left to filter and reduce the number of hits and apply sorting or click here to change the setting.">左側の表示からファセットを選択してフィルタリングしてヒット数を減らし、並べ替えを適用するか、ここをクリックして設定を変更します。</message>
+    <message key="search.facets" source="Facets">絞り込み</message>
+    <message key="search.configure" source="Configure...">設定...</message>
+    <message key="search.total-hits" source="Total number of hits:">ヒット総数：</message>
+    <message key="search.result-matrix" source="Result matrix">結果マトリクス</message>
+    <message key="search.applied-filters" source="Applied filters:">適用中の絞り込み：</message>
+    <message key="search.release-filters-title" source="To release filters find 'Click here to display all matches' in the center of the page">フィルターを解除するには、ページの中央にある「ここをクリックしてすべての一致を表示」を見つけます。</message>
+    <message key="search.not-assigned" source="Not assigned">割り当てられていません</message>
+    <message key="search.filter-category-title" source="Click here to filter on this category">このカテゴリでフィルターするにはここをクリックしてください</message>
+    <message key="search.aggregate-title" source="Aggregate over this and lower levels">このレベルとそれ以下のレベルを集計します</message>
+    <message key="search.count-level-title" source="Count on this level only">このレベルだけを集計します</message>
+    <message key="search.ratio-larger" source="{ratio}: This result is larger than expected">{ratio}: この結果は予想よりも大きいです</message>
+    <message key="search.ratio-smaller" source="{ratio}: This result is smaller than expected">{ratio}: この結果は予想よりも小さいです</message>
+    <message key="search.ratio-expected" source="{ratio}: This result is in the expected range">{ratio}: この結果は予想の範囲内です</message>
+    <message key="search.annotations" source="Annotations">注釈</message>
+    <message key="search.creation-period" source="Period of creation of text">テキストの成立時期</message>
+    <message key="search.classified-catalog" source="Classified catalog">分類目録</message>
+    <message key="facet.category.annotation" source="Annotated texts" mode="key-only">注釈済みテキスト</message>
+    <message key="facet.category.core" source="Core texts" mode="key-only">中核テキスト</message>
+    <message key="facet.category.swl" source="Syntactic Annotations" mode="key-only">統語注釈</message>
+    <message key="facet.category.semantic" source="Semantic Annotations" mode="key-only">意味注釈</message>
+    <message key="facet.category.rhet-dev" source="Rhetorical Devices" mode="key-only">修辞技法</message>
+    <message key="facet.category.word-rel" source="Word Relations" mode="key-only">語の関係</message>
+    <message key="facet.category.has-translation" source="Translations" mode="key-only">翻訳</message>
+    <message key="facet.category.tr-en" source="English translations" mode="key-only">英語翻訳</message>
+    <message key="facet.category.tr-fr" source="French translations" mode="key-only">フランス語翻訳</message>
+    <message key="facet.category.tr-de" source="German translations" mode="key-only">ドイツ語翻訳</message>
+    <message key="facet.category.tr-zh" source="Modern Chinese translations" mode="key-only">現代中国語翻訳</message>
+    <message key="facet.category.tr-ja" source="Japanese translations" mode="key-only">日本語翻訳</message>
+    <message key="facet.category.tr-ja-ku" source="Japanese Kundoku" mode="key-only">日本語訓読</message>
+    <message key="facet.category.tr-ru" source="Russian translations" mode="key-only">ロシア語翻訳</message>
+    <message key="facet.category.tr-ko" source="Korean translations" mode="key-only">韓国語翻訳</message>
+    <message key="facet.category.tr-la" source="Latin translations" mode="key-only">ラテン語翻訳</message>
+    <message key="facet.category.tr-ogr" source="Old Greek translations" mode="key-only">古代ギリシア語翻訳</message>
+    <message key="facet.category.tls-state" source="Editorial state" mode="key-only">編集状態</message>
+    <message key="facet.category.state-red" source="Raw import" mode="key-only">未整理インポート</message>
+    <message key="facet.category.state-yellow" source="In preparation" mode="key-only">準備中</message>
+    <message key="facet.category.state-green" source="Editing completed" mode="key-only">編集完了</message>
+    <message key="facet.category.dat02100" source="modern Chinese" mode="key-only">現代中国語</message>
+    <message key="facet.category.dat02200" source="Republic" mode="key-only">中華民国期</message>
+    <message key="facet.category.dat04000" source="pre-modern Chinese" mode="key-only">近世中国語</message>
+    <message key="facet.category.dat04100" source="Middle Chinese" mode="key-only">中古中国語</message>
+    <message key="facet.category.dat04200" source="Ming/Qing" mode="key-only">明・清</message>
+    <message key="facet.category.dat04210" source="Qing" mode="key-only">清代</message>
+    <message key="facet.category.dat04250" source="Ming" mode="key-only">明代</message>
+    <message key="facet.category.dat04300" source="Song/Yuan" mode="key-only">宋・元</message>
+    <message key="facet.category.dat04310" source="Yuan" mode="key-only">元代</message>
+    <message key="facet.category.dat04350" source="Song" mode="key-only">宋代</message>
+    <message key="facet.category.dat04360" source="S. Song" mode="key-only">南宋</message>
+    <message key="facet.category.dat04370" source="N. Song" mode="key-only">北宋</message>
+    <message key="facet.category.dat04380" source="Jin" mode="key-only">金代</message>
+    <message key="facet.category.dat04400" source="Sui/Tang" mode="key-only">隋・唐</message>
+    <message key="facet.category.dat04410" source="Five Dynasties" mode="key-only">五代</message>
+    <message key="facet.category.dat04430" source="Tang" mode="key-only">唐代</message>
+    <message key="facet.category.dat04450" source="Sui" mode="key-only">隋代</message>
+    <message key="facet.category.dat04500" source="Six Dynasties" mode="key-only">六朝</message>
+    <message key="facet.category.dat04510" source="Three Kingdoms" mode="key-only">三国</message>
+    <message key="facet.category.dat04520" source="Wei" mode="key-only">魏</message>
+    <message key="facet.category.dat04530" source="Shu" mode="key-only">蜀</message>
+    <message key="facet.category.dat04540" source="Wu" mode="key-only">呉</message>
+    <message key="facet.category.dat04550" source="Jin" mode="key-only">晋</message>
+    <message key="facet.category.dat04560" source="N. and S. Dynasties" mode="key-only">南北朝</message>
+    <message key="facet.category.dat04570" source="Northern Dynasties" mode="key-only">北朝</message>
+    <message key="facet.category.dat04580" source="Southern Dynasties" mode="key-only">南朝</message>
+    <message key="facet.category.dat05000" source="Ancient Chinese" mode="key-only">古代中国語</message>
+    <message key="facet.category.dat05100" source="Old Chinese" mode="key-only">上古中国語</message>
+    <message key="facet.category.dat06000" source="Han" mode="key-only">漢代</message>
+    <message key="facet.category.dat06100" source="Eastern Han" mode="key-only">後漢</message>
+    <message key="facet.category.dat06110" source="late Eastern Han" mode="key-only">後漢後期</message>
+    <message key="facet.category.dat06120" source="middle Eastern Han" mode="key-only">後漢中期</message>
+    <message key="facet.category.dat06130" source="early Eastern Han" mode="key-only">後漢前期</message>
+    <message key="facet.category.dat06200" source="Western Han" mode="key-only">前漢</message>
+    <message key="facet.category.dat06210" source="late Western Han" mode="key-only">前漢後期</message>
+    <message key="facet.category.dat06220" source="middle Western Han" mode="key-only">前漢中期</message>
+    <message key="facet.category.dat06230" source="early Western Han" mode="key-only">前漢前期</message>
+    <message key="facet.category.dat08000" source="pre-Han" mode="key-only">先漢</message>
+    <message key="facet.category.dat08100" source="Warring States" mode="key-only">戦国時代</message>
+    <message key="facet.category.dat08110" source="late Warring States" mode="key-only">戦国後期</message>
+    <message key="facet.category.dat08120" source="middle Warring States" mode="key-only">戦国中期</message>
+    <message key="facet.category.dat08130" source="early Warring States" mode="key-only">戦国前期</message>
+    <message key="facet.category.dat09100" source="Spring and Autumn" mode="key-only">春秋時代</message>
+    <message key="facet.category.dat11011" source="late Zhou" mode="key-only">周代後期</message>
+    <message key="facet.category.dat12010" source="Shang" mode="key-only">商代</message>
+    <message key="search.all-matches" source="Click here to display all matches">すべての一致項目を表示するにはここをクリックします</message>
+    <message key="search.tabulated" source="Click here to display matches tabulated by text">一致項目をテキスト別の表形式で表示するにはここをクリックします</message>
+    <message key="search.only-translated" source="Click here to display only {count} matching lines that have a translation">翻訳のある一致行 {count} 件だけを表示するにはここをクリックします</message>
+    <message key="search.only-in-text" source="Click here to display only {count} matches in {title}">{title} 内の一致項目 {count} 件だけを表示するにはここをクリックします</message>
+    <message key="search.sorting-rating" source="Sorting by text rating.">テキストの評価順に並べ替えます。</message>
+    <message key="search.sort-date" source="Click here to sort by text date instead.">代わりにテキストの日付で並べ替えるには、ここをクリックしてください。</message>
+    <message key="search.sorting-date" source="Sorting by text date.">テキストの日付順に並べ替えます。</message>
+    <message key="search.sort-favorites" source="Click here to sort your favorite texts first.">ここをクリックして、最初にお気に入りのテキストを並べ替えます。</message>
+    <message key="search.rating-menu-help" source="Go to the menu -&gt; Browse -&gt; Texts to rate your favorite texts.">メニューの「閲覧」→「テキスト」でお気に入りのテキストを評価できます。</message>
+    <message key="search.more-translations" source="More translations">他の翻訳</message>
+    <message key="search.text-info-title" source="Information about this text">このテキストに関する情報</message>
+    <message key="search.tab-found" source="Found {count} matches, shown by text.">{count} 件が一致しました。テキスト別に表示しています。</message>
+    <message key="search.match-count" source="{count} match(es)">{count} 件一致</message>
+    <message key="search.existing-tls-texts" source="Existing texts in TLS:">TLS の既存のテキスト:</message>
+    <message key="search.kanseki-texts" source="Texts in the Kanseki Repository:">漢籍リポジトリのテキスト：</message>
+    <message key="search.requests" source="Requests:">リクエスト:</message>
+    <message key="search.view-kanseki" source="View {title} in Kanseki Repository (External link)">漢籍リポジトリで {title} を表示（外部リンク）</message>
+    <message key="search.meaning-taxonomy" source="Taxonomy of meanings:">語義分類：</message>
+    <message key="search.phonetic-profile" source="Phonetic profile:">音韻プロファイル：</message>
+    <message key="search.show-meaning-taxonomy" source="Show taxonomy of meanings for {character}">{character} の語義分類を表示</message>
+    <message key="search.show-phonetic-profile" source="Show phonetic profile for {character}">{character} の音韻プロファイルを表示</message>
+    <message key="search.kanseki-search" source="Search {query} in Kanseki Repository">漢籍リポジトリで {query} を検索</message>
+    <message key="search.algorithm-label" source="Select algorithm for display">表示アルゴリズムの選択</message>
+    <message key="search.algorithm-title" source="This algorithm is used to evaluate the matches in every category against the expected matches.">このアルゴリズムは、すべてのカテゴリの一致を予想される一致と比較して評価するために使用されます。</message>
+    <message key="search.none" source="None">なし</message>
+    <message key="search.ratio-characters" source="Matches / Total Characters (MF/ICF)">一致数 / 合計文字数 (MF/ICF)</message>
+    <message key="search.ratio-segments" source="Matches / Segments (MF/ISF)">一致数 / セグメント数（MF/ISF）</message>
+    <message key="search.cutoff-label" source="Select cutoff value {value}">カットオフ値を選択 {value}</message>
+    <message key="search.cutoff-title" source="Cutoff value used for the different display colors.">さまざまな表示色に使用されるカットオフ値。</message>
+    <message key="search.save-settings" source="Save Settings">設定の保存</message>
+    <message key="search.update-page" source="Update Page">ページを更新</message>
+    <message key="search.category" source="Category">カテゴリ</message>
+    <message key="search.texts-heading" source="Texts">テキスト</message>
+    <message key="search.sum" source="Sum">合計</message>
+    <message key="search.matches" source="Matches">一致</message>
+    <message key="search.sort-limit-hint" source="This is the number of hits beyond which searching will be disabled. The current value is {count}. Enter 0 to switch off the disabling.">これは、検索が無効になるヒット数です。現在の値は {count} です。無効化をオフにするには、0 を入力します。</message>
+    <message key="search.link-selected" source="Link selected items to this line">選択した項目をこの行にリンクします</message>
+    <message key="search.advanced-title" source="Advanced Search">詳細検索</message>
+
+    <message key="pagination.label" source="Page navigation">ページナビゲーション</message>
+    <message key="pagination.first" source="First">最初</message>
+    <message key="pagination.previous" source="Previous">前へ</message>
+    <message key="pagination.next" source="Next">次へ</message>
+    <message key="pagination.last" source="Last">最後</message>
+    <message key="pagination.go-first" source="Go to the first page">最初のページに移動します</message>
+    <message key="pagination.go-previous" source="Go to the previous page">前のページに戻る</message>
+    <message key="pagination.go-next" source="Go to the next page">次のページへ</message>
+    <message key="pagination.go-last" source="Go to the last page">最後のページに移動する</message>
+
+    <message key="textview.more-information" source="Click here for more information">詳細についてはここをクリックしてください</message>
+    <message key="textview.source" source="Source:">出典：</message>
+    <message key="textview.translation-by" source="Translation by">翻訳者</message>
+    <message key="textview.select-annotation" source="Select type of annotation:">注釈の種類を選択します:</message>
+    <message key="textview.line-position" source="line {line} / {percent}%">行 {line} / {percent}%</message>
+    <message key="textview.facsimile-title" source="Click here to display a facsimile of this page: {page}">このページのファクシミリを表示するには、ここをクリックしてください: {page}</message>
+    <message key="textview.no-facsimile" source="No facsimile available">ファクシミリはありません</message>
+    <message key="textview.edition" source="Edition:">版：</message>
+    <message key="textview.catalog-category" source="Catalog category:">目録分類：</message>
+    <message key="textview.edit-category" source="Edit category">カテゴリを編集する</message>
+    <message key="textview.dates" source="Dates:">成立年代：</message>
+    <message key="textview.edit-date" source="Edit date">年代を編集</message>
+    <message key="textview.add-date" source="Add date">年代を追加</message>
+    <message key="textview.rating" source="Rating:">評価:</message>
+    <message key="textview.rating-title" source="Click on one of the stars to rate the text and add to the ★ menu.">星のいずれかをクリックしてテキストを評価し、★ メニューに追加します。</message>
+    <message key="textview.text-length" source="Text length:">テキストの長さ:</message>
+    <message key="textview.characters" source="{count} characters.">{count} 文字。</message>
+    <message key="textview.comment" source="Comment:">コメント：</message>
+    <message key="textview.wikidata" source="Wikidata:">ウィキデータ:</message>
+    <message key="textview.references" source="References:">参考文献:</message>
+    <message key="textview.show-bibliography" source="Show bibliography">参考文献を表示する</message>
+    <message key="textview.add-reference-title" source="Add new reference">新しい参照を追加する</message>
+    <message key="textview.add-reference" source="Add reference to source or witness">出典または伝本への参照を追加</message>
+    <message key="textview.responsible" source="Resp: {person}">担当：{person}</message>
+
+    <message key="textlist.title" source="TLS Text list">TLS テキスト目録</message>
+    <message key="textlist.count" source="There are currently {count} texts available.">現在 {count} 点のテキストを利用できます。</message>
+    <message key="textlist.browse-help" source="Please click on the links in the list below to browse the titles or search for titles in the search box.">以下のリスト内のリンクをクリックしてタイトルを参照するか、検索ボックスでタイトルを検索してください。</message>
+    <message key="textlist.doc-intro-prefix" source="This page allows you to browse the contents of the TLS and discover what texts are available. The texts are basically classified into the four traditional bibliographic categories. However, the Daoist and Buddhist texts, which are usually part of the">このページでは TLS の収録内容を閲覧し、利用できるテキストを確認できます。テキストは基本的に伝統的な四部分類に従います。ただし、道教・仏教テキストは伝統的な分類では通常</message>
+    <message key="textlist.doc-intro-suffix" source="in the traditional classification are treated as top level categories, for a total of six top level categories, as shown in Table 1.">に含まれますが、ここではそれぞれを最上位分類として扱います。そのため、表1のとおり最上位分類は合計6つです。</message>
+    <message key="textlist.table-one" source="Table 1:">表 1:</message>
+    <message key="textlist.six-categories-prefix" source="The six top categories (as in the">6つの最上位分類（</message>
+    <message key="textlist.close-parenthesis" source=")">)</message>
+    <message key="textlist.kr1-description" source="Confucian Classics (incl. music, dictionaries and elementary learning)">経書（楽類・字書・小学類を含む）</message>
+    <message key="textlist.kr2-description" source="Historiography and politics">史学と政治</message>
+    <message key="textlist.kr3-description" source="Masters, philosophers and treatises; medical and mathematical texts">諸子・哲学・論著、医書と算書</message>
+    <message key="textlist.kr4-description" source="Anthologies (Poetry and Collected Writings)">集部（詩文総集と別集）</message>
+    <message key="textlist.kr5-description" source="Daoist texts">道教テキスト</message>
+    <message key="textlist.kr6-description" source="Buddhist texts">仏教テキスト</message>
+    <message key="textlist.catalog-explanation" source="In the classified catalog, the four categories have been folded into one (artificial) top level, in order to allow direct comparison to the Daoist and Buddhist texts.">分類目録では、道教・仏教テキストと直接比較できるよう、伝統的な四部を一つの（便宜的な）最上位分類にまとめています。</message>
+    <message key="textlist.usage" source="Usage">利用方法</message>
+    <message key="textlist.access-prefix" source="To access the classified catalog,">分類目録を開くには、</message>
+    <message key="textlist.click-links" source="click on any of the links">いずれかのリンクをクリックします</message>
+    <message key="textlist.access-suffix" source="shown to the left.">左に示されています。</message>
+    <message key="textlist.specific-prefix" source="If you are looking for a specific title, use the">特定の書名を探す場合は、</message>
+    <message key="textlist.search-function" source="search function in the upper right corner">右上の検索機能を使い、</message>
+    <message key="textlist.specific-suffix" source="and select &quot;titles&quot; from the dropdown selector.">ドロップダウンから「書名」を選択してください。</message>
+
+    <message key="browse.about-word-relations" source="About word relations:">語の関係について：</message>
+    <message key="browse.left-word-heading" source="Left Word">左の語</message>
+    <message key="browse.right-word-heading" source="Right Word">右の語</message>
+    <message key="browse.text-reference-heading" source="Text / Ref">テキスト/参照</message>
+
+    <message key="citations.analyze-count" source="Analyze the {count} citations currently defined in the system.">現在システムで定義されている {count} 件の用例を分析します。</message>
+
+    <message key="account.login" source="Login">ログイン</message>
+    <message key="account.logout" source="Logout">ログアウト</message>
+    <message key="account.settings" source="Settings">設定</message>
+    <message key="account.report-problems" source="Report problems">問題を報告</message>
+    <message key="account.user" source="User:">ユーザー：</message>
+    <message key="account.password" source="Password:">パスワード：</message>
+    <message key="account.email" source="Email:">メールアドレス：</message>
+    <message key="account.send-mail" source="Send mail">メールを送信する</message>
+    <message key="account.login-failed-title" source="Login failed!">ログインに失敗しました！</message>
+    <message key="account.login-failed-help" source="Try again or request to get your login information sent to the email you provided upon registration and re-entered above.">もう一度試すか、登録時に指定した電子メールにログイン情報を送信して上記で再入力してください。</message>
+    <message key="account.logged-out" source="You have been logged out.">ログアウトされました。</message>
+
+    <message key="common.save" source="Save">保存</message>
+    <message key="common.cancel" source="Cancel">キャンセル</message>
+    <message key="common.close" source="Close">閉じる</message>
+    <message key="common.delete" source="Delete">削除</message>
+    <message key="common.edit" source="Edit">編集</message>
+    <message key="common.add" source="Add">追加</message>
+    <message key="common.select" source="Select">選択</message>
+    <message key="common.use" source="Use">使用</message>
+    <message key="common.count" source="Count">件数</message>
+    <message key="common.loading" source="Loading…">読み込み中…</message>
+    <message key="common.not-implemented" source="Not yet implemented">まだ実装されていません</message>
+    <message key="common.problem" source="A problem occurred.">問題が発生しました。</message>
+    <message key="common.period" source=".">.</message>
+    <message key="common.semicolon" source=";">;</message>
+    <message key="common.show-more" source="Show more...">さらに表示…</message>
+    <message key="common.total" source="Total:">合計：</message>
+    <message key="common.tags" source="tags">タグ</message>
+    <message key="common.click-to-show" source="Click to show">クリックして表示</message>
+    <message key="common.unknown-error" source="An unknown error happened on the system.">システム上で不明なエラーが発生しました。</message>
+    <message key="common.saved" source="Modification saved.">変更が保存されました。</message>
+    <message key="common.hxwd-says" source="HXWD says:">HXWD：</message>
+    <message key="common.tls-says" source="漢學文典 says:">漢學文典：</message>
+
+    <message key="browse.filter" source="Type to filter...">フィルタリングするために入力...</message>
+    <message key="browse.show-tree" source="Show tree">ツリーを表示</message>
+    <message key="browse.show-alternate-labels" source="Show alternate labels">代替ラベルを表示</message>
+    <message key="browse.formula" source="Formula">式</message>
+    <message key="browse.definition" source="Definition">定義</message>
+    <message key="browse.alternate-labels" source="Alternate Labels">代替ラベル</message>
+    <message key="browse.remarks" source="Remarks">備考</message>
+    <message key="browse.analyzed-characters" source="Analyzed characters by frequency">頻度順の分析済み漢字</message>
+    <message key="browse.syntactic-words" source="Syntactic words">統語語</message>
+    <message key="browse.show-references" source="Show references">参考資料を表示</message>
+    <message key="browse.syntactic-functions-title" source="Syntactic Functions">統語機能</message>
+    <message key="browse.semantic-features-title" source="Semantic Features">意味特徴</message>
+    <message key="browse.rhetorical-devices-title" source="Rhetorical Devices">修辞技法</message>
+
+    <message key="textview.line-empty" source="line / %">行 / %</message>
+    <message key="wikidata.view" source="View {label} in Wikidata (External link)">ウィキデータで {label} を表示 (外部リンク)</message>
+    <message key="wikidata.change" source="Click here to change association of {label} with {item}">{label} と {item} の関連付けを変更するには、ここをクリックしてください</message>
+    <message key="wikidata.search" source="Click here to search for {label} in WikiData">WikiData で {label} を検索するにはここをクリックしてください</message>
+    <message key="wikidata.search-empty" source="Click here to search for in WikiData">ウィキデータで検索するにはここをクリックしてください</message>
+
+    <message key="biblio.browse" source="Browse the bibliography">参考文献を閲覧する</message>
+    <message key="biblio.authors" source="Authors">著者</message>
+    <message key="biblio.titles" source="Titles">書名</message>
+    <message key="biblio.topics" source="Topics">トピックス</message>
+    <message key="biblio.most-referred" source="Most referred">最も参照された</message>
+    <message key="biblio.recently-added" source="Recently added">最近追加された</message>
+    <message key="biblio.most-referenced-works" source="Works which have been most frequently referenced">参照回数の最も多い文献</message>
+    <message key="biblio.recent-works" source="Recently added works">最近追加された文献</message>
+    <message key="biblio.edit-reference" source="Edit this reference">この参照を編集する</message>
+    <message key="biblio.responsibility" source="Responsibility">責任表示</message>
+    <message key="biblio.title" source="Title">書名</message>
+    <message key="biblio.details" source="Details">詳細</message>
+    <message key="biblio.identifier" source="Identifier">識別子</message>
+    <message key="biblio.comments" source="Comments">コメント</message>
+    <message key="biblio.information-basis" source="Information basis">情報源</message>
+    <message key="biblio.electronic-version" source="Electronic Version">電子版</message>
+    <message key="biblio.internet-archive" source="Find on Internet Archive">インターネットアーカイブで探す</message>
+    <message key="biblio.add-direct-link" source="Add direct link to this work">この作品への直接リンクを追加します</message>
+    <message key="biblio.registered-urls" source="Registered URLs">登録されているURL</message>
+    <message key="biblio.referred-from" source="Referred from">参照元</message>
+    <message key="biblio.publication-marker" source="(publication)">(出版物)</message>
+    <message key="biblio.details-marker" source="(details)">（詳細）</message>
+    <message key="biblio.place-marker" source="(place)">（場所）</message>
+    <message key="biblio.publisher-marker" source="(publisher)">(出版社)</message>
+    <message key="biblio.author-marker" source="(author):">（著者）：</message>
+    <message key="biblio.editor-marker" source="(editor):">（編者）：</message>
+    <message key="biblio.translator-marker" source="(translator):">(翻訳者):</message>
+    <message key="biblio.english-marker" source="(eng):">(英語):</message>
+    <message key="biblio.delete-reference" source="Immediately delete this reference">この参照をすぐに削除します</message>
+
+    <message key="concept.modern-chinese" source="Modern Chinese">現代中国語</message>
+    <message key="concept.old-chinese" source="Old Chinese">上古中国語</message>
+    <message key="concept.old-chinese-criteria" source="Old Chinese Criteria">上古中国語の判定基準</message>
+    <message key="concept.modern-chinese-criteria" source="Modern Chinese Criteria">現代中国語の判定基準</message>
+    <message key="concept.hyponym" source="Hyponym">下位概念</message>
+    <message key="concept.hypernym" source="Hypernym">上位概念</message>
+    <message key="concept.antonym" source="Antonym">対義語</message>
+    <message key="concept.part-of" source="Part of">部分である</message>
+    <message key="concept.has-part" source="Has part">部分を持つ</message>
+    <message key="concept.see-also" source="See also">こちらも参照</message>
+    <message key="concept.register" source="Register">文体</message>
+    <message key="concept.warring-states-currency" source="Warring States Currency">戦国貨幣</message>
+    <message key="concept.old-chinese-contrasts" source="Old Chinese Contrasts">上古中国語の対立</message>
+    <message key="concept.texts-or-translation" source="Texts or Translation">テキストまたは翻訳</message>
+    <message key="concept.chars" source="Chars">文字</message>
+    <message key="concept.syntactic-function" source="Syntactic Function">統語機能</message>
+    <message key="concept.semantic-feature" source="Semantic Feature">意味特徴</message>
+    <message key="concept.alternate-labels" source="Alternate labels">代替ラベル</message>
+    <message key="concept.alternate-labels-count" source="Alternate labels ({count})">代替ラベル ({count})</message>
+    <message key="concept.criteria-notes" source="Criteria and general notes">判定基準と一般注記</message>
+    <message key="concept.criteria-notes-count" source="Criteria and general notes ({count} characters)">判定基準と一般注記（{count} 文字）</message>
+    <message key="concept.source-references" source="Source references">出典参照</message>
+    <message key="concept.source-references-count" source="Source references ({count} items)">出典参照（{count} 件）</message>
+    <message key="concept.bibliography-count" source="Bibliography ({count} items)">参考文献（{count} 件）</message>
+    <message key="concept.ontology" source="Ontology">オントロジー</message>
+    <message key="concept.words-count" source="Words ({count} items)">語（{count} 件）</message>
+    <message key="concept.character-count" source="({count} characters)">（{count} 文字）</message>
+    <message key="concept.separate-page" source="This moves to a separate page">別ページに移動します</message>
+    <message key="concept.attribution" source="Attribution">語義注釈</message>
+    <message key="concept.attribution-count" source="{count} Attribution">{count} 件の語義注釈</message>
+    <message key="concept.attributions-count" source="{count} Attributions">{count} 件の語義注釈</message>
+    <message key="concept.change-pinyin" source="Click here to change pinyin">ピンインを変更するにはここをクリックしてください</message>
+    <message key="concept.add-pinyin" source="Click here to add pinyin">ピンインを追加するにはここをクリックしてください</message>
+    <message key="concept.search-word" source="Search for this word">この語を検索</message>
+    <message key="concept.pending" source="Concept pending: not yet attributed for this character">概念は保留中：この漢字にはまだ語義注釈がありません</message>
+    <message key="concept.reveal-syntactic-words" source="click to reveal {count} syntactic words">クリックして {count} 件の統語語を表示</message>
+    <message key="concept.other-hypernyms" source="Other Hypernyms">その他の上位語</message>
+    <message key="concept.restore-primary" source="Click here to restore as primary concept">主要概念に戻すにはここをクリック</message>
+    <message key="concept.tree-counts" source="anc: {ancestors}/{new}, child: {children}">上位：{ancestors}/{new}、下位：{children}</message>
+    <message key="concept.edit" source="Edit concept">概念を編集</message>
+
+    <message key="taxonomy.title" source="Taxonomy of meanings for {item}:">{item} の語義分類：</message>
+    <message key="taxonomy.character-unanalysed" source="The character {item} has not been analyzed yet.">文字 {item} はまだ解析されていません。</message>
+    <message key="taxonomy.word-unanalysed" source="The word {item} has not been analyzed yet.">語 {item} はまだ分析されていません。</message>
+    <message key="taxonomy.additional-info" source="Additional information about {item}">{item} に関する追加情報</message>
+    <message key="taxonomy.criteria" source="Criteria">基準</message>
+    <message key="taxonomy.save" source="Save taxonomy">分類の保存</message>
+    <message key="taxonomy.leave-edit" source="Leave edit mode">編集モードを終了する</message>
+    <message key="taxonomy.edit" source="Edit taxonomy">分類の編集</message>
+    <message key="taxonomy.character-help" source="Hints for editing the character taxonomy">文字分類を編集するためのヒント</message>
+    <message key="taxonomy.word-help" source="Hints for editing the word taxonomy">語の分類ツリーを編集するためのヒント</message>
+    <message key="taxonomy.lines-movable" source="Lines can be moved around with the mouse.">線はマウスで移動できます。</message>
+    <message key="taxonomy.highest-level" source="Lines of the highest level indicate the reading for this part of the hierarchy.">最上位の行は、階層のこの部分の読み取り値を示します。</message>
+    <message key="taxonomy.save-before-leaving" source="Save before leaving the page!">ページを離れる前に保存してください。</message>
+    <message key="taxonomy.right-click" source="Start editing the label by right-clicking on it.">ラベルを右クリックして編集を開始します。</message>
+    <message key="taxonomy.keep-concept-name" source="When editing the label, please leave the name of the concept unchanged at the very end of the label.">ラベルを編集する際は、末尾の概念名を変更しないでください。</message>
+    <message key="taxonomy.text-after-concept" source="Text after the name of the concept will not be saved.">概念名より後ろのテキストは保存されません。</message>
+    <message key="taxonomy.delete-subtree" source="&quot;Delete&quot; will delete a subtree. Move lines you want to keep to other subtrees before deleting the upper level item(s).">「削除」はサブツリーを削除します。上位レベルの項目を削除する前に、保持したい行を他のサブツリーに移動します。</message>
+    <message key="taxonomy.new-concepts" source="There might be some lines at the bottom with new concepts that have been added since the last editing of this character.">この漢字を前回編集した後に追加された新しい概念の行が、下部に表示されることがあります。</message>
+
+    <message key="citations.processing" source="Processing data, just a moment please.">データを処理しています。しばらくお待ちください。</message>
+    <message key="citations.new-item-definition" source="If the new item is not from the list, please add a definition below!">新しい項目がリストにない場合は、以下に定義を追加してください。</message>
+    <message key="citations.total-count" source="Total: {count}">合計: {count}</message>
+    <message key="citations.set-item" source="set the item and perspective to this value">項目と視点をこの値に設定</message>
+    <message key="citations.select-actions" source="Select items to apply these actions:">操作を適用する項目を選択：</message>
+    <message key="citations.mark-prototypical" source="Mark this attribution as prototypical">この語義注釈を典型例に指定</message>
+    <message key="citations.prototypical-level" source="Currently marked as prototypical {level}. Increase up to 3 then reset.">現在、プロトタイプの {level} としてマークされています。 3まで増やしてリセットします。</message>
+
+    <message key="settings.title" source="Customizable settings for">カスタマイズ可能な設定</message>
+    <message key="settings.display" source="Display settings">表示設定</message>
+    <message key="settings.external-resources" source="External resources">外部リソース</message>
+    <message key="settings.changed" source="Setting has been changed.">設定が変更されました。</message>
+    <message key="settings.hide" source="Don't show this at all">表示しない</message>
+    <message key="settings.show" source="Show this wherever possible">可能な場所で表示</message>
+    <message key="settings.context" source="Show this in these contexts:">これを次のコンテキストで示します。</message>
+
+    <message key="welcome.back" source="Welcome back!">おかえり！</message>
+    <message key="welcome.acknowledge" source="Please acknowledge your use of TLS in your publications.">出版物に TLS を利用した旨を明記してください。</message>
+    <message key="welcome.browse" source="Browse the database">データベースを閲覧</message>
+    <message key="welcome.development" source="This website is under development.">このウェブサイトは開発中です。</message>
+
+    <message key="citations.title" source="Citations">用例</message>
+    <message key="citations.analyze" source="Analyze the">分析対象：</message>
+    <message key="citations.defined" source="citations currently defined in the system.">現在システムで定義されている用例。</message>
+    <message key="common.warning" source="Warning:">警告：</message>
+
+    <message key="signup.title" source="Application for membership in the TLS Project">TLS プロジェクトへのメンバーシップの申請</message>
+    <message key="signup.form" source="Signup form">登録フォーム</message>
+    <message key="signup.personal" source="Personal information">個人情報</message>
+    <message key="signup.required" source="All input (except the website) is required">すべての入力（Web サイトを除く）が必須です</message>
+    <message key="signup.full-name" source="Full name">フルネーム</message>
+    <message key="signup.nickname" source="Requested nickname">希望ユーザー名</message>
+    <message key="signup.password" source="Password">パスワード</message>
+    <message key="signup.repeat-password" source="Repeat password">パスワードを再度入力してください。</message>
+    <message key="signup.email" source="Email">電子メール</message>
+    <message key="signup.professional" source="Professional information">専門情報</message>
+    <message key="signup.research-areas" source="Research areas of interest to you">関心のある研究分野</message>
+    <message key="signup.affiliation" source="Affiliated university or research institution">所属大学または研究機関</message>
+    <message key="signup.contribution" source="How would you like to contribute to the project?">このプロジェクトにどのように貢献したいですか?</message>
+    <message key="signup.website" source="Website">Webサイト</message>
+    <message key="signup.agreement" source="Agreement">利用条件</message>
+    <message key="signup.next" source="What happens next?">申請後の流れ</message>
+    <message key="signup.submit" source="Submit">提出する</message>
+
+    <message key="error.title" source="An error has occurred">エラーが発生しました</message>
+    <message key="error.description" source="An error has been generated by the application.">アプリケーションによってエラーが生成されました。</message>
+
+    <message key="toast.select-related-word" source="Now select the right word and then set the relation type.">次に右側の語を選択し、関係タイプを設定してください。</message>
+    <message key="toast.word-relation-moved" source="Word relation has been moved.">語の関係を移動しました。</message>
+    <message key="toast.relation-type-saved" source="Relation type has been saved.">関係タイプが保存されました。</message>
+    <message key="toast.word-relation-deleted" source="Word relation has been deleted.">語の関係を削除しました。</message>
+    <message key="toast.requesting-lines" source="Requesting more text lines, please wait a moment.">さらにテキスト行をリクエストしています。しばらくお待ちください。</message>
+    <message key="toast.translation-change" source="Translation change requested. Please wait a moment.">翻訳の変更が要求されました。しばらくお待ちください。</message>
+    <message key="toast.translation-draft" source="Translation draft requested. Please wait a moment.">翻訳草案がリクエストされました。しばらくお待ちください。</message>
+    <message key="toast.work-saved" source="New work has been saved.">新しい文献を保存しました。</message>
+    <message key="toast.translation-saved" source="The translation has been saved.">翻訳が保存されました。</message>
+    <message key="toast.saving-attribution" source="Saving the attribution...">語義注釈を保存中…</message>
+    <message key="toast.concept-exists" source="Concept already exists.">概念はすでに存在します。</message>
+    <message key="toast.concept-saved" source="Concept has been saved.">概念を保存しました。</message>
+    <message key="toast.rating-saved" source="Your rating has been saved.">あなたの評価が保存されました。</message>
+    <message key="toast.rating-cleared" source="Your rating has been cleared.">あなたの評価はクリアされました。</message>
+    <message key="toast.merged" source="Merged into target.">ターゲットにマージされました。</message>
+    <message key="toast.word-moving" source="SW is being moved.">SWは移動中です。</message>
+    <message key="toast.word-deleted" source="Word has been deleted.">語が削除されました。</message>
+    <message key="toast.attribution-marked" source="Attribution has been marked.">語義注釈にマークを付けました。</message>
+    <message key="toast.deleting-attribution" source="Deleting the attribution...">語義注釈を削除中…</message>
+    <message key="toast.attribution-deleted" source="Attribution deleted.">語義注釈を削除しました。</message>
+    <message key="toast.review-saved" source="Review has been saved. Thank you for your effort!">レビューを保存しました。ご協力ありがとうございます。</message>
+    <message key="toast.bookmark-saved" source="Bookmark has been saved.">ブックマークが保存されました。</message>
+    <message key="toast.bookmark-deleted" source="Bookmark has been deleted.">ブックマークが削除されました。</message>
+    <message key="toast.password-changed" source="Your password has been changed. You will be logged out.">パスワードが変更されました。ログアウトされます。</message>
+
+    <message key="home.founding-editor" source="Founding Editor:">創設編集主幹：</message>
+    <message key="home.associate-editor" source="Associate Editor:">副編集主幹：</message>
+    <message key="home.general-editor" source="General Editor:">総編集主幹：</message>
+    <message key="home.technical-editor" source="Technical Editor:">技術編集主幹：</message>
+    <message key="home.problems" source="Problems and suggestions can be reported and discussed also on">問題や提案は、次のサイトでも報告および議論できます。</message>
+    <message key="home.overview" source="Overview of the content of the database (last updated:">データベースの内容の概要 (最終更新日:</message>
+
+    <message key="footer.copyright-prefix" source="Copyright TLS Project 2026, licensed under a">Copyright TLS Project 2026。</message>
+    <message key="footer.copyright-suffix" source="license (except some translations)">ライセンス（一部翻訳を除く）</message>
+    <message key="footer.cc-title" source="Creative Commons Attribution-ShareAlike 4.0 International License">クリエイティブ・コモンズ表示 - 継承 4.0 国際ライセンス</message>
+    <message key="footer.developed-at" source="Developed at the">で開発されました</message>
+    <message key="footer.with-support" source=", with support from the">の支援を受けて、</message>
+    <message key="footer.and-comma" source=", and">、 そして</message>
+    <message key="footer.development-supported" source="Development supported by the">開発支援を受けた</message>
+    <message key="footer.research-group-at" source="research group at">の研究グループ</message>
+    <message key="footer.financial-support" source=", with financial support from the">からの財政的支援を受けて、</message>
+    <message key="footer.hosted-by" source="Hosted by">ホスト：</message>
+    <message key="footer.cooperation" source=", in cooperation with">と協力して</message>
+    <message key="footer.support-from" source="Support from">からのサポート</message>
+    <message key="footer.and" source="and">そして</message>
+    <message key="footer.acknowledged" source="gratefully acknowledged.">のご支援に深く感謝します。</message>
+    <message key="footer.cookies" source="This site uses cookies to maintain login state. The cookies are not used for any other purposes. By using this site you agree to this.">このサイトではログイン状態を維持するために Cookie を使用しています。 Cookie は他の目的には使用されません。このサイトを使用すると、これに同意したことになります。</message>
+
+    <message key="browse.word-relation-type" source="Word relation type:">語の関係タイプ：</message>
+    <message key="browse.sort-by" source="Sort by:">並べ替え：</message>
+    <message key="browse.left-word" source="Left word">左の語</message>
+    <message key="browse.right-word" source="Right word">右の語</message>
+    <message key="browse.left-concept" source="Left concept">左の概念</message>
+    <message key="browse.right-concept" source="Right concept">右の概念</message>
+    <message key="browse.words-by-concepts" source="Words by decreasing number of concepts">関連する概念数の多い順に語を表示</message>
+
+    <message key="citations.warning-tree-prefix" source="The options ending in '(tree)' are still a mockup and do">「(tree)」で終わるオプションはまだモックアップであり、</message>
+    <message key="citations.warning-tree-suffix" source="not yet have the correct data">まだ正しいデータがありません</message>
+    <message key="citations.item" source="Item:">アイテム：</message>
+    <message key="citations.perspectives" source="Perspectives:">視点：</message>
+    <message key="citations.grouping-key1" source="Grouping: Key 1">グループ化: キー 1</message>
+    <message key="citations.key2" source="Key 2">キー2</message>
+    <message key="citations.show" source="Show">表示</message>
+    <message key="citations.contributors" source="Contributors">貢献者</message>
+    <message key="citations.syntactical-functions" source="Syntactical Functions">統語機能</message>
+    <message key="citations.diachronic" source="Diachronic">通時的</message>
+    <message key="citations.diachronic-tree" source="Diachronic(tree)">通時性(ツリー)</message>
+    <message key="citations.by-character" source="By character">漢字別</message>
+    <message key="citations.by-concept" source="By Concept">概念別</message>
+    <message key="citations.by-concept-tree" source="By Concept(tree)">概念別（ツリー）</message>
+    <message key="citations.by-text" source="By text">テキスト別</message>
+    <message key="citations.by-synfunc" source="By Syntactic Function">統語機能別</message>
+    <message key="citations.by-synfunc-tree" source="By Syntactic Function(tree)">統語機能別（ツリー）</message>
+    <message key="citations.by-semantic-feature" source="By Semantic Feature">意味特徴別</message>
+    <message key="citations.by-pos" source="By Part Of Speech">品詞別</message>
+    <message key="citations.none" source="None">なし</message>
+    <message key="citations.total" source="Total:">合計：</message>
+
+    <message key="signup.project-description" source="The TLS Project is a collaborative research project, concerned with all aspects of the Chinese culture as transmitted through its textual sources.">TLS プロジェクトは、テキストソースを通じて伝わる中国文化のあらゆる側面に関わる共同研究プロジェクトです。</message>
+    <message key="signup.platform-description" source="This website is the main platform for this work. It allows to prepare, edit, analyze, annotate and translate the texts.">このウェブサイトは本プロジェクトの主要な作業基盤で、テキストの整理、編集、分析、注釈、翻訳ができます。</message>
+    <message key="signup.privacy-description" source="This system is still work in progress, but a limited number of accounts are available at this moment. The accounts are free of charge and there is no advertisement or tracking on the site. Your personal data will only be kept on the server and not shared with anyone. If you request deletion of the account, all personal information will be deleted, except your name as far as it is associated with data items.">このシステムはまだ開発中ですが、現時点では利用できるアカウントの数が限られています。アカウントは無料で、サイト上に広告や追跡はありません。あなたの個人データはサーバー上にのみ保管され、誰とも共有されません。アカウントの削除をリクエストした場合、データ項目に関連付けられている限り、名前を除くすべての個人情報が削除されます。</message>
+    <message key="signup.languages" source="If you are interested, please fill in the information below and let us now. You may use English, Chinese, Japanese, Korean or German when filling out this form.">参加を希望する方は、以下の情報を入力してください。このフォームは英語、中国語、日本語、韓国語、ドイツ語で記入できます。</message>
+    <message key="signup.important" source="Important:">重要：</message>
+    <message key="signup.nickname-prefix" source="this nickname can only contain">ユーザー名に使用できるのは</message>
+    <message key="signup.letters" source="letters">英字</message>
+    <message key="signup.and-or" source="and/or">および/または</message>
+    <message key="signup.numbers" source="numbers">数字</message>
+    <message key="signup.nickname-restriction" source=". No other characters, such as a">のみです。その他の文字、たとえば</message>
+    <message key="signup.space-character" source="space character">スペース文字</message>
+    <message key="signup.allowed" source="are allowed.">は使用できません。</message>
+    <message key="signup.password-help" source="Make sure you take note of this password and remember it, you will need it to log in to your account!">このパスワードは必ずメモして覚えておいてください。アカウントにログインするために必要になります。</message>
+    <message key="signup.email-help" source="Make sure the email is spelled correctly and will receive messages from">電子メールのスペルが正しく、次からのメッセージが受信されることを確認してください。</message>
+    <message key="signup.website-help" source="If you have a private or institutional website, please let us now.">個人または所属機関のウェブサイトがある場合は入力してください。</message>
+    <message key="signup.license-prefix" source="All data on this site, with the exception of translations, is made available by the TLS Project under a">翻訳を除く本サイトのすべてのデータは、TLS プロジェクトにより</message>
+    <message key="signup.license-suffix" source="license. This applies to all of your input as well.">ライセンスのもとで提供されます。入力したすべてのデータにも同じ条件が適用されます。</message>
+    <message key="signup.translation-license" source="As far as your translations are concerned, you retain your copyright, and are free to publish them wherever you like. You do grant a irrevocable license to the TLS Project to display the translations in the context of the website, but not anywhere else.">翻訳の著作権は投稿者に帰属し、任意の場所で自由に公表できます。同時に、投稿者は TLS プロジェクトに対し、このウェブサイト上でのみ翻訳を表示するための取り消し不能な許諾を与えます。</message>
+    <message key="signup.agree" source="By submitting this form, you agree to these conditions!">このフォームを送信すると、これらの条件に同意したことになります。</message>
+    <message key="signup.next-description" source="Shortly after sending this form, you should receive an automated message to verify your email address. You will have to click on a link that has been sent to you. Only after the mail has been verified will the review process begin. If you are accepted, you will receive an email notification and can start to use your account.">このフォームを送信するとすぐに、電子メール アドレスを確認するための自動メッセージが届きます。送信されたリンクをクリックする必要があります。メールが確認されて初めて審査プロセスが開始されます。承認されると電子メール通知が届き、アカウントの使用を開始できるようになります。</message>
+    <message key="signup.password-mismatch" source="Passwords do not match.">パスワードが一致しません。</message>
+    <message key="signup.captcha-label" source="To make sure, only humans sign up, here is a random question:">自動登録でないことを確認するため、次の質問に答えてください：</message>
+    <message key="signup.captcha-question" source="What is twelve times thirteen? (write the answer in numbers)">12 掛ける 13 は何ですか? （答えを数字で書きます）</message>
+
+    <message key="settings.intro-prefix" source="Here are settings to fine-tune the place, type and number of">以下の設定で、異なる場所に表示する</message>
+    <message key="settings.items" source="items">項目</message>
+    <message key="settings.intro-middle" source="to display in different">の種類、数、および</message>
+    <message key="settings.contexts" source="contexts:">表示状況を調整できます：</message>
+    <message key="settings.wikidata" source="Wikidata Search and Links">ウィキデータの検索とリンク</message>
+    <message key="settings.links" source="Links to external resources">外部リソースへのリンク</message>
+    <message key="settings.add-reference" source="Add reference">参照の追加</message>
+    <message key="settings.add-bibliography" source="Add bibliographic item">書誌事項を追加</message>
+    <message key="settings.context-label" source="Context:">コンテクスト：</message>
+    <message key="settings.select-option" source="Select here from the following options:">ここでは次のオプションから選択します。</message>
+    <message key="settings.help-title" source="Open documentation for this item">このアイテムのドキュメントを開く</message>
+    <message key="settings.concept-page" source="The page displaying a Concept">概念ページ</message>
+    <message key="settings.rhetdev-page" source="The page displaying a Rhetorical Device">修辞技法を表示するページ</message>
+    <message key="settings.word-definition" source="The definition of a word">語の定義</message>
+    <message key="settings.attribution-floater" source="The attribution floater">語義注釈フローター</message>
+    <message key="settings.search-results" source="The area at the beginning of the display of search results for texts and words.">テキストや単語の検索結果が表示される先頭の領域です。</message>
+    <message key="settings.text-info" source="A section in the text info display">テキスト情報表示のセクション</message>
+    <message key="settings.delete-context" source="Delete this context.">このコンテキストを削除します。</message>
+    <message key="settings.bookmarks-prefix" source="Here are your currently defined bookmarks. Bookmarks register a">現在保存されているブックマークです。ブックマークはテキスト内の</message>
+    <message key="settings.specific-location" source="specific location">特定の場所</message>
+    <message key="settings.bookmarks-middle" source="in a text for you to come back any time. If you">を記録し、いつでも戻れるようにします。テキストを</message>
+    <message key="settings.rate" source="rate">評価すると、</message>
+    <message key="settings.bookmarks-access" source="a text, you can access the">そのテキストの</message>
+    <message key="settings.recent-location" source="most recent location">最近読んだ位置</message>
+    <message key="settings.bookmarks-menu" source="through red-star">へ、上部の赤い星の</message>
+    <message key="settings.menu-above" source="menu above.">メニューから移動できます。</message>
+    <message key="settings.delete-instruction-prefix" source="In the list below, click on the">下の一覧で</message>
+    <message key="settings.delete-instruction-suffix" source="to delete a bookmark.">をクリックするとブックマークを削除できます。</message>
+    <message key="settings.delete-bookmark" source="Delete this bookmark.">このブックマークを削除します。</message>
+    <message key="settings.additional-prefix" source="additional resources or">追加のリソースまたは</message>
+    <message key="settings.select-lower" source="select">選択する</message>
+    <message key="settings.additional-suffix" source="which to show.">表示するリソースを指定します。</message>
+    <message key="settings.available-resources" source="Available resources:">利用可能なリソース:</message>
+    <message key="settings.basic" source="Basic">基本</message>
+    <message key="settings.additional" source="Additional">追加</message>
+
+    <message key="observations.title" source="Observations in the TLS">TLS での観察</message>
+    <message key="observations.add-template" source="Add new template">新しいテンプレートを追加</message>
+    <message key="observations.edit-template" source="Edit template">テンプレートの編集</message>
+    <message key="observations.show" source="Show observations">観察結果を表示する</message>
+    <message key="observations.inline" source="inline">インライン</message>
+    <message key="observations.block" source="block">ブロック</message>
+    <message key="observations.ingredient" source="Ingredient">材料</message>
+    <message key="observations.disease" source="Disease condition">病状</message>
+    <message key="observations.person" source="Person">人</message>
+    <message key="observations.place" source="Place">場所</message>
+    <message key="observations.rhetorical-device" source="Rhetorical Device">修辞技法</message>
+    <message key="observations.comment" source="Comment">コメント</message>
+    <message key="observations.recipe" source="Recipe">レシピ</message>
+    <message key="observations.biographical" source="Biographical entry">経歴エントリー</message>
+
+    <message key="activity.recent" source="Recent activity as of">現在の最近の活動</message>
+    <message key="activity.attributions" source="Attributions">語義注釈</message>
+    <message key="activity.attribution-total" source="Total number of attributions made since Aug. 28, 2019:">2019年8月28日以降の語義注釈総数：</message>
+    <message key="activity.most-recent" source="The most recent attribution was">最新の語義注釈：</message>
+    <message key="activity.ago" source="ago:">前：</message>
+    <message key="activity.translation-lines" source="Lines of translations">翻訳の行数</message>
+    <message key="activity.translation-total" source="Total number of lines translated since Aug. 28, 2019:">2019 年 8 月 28 日以降に翻訳された合計行数:</message>
+    <message key="activity.ai-prefix" source="This does not include AI generated output, which is">これには、AI が生成した出力は含まれません。</message>
+    <message key="activity.ai-suffix" source="lines, but some hand-generated AI requests using the 'AI' button.">ただし、一部の AI リクエストは「AI」ボタンを使用して手動で生成されます。</message>
+    <message key="duration.years" source="{count} years">{count} 年</message>
+    <message key="duration.year" source="{count} year">{count}年</message>
+    <message key="duration.months" source="{count} months">{count} か月</message>
+    <message key="duration.month" source="{count} month">{count} か月</message>
+    <message key="duration.days" source="{count} days">{count} 日</message>
+    <message key="duration.day" source="{count} day">{count} 日</message>
+    <message key="duration.hours" source="{count} hours">{count} 時間</message>
+    <message key="duration.hour" source="{count} hour">{count} 時間</message>
+    <message key="duration.minutes" source="{count} minutes">{count} 分</message>
+    <message key="duration.minute" source="{count} minute">{count} 分</message>
+    <message key="duration.seconds" source="{count} seconds">{count} 秒</message>
+    <message key="duration.second" source="{count} second">{count} 秒</message>
+
+    <message key="textlist.available" source="Available texts:">利用可能なテキスト:</message>
+    <message key="textlist.core" source="Core Texts">コアテキスト</message>
+    <message key="textlist.more" source="More Texts">他のテキスト</message>
+    <message key="textlist.starred" source="Starred Texts">スター付きテキスト</message>
+    <message key="textlist.new" source="New Texts">新しいテキスト</message>
+    <message key="textlist.recent-title" source="Recently added texts">最近追加されたテキスト</message>
+
+    <message key="ui.show-annotations" source="Press here to show annotations.">ここを押すと注釈が表示されます。</message>
+    <message key="ui.end-editing-title" source="Click here to end editing">編集を終了するにはここをクリックしてください</message>
+    <message key="ui.ai-translation-title" source="Translation generated by AI">AIが生成した翻訳</message>
+    <message key="ui.opened-exide" source="Opened code in existing eXide window.">既存の eXide ウィンドウでコードを開きます。</message>
+    <message key="ui.cancel-move" source="Cancelling move to store data. Please press button again.">データを保存するための移動をキャンセルします。もう一度ボタンを押してください。</message>
+    <message key="ui.new-concept-prompt" source="Please enter the name of the new concept:">新しい概念名を入力してください：</message>
+    <message key="ui.new-synfunc-prompt" source="No syntactic function '{function}' defined. If you want to define a new one, please enter the definition here:">統語機能「{function}」は定義されていません。新しく定義する場合は、ここに定義を入力してください：</message>
+    <message key="ui.new-synfunc-saved" source="New syntactic function has been saved.">新しい統語機能を保存しました。</message>
+    <message key="ui.sw-definition-required" source="Newly defined SW need a definition. Can not save SW to concept.">新しく定義する SW には定義が必要です。SW を概念に保存できません。</message>
+    <message key="ui.no-concept-confirm" source="No existing concept selected. Do you want create a new concept named {concept} ?">既存の概念が選択されていません。「{concept}」という新しい概念を作成しますか？</message>
+    <message key="ui.no-synfunc" source="No syntactic function defined. Can not save SW to concept.">統語機能が定義されていないため、SW を概念に保存できません。</message>
+    <message key="ui.guangyun-required" source="Guangyun has not been selected!">『広韻』が選択されていません。</message>
+    <message key="ui.email-sent" source="Email has been sent to {email}">電子メールは {email} に送信されました</message>
+    <message key="ui.email-unregistered" source="Email is not registered {email}">メールアドレスが登録されていません {email}</message>
+    <message key="ui.concept-id-required" source="Concept ID not set. Please select the concept name with the mouse!">概念 ID が設定されていません。マウスで概念名を選択してください。</message>
+    <message key="ui.unsaved-nedit" source="Unsaved data exist, do you want to save (nedit)?">未保存のデータがありますが、保存（編集）しますか？</message>
+    <message key="ui.unsaved-translation" source="Unsaved data exist, do you want to save? (tr)">未保存のデータがあります。保存しますか? (tr)</message>
+    <message key="ui.click-yellow-eye" source="Click the yellow eye to end the editing.">編集を終了するには、黄色い目をクリックします。</message>
+    <message key="ui.delete-line-confirm" source="'{line}' ({id}) will be deleted and removed, do you want to proceed?.">「{line}」 ({id}) は削除されます。続行しますか?</message>
+    <message key="ui.new-rhetdev-prompt" source="No existing rhetorical device selected. Do you want to create a new one?">既存の修辞技法が選択されていません。新しく作成しますか？</message>
+    <message key="ui.delete-used-confirm" source="'{item}' has been used in attributions, do you want to proceed? All attributions will be deleted as well.">「{item}」は語義注釈で使用されています。続行すると関連する語義注釈もすべて削除されます。続行しますか？</message>
+    <message key="ui.url-copied" source="URL: {url} copied to clipboard!">URL: {url} がクリップボードにコピーされました。</message>
+    <message key="ui.delete-translation-confirm" source="Do you really want to delete this translation?">本当にこの翻訳を削除してもよろしいですか?</message>
+    <message key="ui.select-user" source="Please select a user!">ユーザーを選択してください!</message>
+
+    <message key="toast.unknown-detail" source="An unknown error happened on the system.{detail}">システムで不明なエラーが発生しました。{detail}</message>
+    <message key="toast.could-not-save" source="Could not save: {reason}">保存できませんでした: {reason}</message>
+    <message key="toast.word-moving-name" source="Word {word} is being moved.">語 {word} を移動中です。</message>
+    <message key="toast.word-move-complete" source="Move of {word} has been completed.">{word}の移動が完了しました。</message>
+    <message key="toast.concept-reload" source="Concept has been modified/deleted. Please reload page to see the effect.">概念が変更または削除されました。変更を確認するにはページを再読み込みしてください。</message>
+    <message key="toast.definition-saved" source="Modification for definition saved.">定義の変更が保存されました。</message>
+    <message key="toast.problem-response" source="PROBLEM: {status} {response}">問題: {status} {response}</message>
+    <message key="toast.problem-detail" source="PROBLEM: {detail}">問題: {detail}</message>
+    <message key="toast.problem-compact" source="PROBLEM{detail}">問題{detail}</message>
+    <message key="toast.translation-line-saved" source="Translation for line {line} saved.">行 {line} の翻訳が保存されました。</message>
+    <message key="toast.line-saved" source="Modification for line {line} saved.">{line} 行の変更が保存されました。</message>
+    <message key="toast.line-deleted" source="Deletion for line {id} completed.">{id}行の削除が完了しました。</message>
+    <message key="toast.synfunc-updated" source="Syntactic function updated.">統語機能を更新しました。</message>
+    <message key="toast.semfeat-updated" source="Semantic feature updated.">意味特徴を更新しました。</message>
+    <message key="toast.list-display" source="List display option changed.">リスト表示オプションを変更しました。</message>
+    <message key="toast.observation-saved" source="Observation location {item} saved.">観測場所 {item} が保存されました。</message>
+    <message key="toast.observation-error" source="Could not save observation. {detail}">観察を保存できませんでした。 {detail}</message>
+    <message key="toast.synonyms-saved" source="New synonyms for {concept} saved.">{concept} の新しい同義語が保存されました。</message>
+    <message key="toast.item-saved" source="New item {item} saved.">新しいアイテム {item} が保存されました。</message>
+    <message key="toast.checking-usage" source="Checking for usage, please wait.">使用状況を確認中です。お待​​ちください。</message>
+    <message key="toast.synfunc-deleted" source="Syntactic function entry had been deleted.">統語機能の項目を削除しました。</message>
+    <message key="toast.generic-item-saved" source="{item} has been saved.">{item} が保存されました。</message>
+    <message key="toast.generic-item-deleted" source="{item} has been deleted.">{item} は削除されました。</message>
+    <message key="toast.pinyin-saved" source="Pinyin has been saved. Please reload page to see all changes.">ピンインが保存されました。すべての変更を確認するには、ページをリロードしてください。</message>
+    <message key="toast.pronunciation-deleted" source="Pronounciation has been deleted.">発音は削除されました。</message>
+    <message key="toast.pronunciation-used" source="Pronounciation is in use, can not be deleted.">発音は使用中のため削除できません。</message>
+    <message key="toast.gloss-saved" source="Gloss has been saved.">語釈を保存しました。</message>
+    <message key="toast.text-category-saved" source="Text category has been saved.">テキストカテゴリが保存されました。</message>
+    <message key="toast.text-date-saved" source="Textdate has been saved.">テキスト日付が保存されました。</message>
+    <message key="toast.vote" source="Your vote has been registered. Thank you">あなたの投票が登録されました。ありがとう</message>
+    <message key="toast.request-deleted" source="The request has been deleted.">リクエストは削除されました。</message>
+    <message key="toast.request-approved" source="The request has been approved. Thank you">リクエストは承認されました。ありがとう</message>
+    <message key="toast.tag-saved" source="Tag {tag} for {count} item(s) saved.">{count} アイテムのタグ {tag} が保存されました。</message>
+    <message key="toast.url-saved" source="New URL saved.">新しい URL が保存されました。</message>
+    <message key="toast.resource-saved" source="Resource saved.">リソースが保存されました。</message>
+    <message key="toast.translation-deleted" source="Translation has been deleted.">翻訳は削除されました。</message>
+    <message key="toast.pagebreak-saved" source="Pagebreak saved.">改ページが保存されました。</message>
+    <message key="toast.variant-recorded" source="Variant recorded.">バリアントが記録されています。</message>
+    <message key="toast.request-received" source="Request received. Please leave a few days for processing">リクエストを受け取りました。処理には数日お待ちください</message>
+    <message key="toast.request-processed" source="Request processed">リクエストが処理されました</message>
+    <message key="toast.permission-added" source="Permission added for user {user}">ユーザー {user} に権限が追加されました</message>
+    <message key="toast.permission-add-error" source="Error occured when trying to add permission">権限を追加しようとしたときにエラーが発生しました</message>
+    <message key="toast.permission-revoked" source="Permission revoked for user {user}">ユーザー{user}の権限が取り消されました</message>
+    <message key="toast.permission-revoke-error" source="Error occured when trying to revoke permission">権限を取り消そうとしたときにエラーが発生しました</message>
+</catalogue>

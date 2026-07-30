@@ -19,7 +19,7 @@ import module namespace xmldb="http://exist-db.org/xquery/xmldb";
 
 declare namespace templates="http://exist-db.org/xquery/templates";
 
-declare variable $i18n:supported-languages := ("en", "zh-Hans");
+declare variable $i18n:supported-languages := ("en", "zh-Hans", "ja");
 declare variable $i18n:default-language := "en";
 declare variable $i18n:session-key := "tls.ui.language";
 declare variable $i18n:translatable-attributes :=
@@ -33,6 +33,8 @@ declare function i18n:normalize-language($language as xs:string?) as xs:string? 
         else if ($language = ("zh", "zh-cn", "zh-sg", "zh-hans")
                 or starts-with($language, "zh-hans-")) then
             "zh-Hans"
+        else if ($language = "ja" or starts-with($language, "ja-")) then
+            "ja"
         else
             ()
 };
@@ -152,7 +154,9 @@ declare function i18n:catalog-script($node as node(), $model as map(*)) {
 declare function i18n:language-switcher($node as node(), $model as map(*)) {
     let $language := i18n:language()
     let $label :=
-        if ($language = "zh-Hans") then "简体中文" else "English"
+        if ($language = "zh-Hans") then "简体中文"
+        else if ($language = "ja") then "日本語"
+        else "English"
     return
         <div class="dropdown tls-language-switcher" data-i18n-scope="ui">
             <button class="btn btn-sm btn-light dropdown-toggle" type="button"
@@ -168,6 +172,8 @@ declare function i18n:language-switcher($node as node(), $model as map(*)) {
                         onclick="tlsSetLanguage('en')">English</button>
                 <button class="dropdown-item" type="button" lang="zh-Hans"
                         onclick="tlsSetLanguage('zh-Hans')">简体中文</button>
+                <button class="dropdown-item" type="button" lang="ja"
+                        onclick="tlsSetLanguage('ja')">日本語</button>
             </div>
         </div>
 };
@@ -281,11 +287,11 @@ declare function i18n:welcome-message() {
 declare function i18n:display($map as map(*)) {
     if ($map?id = "ai-rationale") then
         <div>
-            <div class="row" xml:id="ai-rationale" lang="en">
+            <div class="row" xml:id="ai-rationale" lang="{i18n:language()}">
                 <div class="col-md-2"/>
                 {i18n:fragment("ai-use")}
             </div>
-            <div class="row" xml:id="ai-rationale" lang="en">
+            <div class="row" xml:id="ai-rationale" lang="{i18n:language()}">
                 <div class="col-md-2"/>
                 {lrh:ai-translations()}
             </div>
