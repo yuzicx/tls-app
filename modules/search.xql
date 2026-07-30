@@ -418,6 +418,15 @@ declare function src:create-query($queryStr as xs:string?, $mode as xs:string?)
 </query>
 };
 
+declare function src:localized-category-titles($categories as map(*)) as node()* {
+    for $genre at $position in map:keys($categories)
+    let $category := string($categories?($genre))
+    return (
+        if ($position gt 1) then text { " / " } else (),
+        <span data-i18n="facet.category.{$category}">{lmd:cat-title($category)}</span>
+    )
+};
+
 declare
 %templates:default("type", "")  (: type is only relevant for advanced search starting from the search landing page for non-Kanji generell search :)
 function src:show-hits-h1($node as node()*, $map as map(*),  $type as xs:string){
@@ -425,7 +434,7 @@ let $st :=  if (string-length($type) > 0) then map:get($config:search-map, $map?
 return
 (if ($map?search-type = $src:search-bib ) then () else
  if ($map?search-type = $src:ngtype) then (
- <h1 id="search-results-top"><span data-i18n="search.searching-in">Searching in</span> <strong>{if (count(map:keys($map?cat)) > 0) then <span data-i18n-scope="content">{string-join(for $c in map:keys($map?cat) return lmd:cat-title($map?cat?($c)), " / ")}</span> else <span data-i18n-scope="ui">{$st}</span>}</strong> <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
+ <h1 id="search-results-top"><span data-i18n="search.searching-in">Searching in</span> <strong>{if (count(map:keys($map?cat)) > 0) then <span>{src:localized-category-titles($map?cat)}</span> else <span data-i18n-scope="ui">{$st}</span>}</strong> <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
 ) else
  if ($map?search-type = $src:search-trans) then (
  <h1 id="search-results-top"><span data-i18n="search.searching-in">Searching in</span> <strong data-i18n-scope="ui">{$st}</strong>{if (string-length($map?textid) > 0) then (" ", <span data-i18n="search.within-text">within text</span>, " ", <span data-i18n-scope="content">{lu:get-title($map?textid)}</span>) else ()} <span data-i18n="search.for">for</span> <mark class="chn-font" data-i18n-scope="content">{$map?query}</mark></h1>
@@ -434,7 +443,7 @@ return
    let $count := count($map?hits)
    return 
    if($count >0) then
-    <h1 id="search-results-top"><span data-i18n="search.catalog">Catalog</span> {if (count(map:keys($map?cat)) > 0) then (<span data-i18n="search.subcategory-excerpt">excerpt for subcategory</span>, " ", <span data-i18n-scope="content">{string-join(for $c in map:keys($map?cat) return lmd:cat-title($map?cat?($c)), " / ")}</span>) else ()}
+    <h1 id="search-results-top"><span data-i18n="search.catalog">Catalog</span> {if (count(map:keys($map?cat)) > 0) then (<span data-i18n="search.subcategory-excerpt">excerpt for subcategory</span>, " ", <span>{src:localized-category-titles($map?cat)}</span>) else ()}
     <span data-i18n-scope="ui">{"(" || $count || " items)"}</span> </h1>
    else src:textlist-doc()
  else
@@ -869,7 +878,7 @@ declare function src:facets($node as node()*, $model as map(*), $query as xs:str
             </div>
             </div>
             <p>{if (count($fkeys) > 0) then <span title="To release filters find 'Click here to display all matches' in the center of the page" data-i18n-title="search.release-filters-title"><span data-i18n="search.applied-filters">Applied filters:</span> <br/>
-            <span data-i18n-scope="content">{string-join(for $f in $fkeys return lmd:cat-title($model?cat?($f)), " / ")}</span>
+            <span>{src:localized-category-titles($model?cat)}</span>
             </span>
             else ()}</p>{
             for $g in $genres
