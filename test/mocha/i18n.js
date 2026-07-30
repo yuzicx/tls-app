@@ -234,6 +234,14 @@ describe('interface catalogues', function () {
     expect(i18n.fromSource('Jin')).to.equal('Jin')
   })
 
+  it('localizes selected facet titles in every search summary', function () {
+    const searchSource = fs.readFileSync('modules/search.xql', 'utf8')
+    const localizedTitleCalls = searchSource.match(/src:localized-category-titles\(/g) || []
+
+    expect(searchSource).to.include('data-i18n="facet.category.{$category}"')
+    expect(localizedTitleCalls).to.have.length(4)
+  })
+
   it('supports Japanese language tags in both localization runtimes', function () {
     const serverSource = fs.readFileSync('modules/lib/i18n.xqm', 'utf8')
     const browserSource = fs.readFileSync('resources/scripts/i18n.js', 'utf8')
