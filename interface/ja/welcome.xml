@@ -1,0 +1,65 @@
+<div xml:lang="ja">
+  <div xml:id="for-guests">
+    <h3>HXWD ウェブサイトへようこそ</h3>
+    <p>このウェブサイトは、前近代中国語テキストの読解と翻訳に関心のある方を対象としています。利用には一定の中国語の知識が必要です。</p>
+    <p>ログインせずに<a href="browse.html?type=welcome">サイトを閲覧</a>できますが、多くの機能は登録ユーザーのみ利用できます。</p>
+    <p><a href="https://docs.hxwd.org" target="docs">ドキュメント</a>はまだ十分ではありませんが、利用の参考になります。</p>
+    <p>以下のテキストから読み始められます：
+      <ul>
+        <li><a href="textview.html?location=KR1h0004">『論語』</a></li>
+        <li><a href="textview.html?location=KR1h0001">『孟子』</a></li>
+        <li><a href="textview.html?location=KR3a0002">『荻子』</a></li>
+        <li><a href="textview.html?location=KR1d0052">『礼記』</a></li>
+        <li><a href="textview.html?location=KR1f0001">『孝経』</a></li>
+        <li><a href="textview.html?location=KR5c0126">『荘子』</a></li>
+        <li><a href="textview.html?location=KR5c0057">『老子』（『道徳経』）</a></li>
+        <li><a href="textview.html?location=KR3j0010">『淮南子』</a></li>
+        <li><a href="textview.html?location=KR5c0124">『列子』</a></li>
+        <li><a href="textview.html?location=CH1a0938">『墨子』</a></li>
+        <li><a href="textview.html?location=KR1c0001">『詩経』</a></li>
+        <li><a href="textview.html?location=KR4a0001">『楚辞』</a></li>
+        <li><a href="textview.html?location=KR3c0005">『韓非子』</a></li>
+        <li><a href="textview.html?location=KR3c0004">『商君書』</a></li>
+        <li><a href="textview.html?location=KR3b0003">『孫子』</a></li>
+        <li><a href="textview.html?location=KR1b0061">『尚書』</a></li>
+        <li><a href="textview.html?location=KR1e0001">『左伝』</a></li>
+        <li><a href="textview.html?location=CH1b0943_CHANT_176-7a.5&amp;prec=0&amp;foll=357">班昭『女誡』</a></li>
+      </ul>
+      または<br/>
+      <b><a href="search.html?search-type=12">テキストの全一覧</a></b>をご覧ください。
+    </p>
+    <p>AI 翻訳の利用方針については<a href="browse.html?type=ai-rationale">こちら</a>をお読みください。</p>
+    <p>データベースを検索：
+      <form action="search.html" class="form-inline my-2 my-lg-0" method="get">
+        <input type="hidden" name="textid" value=""/>
+        <input id="query-inp" name="query" class="form-control w-50 mr-sm-2 chn-font" type="search" placeholder="検索" aria-label="検索" value=""/>
+        <span class="mr-1">対象</span>
+        <select class="form-control input-sm" name="search-type">
+          <option selected="true" value="1">テキスト本文</option>
+          <option value="7">書名</option>
+          <option value="2">辞書</option>
+          <option value="3">翻訳</option>
+          <option value="4">すべて</option>
+          <option value="10">参考文献</option>
+        </select>
+        <button id="search-submit" class="btn btn-outline-success my-2 my-sm-0" type="submit">
+          <img class="icon" src="resources/icons/open-iconic-master/svg/magnifying-glass.svg"/>
+        </button>
+      </form>
+    </p>
+    <p>
+      <b><a href="#" data-toggle="modal" data-target="#loginDialog">ログイン</a></b>、または<br/>
+      <br/>
+      <a href="signup.html">TLS プロジェクトのメンバーシップを<b>申請</b>してください。</a>
+    </p>
+  </div>
+  <div xml:id="for-users">
+    <div>
+      <h3>おかえりなさい</h3>
+      <p>最近閲覧したテキストです：</p>
+      <ul>{for $l in $r return $l}</ul>
+      <p>AI 翻訳の利用方針については<a href="browse.html?type=ai-rationale">こちら</a>をお読みください。</p>
+      <p>出版物に TLS を利用した旨を明記してください。</p>
+    </div>
+  </div>
+</div>

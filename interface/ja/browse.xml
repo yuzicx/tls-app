@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<div class="row" xml:id="browse" lang="ja">
+  <div class="col-md-2"/>
+  <div class="col-md-6">
+  <h3>データベースを閲覧</h3>
+  <p>以下のデータは閲覧用インターフェースから利用できます。これらの機能は、各ページの「閲覧」メニューからも開けます。</p>
+  <p/>
+  <ul>
+    <li>多くのテキストを閲読できます：
+      <a class="dropdown-item" href="search.html?search-type=12">テキスト</a>
+    </li>
+    <li>伝統的な中国の世界観を独自の視点から示す概念を探索できます：<a data-template="lrh:help-link" data-parameter="concept" target="docs" href="https://docs.hxwd.org/1-General-introduction/Concepts" title="概念について">
+        <img class="icon" src="resources/icons/help.svg"/>
+      </a>
+      <a class="dropdown-item" href="browse.html?type=concept">概念</a>
+      <a class="dropdown-item" href="browse.html?type=tax&amp;mode=concept">概念の分類ツリー</a>
+    </li>
+    <li>頻出漢字については、意味領域の階層表示が整備されています：
+      <a class="dropdown-item" href="browse.html?type=taxchar">漢字</a>
+    </li>
+    <li>一部の頻出語については、関連付けられた概念の一覧があります：
+      <a class="dropdown-item" href="browse.html?type=taxword">語</a>
+    </li>
+    <li>用例は特定の統語機能と概念に関連付けられたテキスト行で、ここで分析できます：
+      <a class="dropdown-item" href="citations.html">用例</a>
+    </li>
+    <li>関連する語を対照的に配置することは中国散文によく見られる特徴です。確認された関係はここで閲覧できます：
+      <a class="dropdown-item" href="browse.html?type=word-rel-type">語の関係</a>
+    </li>
+    <li>用例で使用する統語機能を命名・分類することにより、言語学的な精密分析を行います：
+      <a class="dropdown-item" href="browse.html?type=syn-func">統語機能</a>
+      <a class="dropdown-item" href="browse.html?type=tax&amp;mode=syn-func">統語機能の分類ツリー</a>
+    </li>
+    <li>一部の注釈には、用法に関する意味的な特徴も記録されています：
+      <a class="dropdown-item" href="browse.html?type=sem-feat">意味特徴</a>
+    </li>
+    <li>語とは異なる層にあるテキストの文体・修辞を記述するため、修辞技法を使用します：
+      <a class="dropdown-item" href="browse.html?type=rhet-dev">修辞技法</a>
+    </li>
+    <li>修辞技法の整備後、テキストのまとまりに対する他の種類の観察も記録できるよう、この概念を一般化しました。この機能は実験段階で、現在も開発中です：
+      <a class="dropdown-item" href="observations.html">観察</a>
+    </li>
+    <li>注釈付き参考文献：
+      <a class="dropdown-item" href="browse.html?type=biblio">参考文献</a>
+    </li>
+  </ul>
+</div>
+</div>

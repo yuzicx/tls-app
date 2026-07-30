@@ -26,7 +26,7 @@ function placeholders(value) {
     .sort()
 }
 
-function createBrowserI18n(messages) {
+function createBrowserI18n(messages, language = 'zh-Hans') {
   const sources = Object.fromEntries(
     messages
       .filter((message) => message.mode !== 'key-only')
@@ -37,7 +37,7 @@ function createBrowserI18n(messages) {
   )
   const window = {
     location: {
-      href: 'https://example.test/index.html?lang=zh-Hans',
+      href: `https://example.test/index.html?lang=${language}`,
       assign() {},
       replace() {}
     },
@@ -55,7 +55,7 @@ function createBrowserI18n(messages) {
     documentElement: { setAttribute() {} },
     getElementById() {
       return {
-        textContent: JSON.stringify({ language: 'zh-Hans', messages: keyedMessages, sources })
+        textContent: JSON.stringify({ language, messages: keyedMessages, sources })
       }
     }
   }
@@ -70,22 +70,27 @@ function createBrowserI18n(messages) {
 describe('interface catalogues', function () {
   const english = loadCatalogue('en')
   const simplifiedChinese = loadCatalogue('zh-Hans')
+  const japanese = loadCatalogue('ja')
+  const catalogues = { en: english, 'zh-Hans': simplifiedChinese, ja: japanese }
+  const localizedCatalogues = { 'zh-Hans': simplifiedChinese, ja: japanese }
 
   it('defines every key exactly once', function () {
-    ;[english, simplifiedChinese].forEach((messages) => {
+    Object.values(catalogues).forEach((messages) => {
       const keys = messages.map((message) => message.key)
       expect(new Set(keys).size).to.equal(keys.length)
     })
   })
 
-  it('keeps the English and Simplified Chinese key sets in sync', function () {
+  it('keeps every localized key set in sync with English', function () {
     const englishKeys = english.map((message) => message.key).sort()
-    const chineseKeys = simplifiedChinese.map((message) => message.key).sort()
-    expect(chineseKeys).to.deep.equal(englishKeys)
+    Object.entries(localizedCatalogues).forEach(([language, messages]) => {
+      const localizedKeys = messages.map((message) => message.key).sort()
+      expect(localizedKeys, language).to.deep.equal(englishKeys)
+    })
   })
 
   it('provides source text and a non-empty value for every message', function () {
-    ;[english, simplifiedChinese].forEach((messages) => {
+    Object.values(catalogues).forEach((messages) => {
       messages.forEach((message) => {
         expect(message.key).to.be.a('string').and.not.empty
         expect(message.source, message.key).to.be.a('string').and.not.empty
@@ -95,18 +100,23 @@ describe('interface catalogues', function () {
   })
 
   it('uses identical source text for matching language keys', function () {
-    const chineseSources = new Map(
-      simplifiedChinese.map((message) => [message.key, message.source])
-    )
-    english.forEach((message) => {
-      expect(chineseSources.get(message.key), message.key).to.equal(message.source)
+    Object.entries(localizedCatalogues).forEach(([language, messages]) => {
+      const localizedSources = new Map(
+        messages.map((message) => [message.key, message.source])
+      )
+      english.forEach((message) => {
+        expect(localizedSources.get(message.key), `${language}:${message.key}`)
+          .to.equal(message.source)
+      })
     })
   })
 
   it('keeps placeholders unchanged between source text and translations', function () {
-    simplifiedChinese.forEach((message) => {
-      expect(placeholders(message.value), message.key)
-        .to.deep.equal(placeholders(message.source))
+    Object.entries(localizedCatalogues).forEach(([language, messages]) => {
+      messages.forEach((message) => {
+        expect(placeholders(message.value), `${language}:${message.key}`)
+          .to.deep.equal(placeholders(message.source))
+      })
     })
   })
 
@@ -171,15 +181,35 @@ describe('interface catalogues', function () {
     expect(textNode.nodeValue).to.equal('  246 个义项标注 ')
   })
 
+  it('translates Japanese runtime messages while preserving their variable values', function () {
+    const i18n = createBrowserI18n(japanese, 'ja')
+
+    expect(i18n.language).to.equal('ja')
+    expect(i18n.fromSource('Email has been sent to editor@example.org'))
+      .to.equal('電子メールは editor@example.org に送信されました')
+    expect(i18n.fromSource('Found 1118 matches, showing 1 to 50'))
+      .to.equal('1118 件が一致しました。1～50 件目を表示しています')
+    expect(i18n.fromSource('Taxonomy of meanings for 之:'))
+      .to.equal('之 の語義分類：')
+    expect(i18n.fromSource('Words (19 items)'))
+      .to.equal('語（19 件）')
+    expect(i18n.fromSource('246 Attributions'))
+      .to.equal('246 件の語義注釈')
+    expect(i18n.fromSource('Search 麒麟 in Kanseki Repository'))
+      .to.equal('漢籍リポジトリで 麒麟 を検索')
+  })
+
   it('contains the global navigation, account and search messages', function () {
-    const chinese = valuesByKey(simplifiedChinese)
-    ;[
-      'nav.browse',
-      'nav.texts',
-      'search.search',
-      'account.login',
-      'language.label'
-    ].forEach((key) => expect(chinese.has(key), key).to.equal(true))
+    Object.entries(localizedCatalogues).forEach(([language, messages]) => {
+      const values = valuesByKey(messages)
+      ;[
+        'nav.browse',
+        'nav.texts',
+        'search.search',
+        'account.login',
+        'language.label'
+      ].forEach((key) => expect(values.has(key), `${language}:${key}`).to.equal(true))
+    })
   })
 
   it('translates data-backed text facets by category id', function () {
@@ -191,6 +221,36 @@ describe('interface catalogues', function () {
     expect(i18n.t('facet.category.dat04380')).to.equal('金')
     expect(i18n.t('facet.category.dat04550')).to.equal('晋')
     expect(i18n.fromSource('Jin')).to.equal('Jin')
+  })
+
+  it('translates Japanese data-backed text facets by category id', function () {
+    const i18n = createBrowserI18n(japanese, 'ja')
+
+    expect(i18n.t('facet.category.annotation')).to.equal('注釈済みテキスト')
+    expect(i18n.t('facet.category.tr-ja')).to.equal('日本語翻訳')
+    expect(i18n.t('facet.category.state-green')).to.equal('編集完了')
+    expect(i18n.t('facet.category.dat04380')).to.equal('金代')
+    expect(i18n.t('facet.category.dat04550')).to.equal('晋')
+    expect(i18n.fromSource('Jin')).to.equal('Jin')
+  })
+
+  it('supports Japanese language tags in both localization runtimes', function () {
+    const serverSource = fs.readFileSync('modules/lib/i18n.xqm', 'utf8')
+    const browserSource = fs.readFileSync('resources/scripts/i18n.js', 'utf8')
+
+    expect(serverSource).to.include('("en", "zh-Hans", "ja")')
+    expect(serverSource).to.include('starts-with($language, "ja-")')
+    expect(serverSource).to.include("onclick=\"tlsSetLanguage('ja')\"")
+    expect(serverSource).to.include('lang="{i18n:language()}"')
+    expect(browserSource).to.include("normalized.indexOf('ja-') === 0")
+  })
+
+  it('provides every rich interface fragment in Japanese', function () {
+    ;['ai-rationale.xml', 'basic-texts.xml', 'browse.xml', 'welcome.xml']
+      .forEach((file) => {
+        const xml = fs.readFileSync(`interface/ja/${file}`, 'utf8')
+        expect(() => new xmldoc.XmlDocument(xml), file).not.to.throw()
+      })
   })
 
   it('marks taxonomy labels with category-specific translation keys', function () {

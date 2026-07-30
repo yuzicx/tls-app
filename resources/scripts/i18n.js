@@ -21,6 +21,7 @@
         normalized === 'zh-hans' || normalized.indexOf('zh-hans-') === 0) {
       return 'zh-Hans';
     }
+    if (normalized === 'ja' || normalized.indexOf('ja-') === 0) return 'ja';
     return null;
   }
 
